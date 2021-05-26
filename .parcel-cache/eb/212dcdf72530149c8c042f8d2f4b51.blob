@@ -1,0 +1,440 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/*
+import React, { Component } from 'react';
+import './App.css';
+import ItemApp from './component/ItemApp';
+
+class App extends Component {
+    render() {
+        return (
+            <div className="container">
+                <ItemApp />
+            </div>
+        );
+    }
+}
+
+export default App;*/ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+var _appCss = require("./App.css");
+var _authService = require("./service/auth.service");
+var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+var _loginComponent = require("./component/login.component");
+var _loginComponentDefault = parcelHelpers.interopDefault(_loginComponent);
+var _registerComponent = require("./component/register.component");
+var _registerComponentDefault = parcelHelpers.interopDefault(_registerComponent);
+var _homeComponent = require("./component/home.component");
+var _homeComponentDefault = parcelHelpers.interopDefault(_homeComponent);
+var _profileComponent = require("./component/profile.component");
+var _profileComponentDefault = parcelHelpers.interopDefault(_profileComponent);
+var _boardAdminComponent = require("./component/board-admin.component");
+var _boardAdminComponentDefault = parcelHelpers.interopDefault(_boardAdminComponent);
+var _boardEditorComponent = require("./component/board-editor.component");
+var _boardEditorComponentDefault = parcelHelpers.interopDefault(_boardEditorComponent);
+//import BoardReviewer from "./component/board-reviewer.component";
+var _boardReviewerRpComponent = require("./component/board-reviewer-rp.component");
+var _boardReviewerRpComponentDefault = parcelHelpers.interopDefault(_boardReviewerRpComponent);
+var _boardReviewerWpComponent = require("./component/board-reviewer-wp.component");
+var _boardReviewerWpComponentDefault = parcelHelpers.interopDefault(_boardReviewerWpComponent);
+var _boardRpComponent = require("./component/board-rp.component");
+var _boardRpComponentDefault = parcelHelpers.interopDefault(_boardRpComponent);
+var _boardWpComponent = require("./component/board-wp.component");
+var _boardWpComponentDefault = parcelHelpers.interopDefault(_boardWpComponent);
+var _boardAttendeeComponent = require("./component/board-attendee.component");
+var _boardAttendeeComponentDefault = parcelHelpers.interopDefault(_boardAttendeeComponent);
+var _boardUserComponent = require("./component/board-user.component");
+var _boardUserComponentDefault = parcelHelpers.interopDefault(_boardUserComponent);
+class App extends _react.Component {
+    constructor(props){
+        super(props);
+        this.logOut = this.logOut.bind(this);
+        this.state = {
+            showModeratorBoard: false,
+            showAdminBoard: false,
+            currentUser: undefined
+        };
+    }
+    componentDidMount() {
+        const user = _authServiceDefault.default.getCurrentUser();
+        if (user) this.setState({
+            currentUser: user,
+            showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+            showEditorBoard: user.roles.includes("ROLE_EDITOR"),
+            //showReviewerBoard: user.roles.includes("ROLE_REVIEWER"),
+            showReviewerBoardRP: user.roles.includes("ROLE_REVIEWER"),
+            showReviewerBoardWP: user.roles.includes("ROLE_REVIEWER"),
+            showRPBoard: user.roles.includes("ROLE_RP"),
+            showWPBoard: user.roles.includes("ROLE_WP"),
+            showAttendeeBoard: user.roles.includes("ROLE_ATTENDEE")
+        });
+    }
+    logOut() {
+        _authServiceDefault.default.logout();
+    }
+    render() {
+        const { currentUser , showAdminBoard , showEditorBoard , showReviewerBoard , showReviewerBoardRP , showReviewerBoardWP , showRPBoard , showWPBoard , showAttendeeBoard  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 79
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+            className: "navbar navbar-expand navbar-dark bg-dark",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 80
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/",
+            className: "navbar-brand",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 81
+            },
+            __self: this
+        }, "CMS"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "navbar-nav mr-auto",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 84
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 85
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/home",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, "Home")), showAdminBoard && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 92
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/admin",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 93
+            },
+            __self: this
+        }, "Admin Board")), showEditorBoard && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 100
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/editor",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 101
+            },
+            __self: this
+        }, "Editor Board")), showReviewerBoardRP && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 116
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/reviewer",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 117
+            },
+            __self: this
+        }, "Reviewer Board RP")), showReviewerBoardWP && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 124
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/reviewer",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 125
+            },
+            __self: this
+        }, "Reviewer Board WP")), showRPBoard && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 132
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/rp",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 133
+            },
+            __self: this
+        }, "RP Board")), showWPBoard && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 140
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/wp",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 141
+            },
+            __self: this
+        }, "RP Board")), showAttendeeBoard && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 148
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/attendee",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 149
+            },
+            __self: this
+        }, "Attendee Board")), currentUser && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 156
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/user",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 157
+            },
+            __self: this
+        }, "User"))), currentUser ? /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "navbar-nav ml-auto",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 165
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 166
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/profile",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 167
+            },
+            __self: this
+        }, currentUser.username)), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 171
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            href: "/login",
+            className: "nav-link",
+            onClick: this.logOut,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 172
+            },
+            __self: this
+        }, "LogOut"))) : /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "navbar-nav ml-auto",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 178
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 179
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/login",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 180
+            },
+            __self: this
+        }, "Login")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 185
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/register",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 186
+            },
+            __self: this
+        }, "Sign Up")))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container mt-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 194
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 195
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: [
+                "/",
+                "/home"
+            ],
+            component: _homeComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 196
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/login",
+            component: _loginComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 197
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/register",
+            component: _registerComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 198
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/profile",
+            component: _profileComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 199
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/admin",
+            component: _boardAdminComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 200
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/editor",
+            component: _boardEditorComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 201
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/reviewer",
+            component: BoardReviewer,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 202
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/rp",
+            component: _boardRpComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 203
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/wp",
+            component: _boardWpComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 204
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/Attendee",
+            component: _boardAttendeeComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 205
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/user",
+            component: _boardUserComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 206
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = App;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

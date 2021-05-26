@@ -1,0 +1,175 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _filesRpService = require("../service/files-rp.service");
+var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
+class UploadRPFiles extends _react.Component {
+    constructor(props){
+        super(props);
+        this.selectFile = this.selectFile.bind(this);
+        this.upload = this.upload.bind(this);
+        this.state = {
+            selectedFiles: undefined,
+            currentFile: undefined,
+            progress: 0,
+            message: "",
+            fileInfos: []
+        };
+    }
+    componentDidMount() {
+        _filesRpServiceDefault.default.getRPFiles().then((response)=>{
+            this.setState({
+                fileInfos: response.data
+            });
+        });
+    }
+    selectFile(event) {
+        this.setState({
+            selectedFiles: event.target.files
+        });
+    }
+    upload() {
+        let currentFile = this.state.selectedFiles[0];
+        this.setState({
+            progress: 0,
+            currentFile: currentFile
+        });
+        _filesRpServiceDefault.default.uploadRP(currentFile, (event)=>{
+            this.setState({
+                progress: Math.round(100 * event.loaded / event.total)
+            });
+        }).then((response)=>{
+            this.setState({
+                message: response.data.message
+            });
+            return _filesRpServiceDefault.default.getRPFiles();
+        }).then((files)=>{
+            this.setState({
+                fileInfos: files.data
+            });
+        }).catch(()=>{
+            this.setState({
+                progress: 0,
+                message: "Could not upload the file!",
+                currentFile: undefined
+            });
+        });
+        this.setState({
+            selectedFiles: undefined
+        });
+    }
+    render() {
+        const { selectedFiles , currentFile , progress , message , fileInfos ,  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 81
+            },
+            __self: this
+        }, currentFile && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "progress",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 83
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "progress-bar progress-bar-info progress-bar-striped",
+            role: "progressbar",
+            "aria-valuenow": progress,
+            "aria-valuemin": "0",
+            "aria-valuemax": "100",
+            style: {
+                width: progress + "%"
+            },
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 84
+            },
+            __self: this
+        }, progress, "%")), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "btn btn-default",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 97
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "file",
+            onChange: this.selectFile,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 98
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-success",
+            disabled: !selectedFiles,
+            onClick: this.upload,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 101
+            },
+            __self: this
+        }, "Upload"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert alert-light",
+            role: "alert",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 109
+            },
+            __self: this
+        }, message), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 113
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-header",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 114
+            },
+            __self: this
+        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "list-group list-group-flush",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                lineNumber: 115
+            },
+            __self: this
+        }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "list-group-item",
+                key: index,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                    lineNumber: 118
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: file.url,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
+                    lineNumber: 119
+                },
+                __self: this
+            }, file.name))
+        )))));
+    }
+}
+exports.default = UploadRPFiles;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

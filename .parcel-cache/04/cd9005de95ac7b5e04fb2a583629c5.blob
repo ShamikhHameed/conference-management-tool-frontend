@@ -1,0 +1,21 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+const API_URL = `http://localhost:8080/api/access/wp/`;
+class UploadWPFilesService {
+    uploadWP(file, onUploadProgress) {
+        let formData = new FormData();
+        formData.append("file", file);
+        return _axiosDefault.default.post(API_URL + "upload", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            onUploadProgress
+        });
+    }
+    getWPFiles() {
+        return _axiosDefault.default.get(API_URL + "files");
+    }
+}
+exports.default = new UploadWPFilesService();

@@ -1,0 +1,291 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _form = require("react-validation/build/form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _input = require("react-validation/build/input");
+var _inputDefault = parcelHelpers.interopDefault(_input);
+var _button = require("react-validation/build/button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _validator = require("validator");
+var _authService = require("../service/auth.service");
+var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+const required = (value)=>{
+    if (!value) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+            lineNumber: 12
+        },
+        __self: undefined
+    }, "This field is required!"));
+};
+const email = (value)=>{
+    if (!_validator.isEmail(value)) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+            lineNumber: 22
+        },
+        __self: undefined
+    }, "This is not a valid email."));
+};
+const vusername = (value)=>{
+    if (value.length < 3 || value.length > 20) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+            lineNumber: 32
+        },
+        __self: undefined
+    }, "The username must be between 3 and 20 characters."));
+};
+const vpassword = (value)=>{
+    if (value.length < 6 || value.length > 40) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+            lineNumber: 42
+        },
+        __self: undefined
+    }, "The password must be between 6 and 40 characters."));
+};
+class Register extends _react.Component {
+    constructor(props){
+        super(props);
+        this.handleRegister = this.handleRegister.bind(this);
+        this.onChangeUsername = this.onChangeUsername.bind(this);
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangePassword = this.onChangePassword.bind(this);
+        this.state = {
+            username: "",
+            email: "",
+            password: "",
+            successful: false,
+            message: ""
+        };
+    }
+    onChangeUsername(e) {
+        this.setState({
+            username: e.target.value
+        });
+    }
+    onChangeEmail(e) {
+        this.setState({
+            email: e.target.value
+        });
+    }
+    onChangePassword(e) {
+        this.setState({
+            password: e.target.value
+        });
+    }
+    handleRegister(e) {
+        e.preventDefault();
+        this.setState({
+            message: "",
+            successful: false
+        });
+        this.form.validateAll();
+        if (this.checkBtn.context._errors.length === 0) _authServiceDefault.default.register(this.state.username, this.state.email, this.state.password).then((response)=>{
+            this.setState({
+                message: response.data.message,
+                successful: true
+            });
+        }, (error)=>{
+            const resMessage = error.response && error.response.data && error.response.data.message || error.message || error.toString();
+            this.setState({
+                successful: false,
+                message: resMessage
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-md-12",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 125
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card card-container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 126
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            src: "//ssl.gstatic.com/accounts/ui/avatar_2x.png",
+            alt: "profile-img",
+            className: "profile-img-card",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 127
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
+            onSubmit: this.handleRegister,
+            ref: (c)=>{
+                this.form = c;
+            },
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 133
+            },
+            __self: this
+        }, !this.state.successful && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 140
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 141
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "username",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 142
+            },
+            __self: this
+        }, "Username"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "text",
+            className: "form-control",
+            name: "username",
+            value: this.state.username,
+            onChange: this.onChangeUsername,
+            validations: [
+                required,
+                vusername
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 143
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 153
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "email",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 154
+            },
+            __self: this
+        }, "Email"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "text",
+            className: "form-control",
+            name: "email",
+            value: this.state.email,
+            onChange: this.onChangeEmail,
+            validations: [
+                required,
+                email
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 155
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 165
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "password",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 166
+            },
+            __self: this
+        }, "Password"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "password",
+            className: "form-control",
+            name: "password",
+            value: this.state.password,
+            onChange: this.onChangePassword,
+            validations: [
+                required,
+                vpassword
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 167
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 177
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-primary btn-block",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 178
+            },
+            __self: this
+        }, "Sign Up"))), this.state.message && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 184
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: this.state.successful ? "alert alert-success" : "alert alert-danger",
+            role: "alert",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 185
+            },
+            __self: this
+        }, this.state.message)), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            style: {
+                display: "none"
+            },
+            ref: (c)=>{
+                this.checkBtn = c;
+            },
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\register.component.js",
+                lineNumber: 197
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = Register;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

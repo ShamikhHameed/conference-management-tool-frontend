@@ -1,0 +1,69 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+var _filesRpComponent = require("./files-rp.component");
+var _filesRpComponentDefault = parcelHelpers.interopDefault(_filesRpComponent);
+class BoardReviewerRP extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getReviewerBoardRP().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
+                lineNumber: 39
+            },
+            __self: this
+        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
+                lineNumber: 41
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = BoardReviewerRP;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,30 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+const API_URL = "http://localhost:8080/api/auth/";
+class AuthService {
+    login(username, password) {
+        return _axiosDefault.default.post(API_URL + "signin", {
+            username,
+            password
+        }).then((response)=>{
+            if (response.data.accessToken) localStorage.setItem("user", JSON.stringify(response.data));
+            return response.data;
+        });
+    }
+    logout() {
+        localStorage.removeItem("user");
+    }
+    register(username, email, password) {
+        return _axiosDefault.default.post(API_URL + "signup", {
+            username,
+            email,
+            password
+        });
+    }
+    getCurrentUser() {
+        return JSON.parse(localStorage.getItem('user'));
+    }
+}
+exports.default = new AuthService();

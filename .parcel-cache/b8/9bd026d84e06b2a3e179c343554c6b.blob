@@ -1,0 +1,131 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+var _appCss = require("./App.css");
+var _addTutorialComponent = require("./components/add-tutorial.component");
+var _addTutorialComponentDefault = parcelHelpers.interopDefault(_addTutorialComponent);
+var _tutorialComponent = require("./components/tutorial.component");
+var _tutorialComponentDefault = parcelHelpers.interopDefault(_tutorialComponent);
+var _tutorialsListComponent = require("./components/tutorials-list.component");
+var _tutorialsListComponentDefault = parcelHelpers.interopDefault(_tutorialsListComponent);
+class App extends _react.Component {
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 13
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+            className: "navbar navbar-expand navbar-dark bg-dark",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 14
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/tutorials",
+            className: "navbar-brand",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 15
+            },
+            __self: this
+        }, "bezKoder"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "navbar-nav mr-auto",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 19
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/tutorials",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 20
+            },
+            __self: this
+        }, "Tutorials")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 24
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/add",
+            className: "nav-link",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, "Add")))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container mt-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 32
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 33
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: [
+                "/",
+                "/tutorials"
+            ],
+            component: _tutorialsListComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 34
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/add",
+            component: _addTutorialComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 35
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/tutorials/:id",
+            component: _tutorialComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\App.js",
+                lineNumber: 36
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = App;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

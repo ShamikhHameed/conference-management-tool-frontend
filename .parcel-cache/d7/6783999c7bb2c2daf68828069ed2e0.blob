@@ -1,0 +1,24 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+const TUTORIAL_API_URL = 'http://localhost:8080';
+const ITEM_API_URL = `${TUTORIAL_API_URL}/api/tutorials`;
+class ItemDataService {
+    retrieveAllItems(name) {
+        return _axiosDefault.default.get(`${ITEM_API_URL}`);
+    }
+    deleteItem(id) {
+        return _axiosDefault.default.delete(`${ITEM_API_URL}/${id}`);
+    }
+    retrieveItem(id) {
+        return _axiosDefault.default.get(`${ITEM_API_URL}/${id}`);
+    }
+    updateItem(id, tutorial) {
+        return _axiosDefault.default.put(`${ITEM_API_URL}/${id}`, tutorial);
+    }
+    createitem(tutorial) {
+        return _axiosDefault.default.post(`${ITEM_API_URL}/`, tutorial);
+    }
+}
+exports.default = new ItemDataService();

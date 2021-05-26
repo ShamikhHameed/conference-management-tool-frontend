@@ -1,0 +1,261 @@
+(function(e, t) {
+    "object" === typeof exports && "object" === typeof module ? module.exports = t(require("react"), require("prop-types"), require("uuid/v4")) : "function" === typeof define && define.amd ? define([
+        "react",
+        "prop-types",
+        "uuid/v4"
+    ], t) : "object" === typeof exports ? exports.input = t(require("react"), require("prop-types"), require("uuid/v4")) : e.input = t(e.React, e.PropTypes, e.uuid);
+})(this, function(e, t, n1) {
+    return (function(e1) {
+        function t1(r) {
+            if (n2[r]) return n2[r].exports;
+            var o = n2[r] = {
+                i: r,
+                l: false,
+                exports: {
+                }
+            };
+            return e1[r].call(o.exports, o, o.exports, t1), o.l = true, o.exports;
+        }
+        var n2 = {
+        };
+        return t1.m = e1, t1.c = n2, t1.d = function(e2, n3, r) {
+            t1.o(e2, n3) || Object.defineProperty(e2, n3, {
+                configurable: false,
+                enumerable: true,
+                get: r
+            });
+        }, t1.n = function(e2) {
+            var n3 = e2 && e2.__esModule ? function() {
+                return e2.default;
+            } : function() {
+                return e2;
+            };
+            return t1.d(n3, "a", n3), n3;
+        }, t1.o = function(e2, t2) {
+            return Object.prototype.hasOwnProperty.call(e2, t2);
+        }, t1.p = "/", t1(t1.s = 12);
+    })([
+        function(t1, n2) {
+            t1.exports = e;
+        },
+        function(e1, n2) {
+            e1.exports = t;
+        },
+        function(e1, t1, n2) {
+            "use strict";
+            function r(e2, t2) {
+                if (!(e2 instanceof t2)) throw new TypeError("Cannot call a class as a function");
+            }
+            function o(e2, t2) {
+                if (!e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return !t2 || "object" !== typeof t2 && "function" !== typeof t2 ? e2 : t2;
+            }
+            function i(e2, t2) {
+                if ("function" !== typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function, not " + typeof t2);
+                e2.prototype = Object.create(t2 && t2.prototype, {
+                    constructor: {
+                        value: e2,
+                        enumerable: false,
+                        writable: true,
+                        configurable: true
+                    }
+                }), t2 && (Object.setPrototypeOf ? Object.setPrototypeOf(e2, t2) : e2.__proto__ = t2);
+            }
+            function u(e2) {
+                var t2, n3;
+                return n3 = t2 = (function(t3) {
+                    function n4() {
+                        return r(this, n4), o(this, (n4.__proto__ || Object.getPrototypeOf(n4)).apply(this, arguments));
+                    }
+                    return i(n4, t3), f(n4, [
+                        {
+                            key: "render",
+                            value: function() {
+                                var t4 = this.context._getProps(this.id);
+                                return t4 ? c.a.createElement(e2, Object.assign({
+                                }, t4, {
+                                    onChange: this.handleChange,
+                                    onBlur: this.handleBlur
+                                })) : null;
+                            }
+                        }
+                    ]), n4;
+                })(s.a), t2.displayName = "Control(" + e2.name + ")", n3;
+            }
+            t1.a = u;
+            var a = n2(0), c = n2.n(a), s = n2(3), f = function() {
+                function e2(e3, t2) {
+                    for(var n3 = 0; n3 < t2.length; n3++){
+                        var r1 = t2[n3];
+                        r1.enumerable = r1.enumerable || false, r1.configurable = true, "value" in r1 && (r1.writable = true), Object.defineProperty(e3, r1.key, r1);
+                    }
+                }
+                return function(t2, n3, r2) {
+                    return n3 && e2(t2.prototype, n3), r2 && e2(t2, r2), t2;
+                };
+            }();
+        },
+        function(e1, t1, n2) {
+            "use strict";
+            function r2(e2, t2) {
+                var n3 = {
+                };
+                for(var r3 in e2)t2.indexOf(r3) >= 0 || Object.prototype.hasOwnProperty.call(e2, r3) && (n3[r3] = e2[r3]);
+                return n3;
+            }
+            function o(e2, t2) {
+                if (!(e2 instanceof t2)) throw new TypeError("Cannot call a class as a function");
+            }
+            function i(e2, t2) {
+                if (!e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return !t2 || "object" !== typeof t2 && "function" !== typeof t2 ? e2 : t2;
+            }
+            function u(e2, t2) {
+                if ("function" !== typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function, not " + typeof t2);
+                e2.prototype = Object.create(t2 && t2.prototype, {
+                    constructor: {
+                        value: e2,
+                        enumerable: false,
+                        writable: true,
+                        configurable: true
+                    }
+                }), t2 && (Object.setPrototypeOf ? Object.setPrototypeOf(e2, t2) : e2.__proto__ = t2);
+            }
+            var a = n2(0), c = (n2.n(a), n2(1)), s = n2.n(c), f = n2(4), p = n2.n(f), l = n2(5), d = n2.n(l), h = n2(6), y = n2.n(h), v = function() {
+                function e2(e3, t2) {
+                    for(var n3 = 0; n3 < t2.length; n3++){
+                        var r3 = t2[n3];
+                        r3.enumerable = r3.enumerable || false, r3.configurable = true, "value" in r3 && (r3.writable = true), Object.defineProperty(e3, r3.key, r3);
+                    }
+                }
+                return function(t2, n3, r4) {
+                    return n3 && e2(t2.prototype, n3), r4 && e2(t2, r4), t2;
+                };
+            }(), b = function(e2) {
+                function t2() {
+                    var e3, n3, r4, u1;
+                    o(this, t2);
+                    for(var a1 = arguments.length, c1 = Array(a1), s1 = 0; s1 < a1; s1++)c1[s1] = arguments[s1];
+                    return n3 = r4 = i(this, (e3 = t2.__proto__ || Object.getPrototypeOf(t2)).call.apply(e3, [
+                        this
+                    ].concat(c1))), r4.id = y()(), r4.handleChange = function(e4) {
+                        e4.persist(), r4.context._handleChange(e4, r4.id), r4.props.onChange && r4.props.onChange(e4);
+                    }, r4.handleBlur = function(e4) {
+                        e4.persist(), r4.context._handleBlur(e4, r4.id), r4.props.onBlur && r4.props.onBlur(e4);
+                    }, u1 = n3, i(r4, u1);
+                }
+                return u(t2, e2), v(t2, [
+                    {
+                        key: "componentDidMount",
+                        value: function() {
+                            this.context._register(this, this.id);
+                        }
+                    },
+                    {
+                        key: "componentWillUnmount",
+                        value: function() {
+                            this.context._unregister(this, this.id);
+                        }
+                    },
+                    {
+                        key: "componentWillReceiveProps",
+                        value: function(e3) {
+                            var t3 = e3.validations, n3 = r2(e3, [
+                                "validations"
+                            ]), o1 = this.props, i1 = o1.validations, u1 = r2(o1, [
+                                "validations"
+                            ]);
+                            d()(u1, n3) && p()(i1, t3) || this.context._setProps(n3, this.id);
+                        }
+                    },
+                    {
+                        key: "shouldComponentUpdate",
+                        value: function(e3, t3, n3) {
+                            return n3 !== this.context;
+                        }
+                    },
+                    {
+                        key: "render",
+                        value: function() {
+                            return null;
+                        }
+                    }
+                ]), t2;
+            }(a.Component);
+            b.contextTypes = {
+                _register: s.a.func.isRequired,
+                _unregister: s.a.func.isRequired,
+                _setProps: s.a.func.isRequired,
+                _handleChange: s.a.func.isRequired,
+                _handleBlur: s.a.func.isRequired,
+                _getProps: s.a.func.isRequired
+            }, b.propTypes = {
+                validations: s.a.arrayOf(s.a.func),
+                onChange: s.a.func,
+                onBlur: s.a.func
+            }, b.defaultProps = {
+                validations: []
+            }, t1.a = b;
+        },
+        function(e1, t1) {
+            e1.exports = function(e2, t2) {
+                if (e2 === t2) return true;
+                var n2 = e2.length;
+                if (t2.length !== n2) return false;
+                for(var r2 = 0; r2 < n2; r2++)if (e2[r2] !== t2[r2]) return false;
+                return true;
+            };
+        },
+        function(e1, t1) {
+            e1.exports = function(e2, t2) {
+                if (e2 === t2) return true;
+                var n2 = Object.keys(e2), r2 = Object.keys(t2), o = n2.length;
+                if (r2.length !== o) return false;
+                for(var i = 0; i < o; i++){
+                    var u = n2[i];
+                    if (e2[u] !== t2[u]) return false;
+                }
+                return true;
+            };
+        },
+        function(e1, t1) {
+            e1.exports = n1;
+        },
+        ,
+        ,
+        ,
+        ,
+        ,
+        function(e1, t1, n2) {
+            "use strict";
+            function r2(e2, t2) {
+                var n3 = {
+                };
+                for(var r4 in e2)t2.indexOf(r4) >= 0 || Object.prototype.hasOwnProperty.call(e2, r4) && (n3[r4] = e2[r4]);
+                return n3;
+            }
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var o = n2(0), i = n2.n(o), u = n2(1), a = n2.n(u), c = n2(2), s = function(e2) {
+                var t2 = e2.error, n3 = e2.isChanged, o1 = e2.isUsed, u1 = r2(e2, [
+                    "error",
+                    "isChanged",
+                    "isUsed"
+                ]);
+                return i.a.createElement("div", null, i.a.createElement("input", Object.assign({
+                }, u1, n3 && o1 && t2 ? {
+                    className: "is-invalid-input " + u1.className
+                } : {
+                    className: u1.className
+                })), n3 && o1 && t2);
+            };
+            s.propTypes = {
+                error: a.a.oneOfType([
+                    a.a.node,
+                    a.a.string
+                ])
+            }, t1.default = Object(c.a)(s);
+        }
+    ]);
+});

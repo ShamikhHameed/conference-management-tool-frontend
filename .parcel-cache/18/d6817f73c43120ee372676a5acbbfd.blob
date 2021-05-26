@@ -1,0 +1,71 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _itemDataService = require("../service/ItemDataService");
+var _itemDataServiceDefault = parcelHelpers.interopDefault(_itemDataService);
+class ItemComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: this.props.match.params.id,
+            name: '',
+            description: ''
+        };
+    }
+    componentDidMount() {
+        if (this.state.id == -1) return;
+        _itemDataServiceDefault.default.retrieveItem(this.state.id).then((response)=>this.setState({
+                name: response.data.name,
+                description: response.data.description
+            })
+        );
+    }
+    render() {
+        let { description , name , id  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 31
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 32
+            },
+            __self: this
+        }, "Item"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 33
+            },
+            __self: this
+        }, id), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 34
+            },
+            __self: this
+        }, name), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 35
+            },
+            __self: this
+        }, description)));
+    }
+}
+exports.default = ItemComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

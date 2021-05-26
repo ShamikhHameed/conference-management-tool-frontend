@@ -1,0 +1,28 @@
+{
+  "name": "conference-management-tool-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "author": "Shamikh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.1",
+    "formik": "^2.2.8",
+    "parcel": "^2.0.0-beta.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-validation": "^3.0.7",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.9"
+  }
+}

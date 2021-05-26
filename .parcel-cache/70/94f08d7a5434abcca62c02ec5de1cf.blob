@@ -1,0 +1,415 @@
+(function(e, t) {
+    "object" === typeof exports && "object" === typeof module ? module.exports = t(require("react"), require("prop-types"), require("lodash.omit")) : "function" === typeof define && define.amd ? define([
+        "react",
+        "prop-types",
+        "lodash.omit"
+    ], t) : "object" === typeof exports ? exports.form = t(require("react"), require("prop-types"), require("lodash.omit")) : e.form = t(e.React, e.PropTypes, e["_.omit"]);
+})(this, function(e, t, r1) {
+    return (function(e1) {
+        function t1(n) {
+            if (r2[n]) return r2[n].exports;
+            var a = r2[n] = {
+                i: n,
+                l: false,
+                exports: {
+                }
+            };
+            return e1[n].call(a.exports, a, a.exports, t1), a.l = true, a.exports;
+        }
+        var r2 = {
+        };
+        return t1.m = e1, t1.c = r2, t1.d = function(e2, r3, n) {
+            t1.o(e2, r3) || Object.defineProperty(e2, r3, {
+                configurable: false,
+                enumerable: true,
+                get: n
+            });
+        }, t1.n = function(e2) {
+            var r3 = e2 && e2.__esModule ? function() {
+                return e2.default;
+            } : function() {
+                return e2;
+            };
+            return t1.d(r3, "a", r3), r3;
+        }, t1.o = function(e2, t2) {
+            return Object.prototype.hasOwnProperty.call(e2, t2);
+        }, t1.p = "/", t1(t1.s = 11);
+    })([
+        function(t1, r2) {
+            t1.exports = e;
+        },
+        function(e1, r2) {
+            e1.exports = t;
+        },
+        ,
+        ,
+        ,
+        ,
+        ,
+        function(e1, t1, r2) {
+            "use strict";
+            function n(e2, t2) {
+                var r3 = {
+                };
+                for(var n1 in e2)t2.indexOf(n1) >= 0 || Object.prototype.hasOwnProperty.call(e2, n1) && (r3[n1] = e2[n1]);
+                return r3;
+            }
+            function a(e2, t2, r3) {
+                return t2 in e2 ? Object.defineProperty(e2, t2, {
+                    value: r3,
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
+                }) : e2[t2] = r3, e2;
+            }
+            function i(e2) {
+                if (Array.isArray(e2)) {
+                    for(var t2 = 0, r3 = Array(e2.length); t2 < e2.length; t2++)r3[t2] = e2[t2];
+                    return r3;
+                }
+                return Array.from(e2);
+            }
+            function o(e2, t3) {
+                if (!(e2 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+            }
+            function s(e2, t3) {
+                if (!e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return !t3 || "object" !== typeof t3 && "function" !== typeof t3 ? e2 : t3;
+            }
+            function u(e2, t3) {
+                if ("function" !== typeof t3 && null !== t3) throw new TypeError("Super expression must either be null or a function, not " + typeof t3);
+                e2.prototype = Object.create(t3 && t3.prototype, {
+                    constructor: {
+                        value: e2,
+                        enumerable: false,
+                        writable: true,
+                        configurable: true
+                    }
+                }), t3 && (Object.setPrototypeOf ? Object.setPrototypeOf(e2, t3) : e2.__proto__ = t3);
+            }
+            function c(e2) {
+                var t3, r4, c1;
+                return r4 = t3 = (function(t4) {
+                    function r5(e3, t5) {
+                        o(this, r5);
+                        var n1 = s(this, (r5.__proto__ || Object.getPrototypeOf(r5)).call(this, e3, t5));
+                        return c1.call(n1), n1.state = {
+                            byName: {
+                            },
+                            byId: {
+                            }
+                        }, n1;
+                    }
+                    return u(r5, t4), h(r5, [
+                        {
+                            key: "getChildContext",
+                            value: function() {
+                                var e3 = this;
+                                return {
+                                    _register: this._register,
+                                    _unregister: this._unregister,
+                                    _setProps: this._setProps,
+                                    _handleChange: this._handleChange,
+                                    _handleBlur: this._handleBlur,
+                                    _getProps: this._getProps,
+                                    _errors: Object.keys(this.state.byId).filter(function(t5) {
+                                        return e3.state.byId[t5].error;
+                                    })
+                                };
+                            }
+                        },
+                        {
+                            key: "render",
+                            value: function() {
+                                return l.a.createElement(e2, Object.assign({
+                                }, this.props, {
+                                    validate: this.validate,
+                                    validateAll: this.validateAll,
+                                    getValues: this.getValues,
+                                    showError: this.showError,
+                                    hideError: this.hideError
+                                }));
+                            }
+                        }
+                    ]), r5;
+                })(f.PureComponent), t3.displayName = "Form(" + e2.name + ")", t3.propTypes = {
+                }, t3.childContextTypes = {
+                    _register: b.a.func.isRequired,
+                    _unregister: b.a.func.isRequired,
+                    _setProps: b.a.func.isRequired,
+                    _handleChange: b.a.func.isRequired,
+                    _handleBlur: b.a.func.isRequired,
+                    _getProps: b.a.func.isRequired,
+                    _errors: b.a.array
+                }, c1 = function() {
+                    var e3 = this;
+                    this._register = function(t4, r5) {
+                        e3.setState(function(e4) {
+                            return {
+                                byName: Object.assign({
+                                }, e4.byName, a({
+                                }, t4.props.name, [].concat(i(e4.byName[t4.props.name] || []), [
+                                    r5
+                                ]))),
+                                byId: Object.assign({
+                                }, e4.byId, a({
+                                }, r5, Object.assign({
+                                }, t4.props, {
+                                    isCheckable: g(t4),
+                                    value: t4.props.value || ""
+                                }, g(t4) ? {
+                                    checked: !!t4.props.checked
+                                } : {
+                                })))
+                            };
+                        }, e3._setErrors);
+                    }, this._unregister = function(t4, r5) {
+                        var n1 = [].concat(i(e3.state.byName[t4.props.name]));
+                        n1.splice(n1.indexOf(r5), 1);
+                        var o1 = n1.length ? Object.assign({
+                        }, e3.state.byName, a({
+                        }, t4.props.name, n1)) : y()(e3.state.byName, t4.props.name);
+                        e3.setState({
+                            byName: o1,
+                            byId: y()(e3.state.byId, r5)
+                        });
+                    }, this._getProps = function(t4) {
+                        if (e3.state.byId[t4]) {
+                            var r5 = e3.state.byId[t4];
+                            r5.validations, r5.isCheckable;
+                            return n(r5, [
+                                "validations",
+                                "isCheckable"
+                            ]);
+                        }
+                    }, this._setProps = function(t4, r6) {
+                        e3.setState(function(e4) {
+                            return {
+                                byId: Object.assign({
+                                }, e4.byId, a({
+                                }, r6, Object.assign({
+                                }, e4.byId[r6], t4)))
+                            };
+                        }, e3._setErrors);
+                    }, this._handleChange = function(t4, r6) {
+                        var n1 = e3.state.byId[r6].isCheckable;
+                        e3.setState({
+                            byId: Object.assign({
+                            }, e3.state.byId, n1 ? Object.assign({
+                            }, e3.state.byName[e3.state.byId[r6].name].reduce(function(t5, r7) {
+                                return t5[r7] = Object.assign({
+                                }, e3.state.byId[r7], {
+                                    checked: false
+                                }), t5;
+                            }, {
+                            })) : {
+                            }, a({
+                            }, r6, Object.assign({
+                            }, e3.state.byId[r6], {
+                                isChanged: true,
+                                value: t4.target.value
+                            }, n1 && {
+                                checked: t4.target.checked
+                            })))
+                        }, e3._setErrors);
+                    }, this._handleBlur = function(t4, r6) {
+                        e3.setState({
+                            byId: Object.assign({
+                            }, e3.state.byId, a({
+                            }, r6, Object.assign({
+                            }, e3.state.byId[r6], {
+                                isUsed: true,
+                                value: t4.target.value
+                            })))
+                        }, e3._setErrors);
+                    }, this._setErrors = function() {
+                        e3.setState(function(e4) {
+                            return {
+                                byId: Object.keys(e4.byId).reduce(function(t4, r6) {
+                                    var n1 = e4.byId[r6].validations, a1 = e4.byId[r6], i1 = Object.keys(e4.byName).reduce(function(t5, r7) {
+                                        return t5[r7] = e4.byName[r7].map(function(t6) {
+                                            return e4.byId[t6];
+                                        }), t5;
+                                    }, {
+                                    }), o1 = a1.value;
+                                    t4[r6] = Object.assign({
+                                    }, e4.byId[r6]);
+                                    var s1 = true, u1 = false, c2 = void 0;
+                                    try {
+                                        for(var f, l = n1[Symbol.iterator](); !(s1 = (f = l.next()).done); s1 = true){
+                                            var d = f.value, b = d(o1, a1, i1);
+                                            if (b) {
+                                                t4[r6].error = b;
+                                                break;
+                                            }
+                                            delete t4[r6].error;
+                                        }
+                                    } catch (e5) {
+                                        u1 = true, c2 = e5;
+                                    } finally{
+                                        try {
+                                            !s1 && l.return && l.return();
+                                        } finally{
+                                            if (u1) throw c2;
+                                        }
+                                    }
+                                    return t4;
+                                }, {
+                                })
+                            };
+                        });
+                    }, this.getValues = function() {
+                        return Object.keys(e3.state.byName).reduce(function(t4, r6) {
+                            return e3.state.byName[r6].length > 1 ? t4[r6] = e3.state.byName[r6].map(function(t5) {
+                                return e3.state.byId[t5].value;
+                            }) : t4[r6] = e3.state.byId[e3.state.byName[r6][0]].value, t4;
+                        }, {
+                        });
+                    }, this.validate = function(t4) {
+                        e3.setState(function(e4) {
+                            return {
+                                byId: Object.assign({
+                                }, e4.byId, e4.byName[t4].reduce(function(t5, r6) {
+                                    return t5[r6] = Object.assign({
+                                    }, e4.byId[r6], {
+                                        isChanged: true,
+                                        isUsed: true
+                                    }), t5;
+                                }, {
+                                }))
+                            };
+                        }, e3._setErrors);
+                    }, this.validateAll = function() {
+                        e3.setState(function(e4) {
+                            return {
+                                byId: Object.assign({
+                                }, e4.byId, Object.keys(e4.byName).reduce(function(t4, r6) {
+                                    return e4.byName[r6].reduce(function(r7, n1) {
+                                        return t4[n1] = Object.assign({
+                                        }, e4.byId[n1], {
+                                            isChanged: true,
+                                            isUsed: true
+                                        }), r7;
+                                    }, {
+                                    }), t4;
+                                }, {
+                                }))
+                            };
+                        }, e3._setErrors);
+                    }, this.showError = function(t4, r6) {
+                        t4 && setTimeout(function() {
+                            e3.setState({
+                                byId: Object.assign({
+                                }, e3.state.byId, a({
+                                }, t4.id, Object.assign({
+                                }, e3.state.byId[t4.id], {
+                                    isChanged: true,
+                                    isUsed: true,
+                                    error: r6
+                                })))
+                            });
+                        }, 0);
+                    }, this.hideError = function(t4) {
+                        e3.setState(function(e4) {
+                            return {
+                                byId: Object.assign({
+                                }, e4.byId, a({
+                                }, t4.id, Object.assign({
+                                }, y()(e4.byId[t4.id], "error"), {
+                                    isChanged: false,
+                                    isUsed: false
+                                })))
+                            };
+                        });
+                    };
+                }, r4;
+            }
+            t1.a = c;
+            var f = r2(0), l = r2.n(f), d = r2(1), b = r2.n(d), p = r2(8), y = r2.n(p), h = function() {
+                function e2(e3, t3) {
+                    for(var r4 = 0; r4 < t3.length; r4++){
+                        var n1 = t3[r4];
+                        n1.enumerable = n1.enumerable || false, n1.configurable = true, "value" in n1 && (n1.writable = true), Object.defineProperty(e3, n1.key, n1);
+                    }
+                }
+                return function(t3, r4, n2) {
+                    return r4 && e2(t3.prototype, r4), n2 && e2(t3, n2), t3;
+                };
+            }(), g = function(e2) {
+                return "radio" === e2.props.type || "checkbox" === e2.props.type;
+            };
+        },
+        function(e1, t1) {
+            e1.exports = r1;
+        },
+        ,
+        ,
+        function(e1, t1, r2) {
+            "use strict";
+            function n2(e2, t3) {
+                var r4 = {
+                };
+                for(var n3 in e2)t3.indexOf(n3) >= 0 || Object.prototype.hasOwnProperty.call(e2, n3) && (r4[n3] = e2[n3]);
+                return r4;
+            }
+            function a(e2, t3) {
+                if (!(e2 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+            }
+            function i(e2, t3) {
+                if (!e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return !t3 || "object" !== typeof t3 && "function" !== typeof t3 ? e2 : t3;
+            }
+            function o(e2, t3) {
+                if ("function" !== typeof t3 && null !== t3) throw new TypeError("Super expression must either be null or a function, not " + typeof t3);
+                e2.prototype = Object.create(t3 && t3.prototype, {
+                    constructor: {
+                        value: e2,
+                        enumerable: false,
+                        writable: true,
+                        configurable: true
+                    }
+                }), t3 && (Object.setPrototypeOf ? Object.setPrototypeOf(e2, t3) : e2.__proto__ = t3);
+            }
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var s = r2(0), u = r2.n(s), c = r2(1), f = r2.n(c), l = r2(7), d = function() {
+                function e2(e3, t3) {
+                    for(var r4 = 0; r4 < t3.length; r4++){
+                        var n3 = t3[r4];
+                        n3.enumerable = n3.enumerable || false, n3.configurable = true, "value" in n3 && (n3.writable = true), Object.defineProperty(e3, n3.key, n3);
+                    }
+                }
+                return function(t3, r4, n4) {
+                    return r4 && e2(t3.prototype, r4), n4 && e2(t3, n4), t3;
+                };
+            }(), b = function(e2) {
+                function t3() {
+                    return a(this, t3), i(this, (t3.__proto__ || Object.getPrototypeOf(t3)).apply(this, arguments));
+                }
+                return o(t3, e2), d(t3, [
+                    {
+                        key: "render",
+                        value: function() {
+                            var e3 = this.props, t4 = (e3.getValues, e3.validate, e3.validateAll, e3.showError, e3.hideError, n2(e3, [
+                                "getValues",
+                                "validate",
+                                "validateAll",
+                                "showError",
+                                "hideError"
+                            ]));
+                            return u.a.createElement("form", t4);
+                        }
+                    }
+                ]), t3;
+            }(s.Component);
+            b.propTypes = {
+                getValues: f.a.func.isRequired,
+                validate: f.a.func.isRequired,
+                validateAll: f.a.func.isRequired,
+                showError: f.a.func.isRequired,
+                hideError: f.a.func.isRequired
+            }, t1.default = Object(l.a)(b);
+        }
+    ]);
+});

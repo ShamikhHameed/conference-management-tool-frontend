@@ -1,0 +1,13 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _redux = require("redux");
+var _reduxDevtoolsExtension = require("redux-devtools-extension");
+var _reduxThunk = require("redux-thunk");
+var _reduxThunkDefault = parcelHelpers.interopDefault(_reduxThunk);
+var _reducers = require("./reducers");
+var _reducersDefault = parcelHelpers.interopDefault(_reducers);
+const initialState = {
+};
+const middleware = [_reduxThunkDefault.default];
+const store = _redux.createStore(_reducersDefault.default, initialState, _reduxDevtoolsExtension.composeWithDevTools(_redux.applyMiddleware(...middleware)));
+exports.default = store;

@@ -1,0 +1,169 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _itemDataService = require("../service/ItemDataService");
+var _itemDataServiceDefault = parcelHelpers.interopDefault(_itemDataService);
+var _formik = require("formik");
+class ItemComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: this.props.match.params.id,
+            title: '',
+            description: ''
+        };
+        this.onSubmit = this.onSubmit.bind(this);
+        this.validate = this.validate.bind(this);
+    }
+    componentDidMount() {
+        if (this.state.id == -1) return;
+        _itemDataServiceDefault.default.retrieveItem(this.state.id).then((response)=>this.setState({
+                title: response.data.title,
+                description: response.data.description
+            })
+        );
+    }
+    onSubmit(values) {
+        console.log(values);
+    }
+    validate(values) {
+        let errors = {
+        };
+        if (!values.title) errors.title = 'Enter a Title';
+        if (!values.description) errors.description = 'Enter a Description';
+        return errors;
+    }
+    render() {
+        let { description , title , id  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 51
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 52
+            },
+            __self: this
+        }, "Item"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 53
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_formik.Formik, {
+            initialValues: {
+                id,
+                title,
+                description
+            },
+            onSubmit: this.onSubmit,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                lineNumber: 54
+            },
+            __self: this
+        }, (props1)=>/*#__PURE__*/ _reactDefault.default.createElement(_formik.Form, {
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 60
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("fieldset", {
+                className: "form-group",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 61
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 62
+                },
+                __self: this
+            }, "Id"), /*#__PURE__*/ _reactDefault.default.createElement(_formik.Field, {
+                className: "form-control",
+                type: "text",
+                name: "id",
+                disabled: true,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 63
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("fieldset", {
+                className: "form-group",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 65
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 66
+                },
+                __self: this
+            }, "Title"), /*#__PURE__*/ _reactDefault.default.createElement(_formik.Field, {
+                className: "form-control",
+                type: "text",
+                name: "title",
+                value: title,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 67
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("fieldset", {
+                className: "form-group",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 69
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 70
+                },
+                __self: this
+            }, "Description"), /*#__PURE__*/ _reactDefault.default.createElement(_formik.Field, {
+                className: "form-control",
+                type: "text",
+                name: "description",
+                value: description,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 71
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "btn btn-success",
+                type: "submit",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemComponent.jsx",
+                    lineNumber: 73
+                },
+                __self: this
+            }, "Save"))
+        ))));
+    }
+}
+exports.default = ItemComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,48 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _authHeader = require("./auth-header");
+var _authHeaderDefault = parcelHelpers.interopDefault(_authHeader);
+const API_URL = 'http://localhost:8080/api/access/';
+class UserService {
+    getPublicContent() {
+        return _axiosDefault.default.get(API_URL + 'all');
+    }
+    getAdminBoard() {
+        return _axiosDefault.default.get(API_URL + 'admin', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getEditorBoard() {
+        return _axiosDefault.default.get(API_URL + 'editor', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getReviewerBoard() {
+        return _axiosDefault.default.get(API_URL + 'reviewer', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getRPBoard() {
+        return _axiosDefault.default.get(API_URL + 'rp', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getWPBoard() {
+        return _axiosDefault.default.get(API_URL + 'wp', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getAttendeeBoard() {
+        return _axiosDefault.default.get(API_URL + 'attendee', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getUserBoard() {
+        return _axiosDefault.default.get(API_URL + 'user', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+}
+exports.default = new UserService();

@@ -1,0 +1,8 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _redux = require("redux");
+var _tutorials = require("./tutorials");
+var _tutorialsDefault = parcelHelpers.interopDefault(_tutorials);
+exports.default = _redux.combineReducers({
+    tutorials: _tutorialsDefault.default
+});

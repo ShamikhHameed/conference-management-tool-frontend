@@ -1,0 +1,10 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+exports.default = _axiosDefault.default.create({
+    baseURL: "http://localhost:8080/api",
+    headers: {
+        "Content-type": "application/json"
+    }
+});

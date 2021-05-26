@@ -1,0 +1,275 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
+var _tutorials = require("../actions/tutorials");
+var _tutorialService = require("../services/tutorial.service");
+var _tutorialServiceDefault = parcelHelpers.interopDefault(_tutorialService);
+class Tutorial extends _react.Component {
+    constructor(props){
+        super(props);
+        this.onChangeTitle = this.onChangeTitle.bind(this);
+        this.onChangeDescription = this.onChangeDescription.bind(this);
+        this.getTutorial = this.getTutorial.bind(this);
+        this.updateStatus = this.updateStatus.bind(this);
+        this.updateContent = this.updateContent.bind(this);
+        this.removeTutorial = this.removeTutorial.bind(this);
+        this.state = {
+            currentTutorial: {
+                id: null,
+                title: "",
+                description: "",
+                published: false
+            },
+            message: ""
+        };
+    }
+    componentDidMount() {
+        this.getTutorial(this.props.match.params.id);
+    }
+    onChangeTitle(e) {
+        const title = e.target.value;
+        this.setState(function(prevState) {
+            return {
+                currentTutorial: {
+                    ...prevState.currentTutorial,
+                    title: title
+                }
+            };
+        });
+    }
+    onChangeDescription(e) {
+        const description = e.target.value;
+        this.setState((prevState)=>({
+                currentTutorial: {
+                    ...prevState.currentTutorial,
+                    description: description
+                }
+            })
+        );
+    }
+    getTutorial(id) {
+        _tutorialServiceDefault.default.get(id).then((response)=>{
+            this.setState({
+                currentTutorial: response.data
+            });
+            console.log(response.data);
+        }).catch((e)=>{
+            console.log(e);
+        });
+    }
+    updateStatus(status) {
+        var data = {
+            id: this.state.currentTutorial.id,
+            title: this.state.currentTutorial.title,
+            description: this.state.currentTutorial.description,
+            published: status
+        };
+        this.props.updateTutorial(this.state.currentTutorial.id, data).then((reponse)=>{
+            console.log(reponse);
+            this.setState((prevState)=>({
+                    currentTutorial: {
+                        ...prevState.currentTutorial,
+                        published: status
+                    }
+                })
+            );
+            this.setState({
+                message: "The status was updated successfully!"
+            });
+        }).catch((e)=>{
+            console.log(e);
+        });
+    }
+    updateContent() {
+        this.props.updateTutorial(this.state.currentTutorial.id, this.state.currentTutorial).then((reponse)=>{
+            console.log(reponse);
+            this.setState({
+                message: "The tutorial was updated successfully!"
+            });
+        }).catch((e)=>{
+            console.log(e);
+        });
+    }
+    removeTutorial() {
+        this.props.deleteTutorial(this.state.currentTutorial.id).then(()=>{
+            this.props.history.push("/tutorials");
+        }).catch((e)=>{
+            console.log(e);
+        });
+    }
+    render() {
+        const { currentTutorial  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 123
+            },
+            __self: this
+        }, currentTutorial ? /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "edit-form",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 125
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 126
+            },
+            __self: this
+        }, "Tutorial"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 127
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 128
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 129
+            },
+            __self: this
+        }, "Title"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            id: "title",
+            value: currentTutorial.title,
+            onChange: this.onChangeTitle,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 130
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 138
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "description",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 139
+            },
+            __self: this
+        }, "Description"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            id: "description",
+            value: currentTutorial.description,
+            onChange: this.onChangeDescription,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 140
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 149
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 150
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 151
+            },
+            __self: this
+        }, "Status:")), currentTutorial.published ? "Published" : "Pending")), currentTutorial.published ? /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "badge badge-primary mr-2",
+            onClick: ()=>this.updateStatus(false)
+            ,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 158
+            },
+            __self: this
+        }, "UnPublish") : /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "badge badge-primary mr-2",
+            onClick: ()=>this.updateStatus(true)
+            ,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 165
+            },
+            __self: this
+        }, "Publish"), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "badge badge-danger mr-2",
+            onClick: this.removeTutorial,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 173
+            },
+            __self: this
+        }, "Delete"), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "badge badge-success",
+            onClick: this.updateContent,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 180
+            },
+            __self: this
+        }, "Update"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 187
+            },
+            __self: this
+        }, this.state.message)) : /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 190
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 191
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorial.component.js",
+                lineNumber: 192
+            },
+            __self: this
+        }, "Please click on a Tutorial..."))));
+    }
+}
+exports.default = _reactRedux.connect(null, {
+    updateTutorial: _tutorials.updateTutorial,
+    deleteTutorial: _tutorials.deleteTutorial
+})(Tutorial);
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

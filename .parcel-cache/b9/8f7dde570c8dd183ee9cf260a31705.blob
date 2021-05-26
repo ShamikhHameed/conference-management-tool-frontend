@@ -1,0 +1,132 @@
+(function(e, t) {
+    "object" === typeof exports && "object" === typeof module ? module.exports = t(require("react"), require("prop-types")) : "function" === typeof define && define.amd ? define([
+        "react",
+        "prop-types"
+    ], t) : "object" === typeof exports ? exports.button = t(require("react"), require("prop-types")) : e.button = t(e.React, e.PropTypes);
+})(this, function(e, t) {
+    return (function(e1) {
+        function t1(n) {
+            if (r[n]) return r[n].exports;
+            var o = r[n] = {
+                i: n,
+                l: false,
+                exports: {
+                }
+            };
+            return e1[n].call(o.exports, o, o.exports, t1), o.l = true, o.exports;
+        }
+        var r = {
+        };
+        return t1.m = e1, t1.c = r, t1.d = function(e2, r1, n) {
+            t1.o(e2, r1) || Object.defineProperty(e2, r1, {
+                configurable: false,
+                enumerable: true,
+                get: n
+            });
+        }, t1.n = function(e2) {
+            var r1 = e2 && e2.__esModule ? function() {
+                return e2.default;
+            } : function() {
+                return e2;
+            };
+            return t1.d(r1, "a", r1), r1;
+        }, t1.o = function(e2, t2) {
+            return Object.prototype.hasOwnProperty.call(e2, t2);
+        }, t1.p = "/", t1(t1.s = 15);
+    })({
+        0: function(t1, r) {
+            t1.exports = e;
+        },
+        1: function(e1, r) {
+            e1.exports = t;
+        },
+        15: function(e1, t1, r) {
+            "use strict";
+            function n(e2, t2) {
+                var r1 = {
+                };
+                for(var n1 in e2)t2.indexOf(n1) >= 0 || Object.prototype.hasOwnProperty.call(e2, n1) && (r1[n1] = e2[n1]);
+                return r1;
+            }
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var o = r(0), u = r.n(o), a = r(1), c = r.n(a), i = r(9), s = function(e2) {
+                var t2 = e2.hasErrors, r1 = n(e2, [
+                    "hasErrors"
+                ]);
+                return u.a.createElement("button", Object.assign({
+                }, r1, {
+                    disabled: t2
+                }));
+            };
+            s.contextTypes = {
+                hasErrors: c.a.bool
+            }, t1.default = Object(i.a)(s);
+        },
+        9: function(e1, t1, r) {
+            "use strict";
+            function n(e2, t2) {
+                if (!(e2 instanceof t2)) throw new TypeError("Cannot call a class as a function");
+            }
+            function o(e2, t2) {
+                if (!e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return !t2 || "object" !== typeof t2 && "function" !== typeof t2 ? e2 : t2;
+            }
+            function u(e2, t2) {
+                if ("function" !== typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function, not " + typeof t2);
+                e2.prototype = Object.create(t2 && t2.prototype, {
+                    constructor: {
+                        value: e2,
+                        enumerable: false,
+                        writable: true,
+                        configurable: true
+                    }
+                }), t2 && (Object.setPrototypeOf ? Object.setPrototypeOf(e2, t2) : e2.__proto__ = t2);
+            }
+            function a(e2) {
+                var t2, r1;
+                return r1 = t2 = (function(t3) {
+                    function r2() {
+                        return n(this, r2), o(this, (r2.__proto__ || Object.getPrototypeOf(r2)).apply(this, arguments));
+                    }
+                    return u(r2, t3), f(r2, [
+                        {
+                            key: "shouldComponentUpdate",
+                            value: function(e3, t4, r3) {
+                                return r3._errors !== this.context._errors;
+                            }
+                        },
+                        {
+                            key: "render",
+                            value: function() {
+                                var t4 = !!Object.keys(this.context._errors).length;
+                                return i.a.createElement(e2, Object.assign({
+                                }, this.props, {
+                                    hasErrors: t4
+                                }));
+                            }
+                        }
+                    ]), r2;
+                })(c.Component), t2.contextTypes = {
+                    _errors: p.a.arrayOf(p.a.oneOfType([
+                        p.a.object,
+                        p.a.string
+                    ]))
+                }, t2.displayName = "Button(" + e2.name + ")", r1;
+            }
+            t1.a = a;
+            var c = r(0), i = r.n(c), s = r(1), p = r.n(s), f = function() {
+                function e2(e3, t2) {
+                    for(var r1 = 0; r1 < t2.length; r1++){
+                        var n1 = t2[r1];
+                        n1.enumerable = n1.enumerable || false, n1.configurable = true, "value" in n1 && (n1.writable = true), Object.defineProperty(e3, n1.key, n1);
+                    }
+                }
+                return function(t2, r1, n2) {
+                    return r1 && e2(t2.prototype, r1), n2 && e2(t2, n2), t2;
+                };
+            }();
+        }
+    });
+});

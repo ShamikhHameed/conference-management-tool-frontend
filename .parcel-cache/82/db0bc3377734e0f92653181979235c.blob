@@ -1,0 +1,72 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _listItemsComponents = require("./ListItemsComponents");
+var _listItemsComponentsDefault = parcelHelpers.interopDefault(_listItemsComponents);
+var _propTypes = require("prop-types");
+var _itemComponent = require("./ItemComponent");
+var _itemComponentDefault = parcelHelpers.interopDefault(_itemComponent);
+class Router extends _react.Component {
+    render() {
+        return null;
+    }
+}
+class Switch extends _react.Component {
+    render() {
+        return null;
+    }
+}
+class ItemApp extends _react.Component {
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(Router, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemApp.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemApp.jsx",
+                lineNumber: 23
+            },
+            __self: this
+        }, "Items Application"), /*#__PURE__*/ _reactDefault.default.createElement(Switch, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemApp.jsx",
+                lineNumber: 24
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(Route, {
+            path: "/",
+            exact: true,
+            component: _listItemsComponentsDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemApp.jsx",
+                lineNumber: 25
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(Route, {
+            path: "/:id",
+            component: _itemComponentDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ItemApp.jsx",
+                lineNumber: 26
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = ItemApp;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,96 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+class ListItemsComponent extends _react.Component {
+    render() {
+        return(/*#__PURE__*/ React.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 7
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 8
+            },
+            __self: this
+        }, "All Items"), /*#__PURE__*/ React.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 9
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("table", {
+            className: "table",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 10
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 11
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 12
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 13
+            },
+            __self: this
+        }, "Id"), /*#__PURE__*/ React.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 14
+            },
+            __self: this
+        }, "Item Name"))), /*#__PURE__*/ React.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 17
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 19
+            },
+            __self: this
+        }, "1"), /*#__PURE__*/ React.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\ListItemsComponent.jsx",
+                lineNumber: 20
+            },
+            __self: this
+        }, "Item One")))))));
+    }
+}
+exports.default = ListItemsComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

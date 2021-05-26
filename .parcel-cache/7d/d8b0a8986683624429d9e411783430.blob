@@ -1,0 +1,113 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _authService = require("../service/auth.service");
+var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+class Profile extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            currentUser: _authServiceDefault.default.getCurrentUser()
+        };
+    }
+    render() {
+        const { currentUser  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 17
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 19
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 20
+            },
+            __self: this
+        }, currentUser.username), " Profile")), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 23
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 24
+            },
+            __self: this
+        }, "Token:"), " ", currentUser.accessToken.substring(0, 20), " ...", " ", currentUser.accessToken.substr(currentUser.accessToken.length - 20)), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 28
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 29
+            },
+            __self: this
+        }, "Id:"), " ", currentUser.id), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 32
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 33
+            },
+            __self: this
+        }, "Email:"), " ", currentUser.email), /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, "Authorities:"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, currentUser.roles && currentUser.roles.map((role, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
+                key: index,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\profile.component.js",
+                    lineNumber: 39
+                },
+                __self: this
+            }, role)
+        ))));
+    }
+}
+exports.default = Profile;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

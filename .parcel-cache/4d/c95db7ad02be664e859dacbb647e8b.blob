@@ -1,0 +1,267 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
+var _tutorials = require("../actions/tutorials");
+class TutorialsList extends _react.Component {
+    constructor(props){
+        super(props);
+        this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
+        this.refreshData = this.refreshData.bind(this);
+        this.setActiveTutorial = this.setActiveTutorial.bind(this);
+        this.findByTitle = this.findByTitle.bind(this);
+        this.removeAllTutorials = this.removeAllTutorials.bind(this);
+        this.state = {
+            currentTutorial: null,
+            currentIndex: -1,
+            searchTitle: ""
+        };
+    }
+    componentDidMount() {
+        this.props.retrieveTutorials();
+    }
+    onChangeSearchTitle(e) {
+        const searchTitle = e.target.value;
+        this.setState({
+            searchTitle: searchTitle
+        });
+    }
+    refreshData() {
+        this.setState({
+            currentTutorial: null,
+            currentIndex: -1
+        });
+    }
+    setActiveTutorial(tutorial, index) {
+        this.setState({
+            currentTutorial: tutorial,
+            currentIndex: index
+        });
+    }
+    removeAllTutorials() {
+        this.props.deleteAllTutorials().then((response)=>{
+            console.log(response);
+            this.refreshData();
+        }).catch((e)=>{
+            console.log(e);
+        });
+    }
+    findByTitle() {
+        this.refreshData();
+        this.props.findTutorialsByTitle(this.state.searchTitle);
+    }
+    render() {
+        const { searchTitle , currentTutorial , currentIndex  } = this.state;
+        const { tutorials  } = this.props;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "list row",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 70
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-md-8",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 71
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 72
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            placeholder: "Search by title",
+            value: searchTitle,
+            onChange: this.onChangeSearchTitle,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 73
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-append",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 80
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-outline-secondary",
+            type: "button",
+            onClick: this.findByTitle,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 81
+            },
+            __self: this
+        }, "Search")))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-md-6",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 91
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 92
+            },
+            __self: this
+        }, "Tutorials List"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "list-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 94
+            },
+            __self: this
+        }, tutorials && tutorials.map((tutorial, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "list-group-item " + (index === currentIndex ? "active" : ""),
+                onClick: ()=>this.setActiveTutorial(tutorial, index)
+                ,
+                key: index,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                    lineNumber: 97
+                },
+                __self: this
+            }, tutorial.title)
+        )), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "m-3 btn btn-sm btn-danger",
+            onClick: this.removeAllTutorials,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 110
+            },
+            __self: this
+        }, "Remove All")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-md-6",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 117
+            },
+            __self: this
+        }, currentTutorial ? /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 119
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 120
+            },
+            __self: this
+        }, "Tutorial"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 121
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 122
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 123
+            },
+            __self: this
+        }, "Title:")), " ", currentTutorial.title), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 127
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 128
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 129
+            },
+            __self: this
+        }, "Description:")), " ", currentTutorial.description), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 133
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 134
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 135
+            },
+            __self: this
+        }, "Status:")), " ", currentTutorial.published ? "Published" : "Pending"), /*#__PURE__*/ _reactDefault.default.createElement(Link, {
+            to: "/tutorials/" + currentTutorial.id,
+            className: "badge badge-warning",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 140
+            },
+            __self: this
+        }, "Edit")) : /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 148
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 149
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\components\\tutorials-list.component.js",
+                lineNumber: 150
+            },
+            __self: this
+        }, "Please click on a Tutorial...")))));
+    }
+}
+const mapStateToProps = (state)=>{
+    return {
+        tutorials: state.tutorials
+    };
+};
+exports.default = _reactRedux.connect(mapStateToProps, {
+    retrieveTutorials: _tutorials.retrieveTutorials,
+    findTutorialsByTitle: _tutorials.findTutorialsByTitle,
+    deleteAllTutorials: _tutorials.deleteAllTutorials
+})(TutorialsList);
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,28 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _httpCommon = require("../http-common");
+var _httpCommonDefault = parcelHelpers.interopDefault(_httpCommon);
+class TutorialDataService {
+    getAll() {
+        return _httpCommonDefault.default.get("/tutorials");
+    }
+    get(id) {
+        return _httpCommonDefault.default.get(`/tutorials/${id}`);
+    }
+    create(data) {
+        return _httpCommonDefault.default.post("/tutorials", data);
+    }
+    update(id, data) {
+        return _httpCommonDefault.default.put(`/tutorials/${id}`, data);
+    }
+    delete(id) {
+        return _httpCommonDefault.default.delete(`/tutorials/${id}`);
+    }
+    deleteAll() {
+        return _httpCommonDefault.default.delete(`/tutorials`);
+    }
+    findByTitle(title) {
+        return _httpCommonDefault.default.get(`/tutorials?title=${title}`);
+    }
+}
+exports.default = new TutorialDataService();
