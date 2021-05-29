@@ -1,12 +1,15 @@
+/*
 import axios from 'axios'
 
 const API_URL = `http://localhost:8080/api/access/wp/`
 
 class UploadWPFilesService {
-    uploadWP(file, onUploadProgress) {
+    uploadWP(file, name, onUploadProgress) {
         let formData = new FormData();
 
         formData.append("file", file);
+        formData.append("user", name);
+        formData.append("approvalStatus", false);
 
         return axios.post(API_URL + "upload", formData, {
             headers: {
@@ -21,4 +24,4 @@ class UploadWPFilesService {
     }
 }
 
-export default new UploadWPFilesService();
+export default new UploadWPFilesService();*/

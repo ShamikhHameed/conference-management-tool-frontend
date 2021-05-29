@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import UserService from "../service/user.service";
-import UploadWPFiles from "./files-wp.component";
+import UserService from "../../service/user.service";
+import UploadWPFiles from "../files/files-wp.component";
 
-export default class BoardReviewerWP extends Component {
+export default class BoardWP extends Component {
     constructor(props) {
         super(props);
 
@@ -13,7 +13,7 @@ export default class BoardReviewerWP extends Component {
     }
 
     componentDidMount() {
-        UserService.getReviewerBoardWP().then(
+        UserService.getWPBoard().then(
             response => {
                 this.setState({
                     content: response.data
@@ -38,7 +38,7 @@ export default class BoardReviewerWP extends Component {
                 <header className="jumbotron">
                     <h3>{this.state.content}</h3>
                 </header>
-                <UploadWPFiles />
+                <UploadWPFiles/>
             </div>
         );
     }

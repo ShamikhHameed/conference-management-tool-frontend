@@ -22,19 +22,23 @@ import "./App.css";
 
 import AuthService from "./service/auth.service";
 
-import Login from "./component/login.component";
-import Register from "./component/register.component";
-import Home from "./component/home.component";
-import Profile from "./component/profile.component";
+import Login from "./component/common/login.component";
+import Register from "./component/common/register.component";
+import Home from "./component/common/home.component";
+import RP from "./component/common/rp.component";
+import WP from "./component/common/wp.component";
+import Download from "./component/common/download.component";
+import ContactUs from "./component/common/contact-us.component";
+import Profile from "./component/common/profile.component";
 
-import BoardAdmin from "./component/board-admin.component";
-import BoardEditor from "./component/board-editor.component";
+import BoardAdmin from "./component/admin/board-admin.component";
+import BoardEditor from "./component/editor/board-editor.component";
 //import BoardReviewer from "./component/board-reviewer.component";
-import BoardReviewerRP from "./component/board-reviewer-rp.component";
-import BoardReviewerWP from "./component/board-reviewer-wp.component";
-import BoardRP from "./component/board-rp.component";
-import BoardWP from "./component/board-wp.component";
-import BoardAttendee from "./component/board-attendee.component";
+import BoardReviewerRP from "./component/reviewer/board-reviewer-rp.component";
+import BoardReviewerWP from "./component/reviewer/board-reviewer-wp.component";
+import BoardRP from "./component/research-presenter/board-rp.component";
+import BoardWP from "./component/workshop-presenter/board-wp.component";
+import BoardAttendee from "./component/attendee/board-attendee.component";
 //import BoardUser from "./component/board-user.component";
 
 class App extends Component {
@@ -90,6 +94,30 @@ class App extends Component {
                         <li className="nav-item">
                             <Link to={"/home"} className="nav-link">
                                 Home
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to={"/all/rp"} className="nav-link">
+                                Research Presentation
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to={"/all/wp"} className="nav-link">
+                                Workshop Presentation
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to={"/download"} className="nav-link">
+                                Download
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to={"/contactus"} className="nav-link">
+                                Contact Us
                             </Link>
                         </li>
 
@@ -174,7 +202,7 @@ class App extends Component {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="/login" className="nav-link" onClick={this.logOut}>
+                                <a href={"/login"} className="nav-link" onClick={this.logOut}>
                                     LogOut
                                 </a>
                             </li>
@@ -199,6 +227,10 @@ class App extends Component {
                 <div className="container mt-3">
                     <Switch>
                         <Route exact path={["/", "/home"]} component={Home} />
+                        <Route exact path="/all/rp" component={RP} />
+                        <Route exact path="/all/wp" component={WP} />
+                        <Route exact path="/download" component={Download} />
+                        <Route exact path="/contactus" component={ContactUs} />
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/profile" component={Profile} />

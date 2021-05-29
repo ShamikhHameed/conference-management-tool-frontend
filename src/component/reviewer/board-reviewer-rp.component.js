@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
-import UserService from "../service/user.service";
+import UserService from "../../service/user.service";
+import UploadRPFiles from "../files/files-rp.component";
 
-export default class BoardAdmin extends Component {
+export default class BoardReviewerRP extends Component {
     constructor(props) {
         super(props);
 
@@ -12,7 +13,7 @@ export default class BoardAdmin extends Component {
     }
 
     componentDidMount() {
-        UserService.getAdminBoard().then(
+        UserService.getReviewerBoardRP().then(
             response => {
                 this.setState({
                     content: response.data
@@ -37,6 +38,7 @@ export default class BoardAdmin extends Component {
                 <header className="jumbotron">
                     <h3>{this.state.content}</h3>
                 </header>
+                <UploadRPFiles />
             </div>
         );
     }

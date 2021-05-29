@@ -4,8 +4,24 @@ import authHeader from './auth-header';
 const API_URL = 'http://localhost:8080/api/access/';
 
 class UserService {
-    getPublicContent() {
-        return axios.get(API_URL + 'all');
+    getPublicContentHome() {
+        return axios.get(API_URL + 'all/home');
+    }
+
+    getPublicContentRP() {
+        return axios.get(API_URL + 'all/rp');
+    }
+
+    getPublicContentWP() {
+        return axios.get(API_URL + 'all/wp');
+    }
+
+    getPublicContentDownload() {
+        return axios.get(API_URL + 'all/download');
+    }
+
+    getPublicContentContactUs() {
+        return axios.get(API_URL + 'all/contactus');
     }
 
     getAdminBoard() {

@@ -4,7 +4,9 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 
-import AuthService from "../service/auth.service";
+import AuthService from "../../service/auth.service";
+
+import UploadServiceRP from "../../service/files-rp.service";
 
 const required = value => {
     if (!value) {
@@ -53,13 +55,25 @@ export default class Register extends Component {
         this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.onChangePassword = this.onChangePassword.bind(this);
+        this.onChangeRadio = this.onChangeRadio.bind(this);
+
+        this.selectFile = this.selectFile.bind(this);
+        this.upload = this.upload.bind(this);
 
         this.state = {
             username: "",
             email: "",
             password: "",
             successful: false,
-            message: ""
+            message: "",
+            userType:"",
+
+            selectedFiles: undefined,
+            currentFile: undefined,
+            progress: 0,
+            filemessage:"",
+
+            fileInfos: [],
         };
     }
 
@@ -81,6 +95,12 @@ export default class Register extends Component {
         });
     }
 
+    onChangeRadio(e) {
+        this.setState({
+            userType: e.target.value
+        });
+    }
+
     handleRegister(e) {
         e.preventDefault();
 
@@ -95,6 +115,7 @@ export default class Register extends Component {
             AuthService.register(
                 this.state.username,
                 this.state.email,
+                this.state.userType,
                 this.state.password
             ).then(
                 response => {
@@ -116,11 +137,69 @@ export default class Register extends Component {
                         message: resMessage
                     });
                 }
-            );
+            ).then(this.upload);
         }
     }
 
+    selectFile(event) {
+        this.setState({
+            selectedFiles: event.target.files,
+        });
+    }
+
+    upload() {
+        let currentFile = this.state.selectedFiles[0];
+
+        this.setState({
+            progress: 0,
+            currentFile: currentFile,
+        });
+
+        UploadServiceRP.uploadFile(currentFile, this.state.username, this.state.userType, (event) => {
+            this.setState({
+                progress: Math.round((100 * event.loaded) / event.total),
+            });
+
+/*        UploadServiceRP.uploadRP(currentFile, this.state.username, (event) => {
+            this.setState({
+                progress: Math.round((100 * event.loaded) / event.total),
+            });*/
+        })
+            .then((response) => {
+                this.setState({
+                    filemessage: response.data.message,
+                });
+                return UploadServiceRP.getRPFiles();
+            })
+            .then((files) => {
+                this.setState({
+                    fileInfos: files.data,
+                });
+            })
+            .catch(() => {
+                this.setState({
+                    progress: 0,
+                    filemessage: "Could not upload the file!",
+                    currentFile: undefined,
+                });
+            });
+
+        this.setState({
+            selectedFiles: undefined,
+        });
+    }
+
     render() {
+
+        const {
+            selectedFiles,
+            currentFile,
+            progress,
+            message,
+            filemessage,
+            fileInfos,
+        } = this.state;
+
         return (
             <div className="col-md-12">
                 <div className="card card-container">
@@ -174,13 +253,64 @@ export default class Register extends Component {
                                     />
                                 </div>
 
+                                <div className="form-group"
+                                     onClick={this.onChangeRadio}
+                                >
+                                    <label htmlFor="userType">User Type</label>
+                                    <Input id="rp" type="radio" value="rp" name="userType"/>
+                                    <label htmlFor="rp">Research Publisher</label>
+                                    <Input id="wp" type="radio" value="wp" name="userType"/>
+                                    <label htmlFor="wp">Workshop Presenter</label>
+                                    <Input id="attendee" type="radio" value="attendee" name="userType"/>
+                                    <label htmlFor="attendee">Attendee</label>
+                                </div>
+
+                                { (this.state.userType == "rp" || this.state.userType == "wp") &&  (
+                                    <div>
+                                        {currentFile && (
+                                            <div className="progress">
+                                                <div
+                                                    className="progress-bar progress-bar-info progress-bar-striped"
+                                                    role="progressbar"
+                                                    aria-valuenow={progress}
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style={{ width: progress + "%" }}
+                                                >
+                                                    {progress}%
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        <label className="btn btn-default">
+                                            <input type="file" onChange={this.selectFile} />
+                                        </label>
+
+{/*                                        <button
+                                            className="btn btn-success"
+                                            disabled={!selectedFiles}
+                                            type="button"
+                                            onClick={this.upload}
+                                        >
+                                            Upload
+                                        </button>*/}
+
+{/*                                        <div className="alert alert-light" role="alert">
+                                            {filemessage}
+                                        </div>*/}
+                                    </div>
+                                )}
+
                                 <div className="form-group">
-                                    <button className="btn btn-primary btn-block">Sign Up</button>
+                                    <button className="btn btn-primary btn-block"
+                                    >
+                                        Sign Up
+                                    </button>
                                 </div>
                             </div>
                         )}
 
-                        {this.state.message && (
+                        {this.state.message && this.state.filemessage && (
                             <div className="form-group">
                                 <div
                                     className={
@@ -192,6 +322,16 @@ export default class Register extends Component {
                                 >
                                     {this.state.message}
                                 </div>
+                                <div
+                                    className={
+                                        this.state.successful
+                                            ? "alert alert-success"
+                                            : "alert alert-danger"
+                                    }
+                                    role="alert"
+                                >
+                                    {this.state.filemessage}
+                                </div>
                             </div>
                         )}
                         <CheckButton
@@ -201,6 +341,12 @@ export default class Register extends Component {
                             }}
                         />
                     </Form>
+
+                    { this.state.userType == "attendee" && (
+                        <div>
+                            <h4>Payment Here</h4>
+                        </div>
+                    )}
                 </div>
             </div>
         );

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import UserService from "../service/user.service";
+import UserService from "../../service/user.service";
 
-export default class BoardWP extends Component {
+export default class BoardAdmin extends Component {
     constructor(props) {
         super(props);
 
@@ -12,7 +12,7 @@ export default class BoardWP extends Component {
     }
 
     componentDidMount() {
-        UserService.getWPBoard().then(
+        UserService.getAdminBoard().then(
             response => {
                 this.setState({
                     content: response.data
