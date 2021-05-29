@@ -21881,32 +21881,32 @@ var _loginComponent = require("./component/common/login.component");
 var _loginComponentDefault = parcelHelpers.interopDefault(_loginComponent);
 var _registerComponent = require("./component/common/register.component");
 var _registerComponentDefault = parcelHelpers.interopDefault(_registerComponent);
-var _homeComponent = require("./component/home.component");
+var _homeComponent = require("./component/common/home.component");
 var _homeComponentDefault = parcelHelpers.interopDefault(_homeComponent);
-var _rpComponent = require("./component/rp.component");
+var _rpComponent = require("./component/common/rp.component");
 var _rpComponentDefault = parcelHelpers.interopDefault(_rpComponent);
-var _wpComponent = require("./component/wp.component");
+var _wpComponent = require("./component/common/wp.component");
 var _wpComponentDefault = parcelHelpers.interopDefault(_wpComponent);
-var _downloadComponent = require("./component/download.component");
+var _downloadComponent = require("./component/common/download.component");
 var _downloadComponentDefault = parcelHelpers.interopDefault(_downloadComponent);
-var _contactUsComponent = require("./component/contact-us.component");
+var _contactUsComponent = require("./component/common/contact-us.component");
 var _contactUsComponentDefault = parcelHelpers.interopDefault(_contactUsComponent);
 var _profileComponent = require("./component/common/profile.component");
 var _profileComponentDefault = parcelHelpers.interopDefault(_profileComponent);
 var _boardAdminComponent = require("./component/admin/board-admin.component");
 var _boardAdminComponentDefault = parcelHelpers.interopDefault(_boardAdminComponent);
-var _boardEditorComponent = require("./component/board-editor.component");
+var _boardEditorComponent = require("./component/editor/board-editor.component");
 var _boardEditorComponentDefault = parcelHelpers.interopDefault(_boardEditorComponent);
 //import BoardReviewer from "./component/board-reviewer.component";
-var _boardReviewerRpComponent = require("./component/board-reviewer-rp.component");
+var _boardReviewerRpComponent = require("./component/reviewer/board-reviewer-rp.component");
 var _boardReviewerRpComponentDefault = parcelHelpers.interopDefault(_boardReviewerRpComponent);
-var _boardReviewerWpComponent = require("./component/board-reviewer-wp.component");
+var _boardReviewerWpComponent = require("./component/reviewer/board-reviewer-wp.component");
 var _boardReviewerWpComponentDefault = parcelHelpers.interopDefault(_boardReviewerWpComponent);
-var _boardRpComponent = require("./component/board-rp.component");
+var _boardRpComponent = require("./component/research-presenter/board-rp.component");
 var _boardRpComponentDefault = parcelHelpers.interopDefault(_boardRpComponent);
-var _boardWpComponent = require("./component/board-wp.component");
+var _boardWpComponent = require("./component/workshop-presenter/board-wp.component");
 var _boardWpComponentDefault = parcelHelpers.interopDefault(_boardWpComponent);
-var _boardAttendeeComponent = require("./component/board-attendee.component");
+var _boardAttendeeComponent = require("./component/attendee/board-attendee.component");
 var _boardAttendeeComponentDefault = parcelHelpers.interopDefault(_boardAttendeeComponent);
 //import BoardUser from "./component/board-user.component";
 class App extends _react.Component {
@@ -22380,7 +22380,7 @@ exports.default = App;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","./App.css":"5Vg7D","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK","bootstrap/dist/css/bootstrap.min.css":"2NdYx","./service/auth.service":"7tMCe","./component/home.component":"5CsMF","./component/board-editor.component":"2A7LR","./component/board-rp.component":"1DtMx","./component/board-wp.component":"340mN","./component/board-attendee.component":"12IXI","./component/board-reviewer-rp.component":"5CuXp","./component/board-reviewer-wp.component":"5IVNU","./component/download.component":"5XbFa","./component/contact-us.component":"7Ma63","./component/rp.component":"7614U","./component/wp.component":"7fijF","./component/common/login.component":"3xFS3","./component/common/register.component":"42g5J","./component/common/profile.component":"1hSVH","./component/admin/board-admin.component":"3X1Wt"}],"5Vg7D":[function() {},{}],"367CR":[function(require,module,exports) {
+},{"react":"3b2NM","./App.css":"5Vg7D","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK","bootstrap/dist/css/bootstrap.min.css":"2NdYx","./service/auth.service":"7tMCe","./component/common/login.component":"3xFS3","./component/common/register.component":"42g5J","./component/common/profile.component":"1hSVH","./component/admin/board-admin.component":"3X1Wt","./component/common/home.component":"2DTtL","./component/common/rp.component":"2sE3H","./component/common/wp.component":"40G91","./component/common/download.component":"4xiGE","./component/common/contact-us.component":"4VD0X","./component/editor/board-editor.component":"77TbD","./component/reviewer/board-reviewer-rp.component":"38PJz","./component/reviewer/board-reviewer-wp.component":"1EuhP","./component/research-presenter/board-rp.component":"4HNO5","./component/workshop-presenter/board-wp.component":"3XISz","./component/attendee/board-attendee.component":"6bc4q"}],"5Vg7D":[function() {},{}],"367CR":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27010,1246 +27010,7 @@ module.exports = CancelToken;
     return typeof payload === 'object' && payload.isAxiosError === true;
 };
 
-},{}],"5CsMF":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-class Home extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getPublicContentHome().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\home.component.js",
-                lineNumber: 34
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\home.component.js",
-                lineNumber: 35
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\home.component.js",
-                lineNumber: 36
-            },
-            __self: this
-        }, this.state.content))));
-    }
-}
-exports.default = Home;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3Djdl":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _authHeader = require("./auth-header");
-var _authHeaderDefault = parcelHelpers.interopDefault(_authHeader);
-const API_URL = 'http://localhost:8080/api/access/';
-class UserService {
-    getPublicContentHome() {
-        return _axiosDefault.default.get(API_URL + 'all/home');
-    }
-    getPublicContentRP() {
-        return _axiosDefault.default.get(API_URL + 'all/rp');
-    }
-    getPublicContentWP() {
-        return _axiosDefault.default.get(API_URL + 'all/wp');
-    }
-    getPublicContentDownload() {
-        return _axiosDefault.default.get(API_URL + 'all/download');
-    }
-    getPublicContentContactUs() {
-        return _axiosDefault.default.get(API_URL + 'all/contactus');
-    }
-    getAdminBoard() {
-        return _axiosDefault.default.get(API_URL + 'admin', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-    getEditorBoard() {
-        return _axiosDefault.default.get(API_URL + 'editor', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-    /*    getReviewerBoard() {
-        return axios.get(API_URL + 'reviewer', { headers: authHeader() });
-    }*/ getReviewerBoardRP() {
-        return _axiosDefault.default.get(API_URL + 'reviewer/rp', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-    getReviewerBoardWP() {
-        return _axiosDefault.default.get(API_URL + 'reviewer/wp', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-    getRPBoard() {
-        return _axiosDefault.default.get(API_URL + 'rp', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-    getWPBoard() {
-        return _axiosDefault.default.get(API_URL + 'wp', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-    getAttendeeBoard() {
-        return _axiosDefault.default.get(API_URL + 'attendee', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-    getUserBoard() {
-        return _axiosDefault.default.get(API_URL + 'user', {
-            headers: _authHeaderDefault.default()
-        });
-    }
-}
-exports.default = new UserService();
-
-},{"axios":"7rA65","./auth-header":"28iSr","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"28iSr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function authHeader() {
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (user && user.accessToken) return {
-        Authorization: 'Bearer ' + user.accessToken
-    };
-    else return {
-    };
-}
-exports.default = authHeader;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"2A7LR":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-class BoardEditor extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getEditorBoard().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-editor.component.js",
-                lineNumber: 36
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-editor.component.js",
-                lineNumber: 37
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-editor.component.js",
-                lineNumber: 38
-            },
-            __self: this
-        }, this.state.content))));
-    }
-}
-exports.default = BoardEditor;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"1DtMx":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-var _filesRpComponent = require("./files-rp.component");
-var _filesRpComponentDefault = parcelHelpers.interopDefault(_filesRpComponent);
-class BoardRP extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getRPBoard().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-rp.component.js",
-                lineNumber: 37
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-rp.component.js",
-                lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-rp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-rp.component.js",
-                lineNumber: 41
-            },
-            __self: this
-        })));
-    }
-}
-exports.default = BoardRP;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./files-rp.component":"7wIG2"}],"7wIG2":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _filesRpService = require("../service/files-rp.service");
-var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
-var _authService = require("../service/auth.service");
-var _authServiceDefault = parcelHelpers.interopDefault(_authService);
-class UploadRPFiles extends _react.Component {
-    constructor(props){
-        super(props);
-        this.selectFile = this.selectFile.bind(this);
-        this.state = {
-            selectedFiles: undefined,
-            currentFile: undefined,
-            progress: 0,
-            message: "",
-            fileInfos: [],
-            userFileInfo: [],
-            userType: ""
-        };
-        if (_authServiceDefault.default.getCurrentUser() != null) for(var i = 0; i < _authServiceDefault.default.getCurrentUser().roles.length; i++){
-            if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_REVIEWER") {
-                this.state.userType = "ROLE_REVIEWER";
-                break;
-            } else if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_RP") {
-                this.state.userType = "ROLE_RP";
-                break;
-            }
-        }
-    }
-    componentDidMount() {
-        _filesRpServiceDefault.default.getRPFiles().then((response)=>{
-            this.setState({
-                fileInfos: response.data
-            });
-        }).then(()=>{
-            for (const [key, value] of Object.entries(this.state.fileInfos))if (_authServiceDefault.default.getCurrentUser().username == value.user) this.state.userFileInfo = value;
-        });
-    }
-    selectFile(event) {
-        this.setState({
-            selectedFiles: event.target.files
-        });
-    }
-    render() {
-        const { userFileInfo , userType , fileInfos ,  } = this.state;
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 63
-            },
-            __self: this
-        }, userType == "ROLE_REVIEWER" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 65
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 66
-            },
-            __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
-            className: "list-group list-group-flush",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 67
-            },
-            __self: this
-        }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
-                className: "list-group-item",
-                key: index,
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                    lineNumber: 69
-                },
-                __self: this
-            }, file.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-                className: "float-lg-end",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                    lineNumber: 71
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
-                href: file.url + "/download",
-                target: "_blank",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                    lineNumber: 72
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success btn-margin-right",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                    lineNumber: 73
-                },
-                __self: this
-            }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
-                href: file.url + "/view",
-                target: "_blank",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                    lineNumber: 75
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                    lineNumber: 76
-                },
-                __self: this
-            }, "View"))))
-        ))), userType == "ROLE_RP" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 86
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 87
-            },
-            __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
-            className: "list-group list-group-flush",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 88
-            },
-            __self: this
-        }, userFileInfo && /*#__PURE__*/ _reactDefault.default.createElement("li", {
-            className: "list-group-item",
-            key: 0,
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 90
-            },
-            __self: this
-        }, userFileInfo.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "float-lg-end",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 92
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
-            href: userFileInfo.url + "/download",
-            target: "_blank",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 93
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success btn-margin-right",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 94
-            },
-            __self: this
-        }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
-            href: userFileInfo.url + "/view",
-            target: "_blank",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 96
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-rp.component.js",
-                lineNumber: 97
-            },
-            __self: this
-        }, "View"))))))));
-    }
-}
-exports.default = UploadRPFiles;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/files-rp.service":"7RhIW","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../service/auth.service":"7tMCe"}],"7RhIW":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _authService = require("./auth.service");
-var _authServiceDefault = parcelHelpers.interopDefault(_authService);
-// const API_URL = `http://localhost:8080/api/access/rp/`
-const API_URL = `http://localhost:8080/api/access/`;
-class UploadRPFilesService {
-    uploadFile(file, name, type, onUploadProgress) {
-        let formData = new FormData();
-        formData.append("file", file);
-        formData.append("user", name);
-        formData.append("approvalStatus", false);
-        if (type == "rp") return _axiosDefault.default.post(API_URL + "rp/upload", formData, {
-            headers: {
-                "Content-Type": "multipart/form-data"
-            },
-            onUploadProgress
-        });
-        else if (type == "wp") return _axiosDefault.default.post(API_URL + "wp/upload", formData, {
-            headers: {
-                "Content-Type": "multipart/form-data"
-            },
-            onUploadProgress
-        });
-    }
-    getRPFiles() {
-        return _axiosDefault.default.get(API_URL + "rp/files");
-    }
-    getWPFiles() {
-        return _axiosDefault.default.get(API_URL + "wp/files");
-    }
-}
-exports.default = new UploadRPFilesService();
-
-},{"axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./auth.service":"7tMCe"}],"340mN":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-var _filesWpComponent = require("./files-wp.component");
-var _filesWpComponentDefault = parcelHelpers.interopDefault(_filesWpComponent);
-class BoardWP extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getWPBoard().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-wp.component.js",
-                lineNumber: 37
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-wp.component.js",
-                lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-wp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-wp.component.js",
-                lineNumber: 41
-            },
-            __self: this
-        })));
-    }
-}
-exports.default = BoardWP;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./files-wp.component":"3t1bI"}],"3t1bI":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _filesRpService = require("../service/files-rp.service");
-var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
-var _authService = require("../service/auth.service");
-var _authServiceDefault = parcelHelpers.interopDefault(_authService);
-class UploadWPFiles extends _react.Component {
-    constructor(props){
-        super(props);
-        this.selectFile = this.selectFile.bind(this);
-        this.state = {
-            selectedFiles: undefined,
-            currentFile: undefined,
-            progress: 0,
-            message: "",
-            fileInfos: [],
-            userFileInfo: [],
-            userType: ""
-        };
-        if (_authServiceDefault.default.getCurrentUser() != null) for(var i = 0; i < _authServiceDefault.default.getCurrentUser().roles.length; i++){
-            if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_REVIEWER") {
-                this.state.userType = "ROLE_REVIEWER";
-                break;
-            } else if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_WP") {
-                this.state.userType = "ROLE_WP";
-                break;
-            }
-        }
-    }
-    componentDidMount() {
-        _filesRpServiceDefault.default.getWPFiles().then((response)=>{
-            this.setState({
-                fileInfos: response.data
-            });
-        }).then(()=>{
-            for (const [key, value] of Object.entries(this.state.fileInfos))if (_authServiceDefault.default.getCurrentUser().username == value.user) this.state.userFileInfo = value;
-        });
-    }
-    selectFile(event) {
-        this.setState({
-            selectedFiles: event.target.files
-        });
-    }
-    render() {
-        const { userFileInfo , userType , fileInfos ,  } = this.state;
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 63
-            },
-            __self: this
-        }, userType == "ROLE_REVIEWER" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 65
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 66
-            },
-            __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
-            className: "list-group list-group-flush",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 67
-            },
-            __self: this
-        }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
-                className: "list-group-item",
-                key: index,
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                    lineNumber: 69
-                },
-                __self: this
-            }, file.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-                className: "float-lg-end",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                    lineNumber: 71
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
-                href: file.url + "/download",
-                target: "_blank",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                    lineNumber: 72
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success btn-margin-right",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                    lineNumber: 73
-                },
-                __self: this
-            }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
-                href: file.url + "/view",
-                target: "_blank",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                    lineNumber: 75
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success",
-                __source: {
-                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                    lineNumber: 76
-                },
-                __self: this
-            }, "View"))))
-        ))), userType == "ROLE_WP" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 86
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 87
-            },
-            __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
-            className: "list-group list-group-flush",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 88
-            },
-            __self: this
-        }, userFileInfo && /*#__PURE__*/ _reactDefault.default.createElement("li", {
-            className: "list-group-item",
-            key: 0,
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 90
-            },
-            __self: this
-        }, userFileInfo.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "float-lg-end",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 92
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
-            href: userFileInfo.url + "/download",
-            target: "_blank",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 93
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success btn-margin-right",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 94
-            },
-            __self: this
-        }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
-            href: userFileInfo.url + "/view",
-            target: "_blank",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 96
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files-wp.component.js",
-                lineNumber: 97
-            },
-            __self: this
-        }, "View"))))))));
-    }
-}
-exports.default = UploadWPFiles;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../service/auth.service":"7tMCe","../service/files-rp.service":"7RhIW"}],"12IXI":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-class BoardAttendee extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getAttendeeBoard().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-attendee.component.js",
-                lineNumber: 36
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-attendee.component.js",
-                lineNumber: 37
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-attendee.component.js",
-                lineNumber: 38
-            },
-            __self: this
-        }, this.state.content))));
-    }
-}
-exports.default = BoardAttendee;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5CuXp":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-var _filesRpComponent = require("./files-rp.component");
-var _filesRpComponentDefault = parcelHelpers.interopDefault(_filesRpComponent);
-class BoardReviewerRP extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getReviewerBoardRP().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
-                lineNumber: 37
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
-                lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-rp.component.js",
-                lineNumber: 41
-            },
-            __self: this
-        })));
-    }
-}
-exports.default = BoardReviewerRP;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./files-rp.component":"7wIG2"}],"5IVNU":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-var _filesWpComponent = require("./files-wp.component");
-var _filesWpComponentDefault = parcelHelpers.interopDefault(_filesWpComponent);
-class BoardReviewerWP extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getReviewerBoardWP().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-wp.component.js",
-                lineNumber: 37
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-wp.component.js",
-                lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-wp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\board-reviewer-wp.component.js",
-                lineNumber: 41
-            },
-            __self: this
-        })));
-    }
-}
-exports.default = BoardReviewerWP;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./files-wp.component":"3t1bI"}],"5XbFa":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-class Download extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getPublicContentDownload().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\download.component.js",
-                lineNumber: 34
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\download.component.js",
-                lineNumber: 35
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\download.component.js",
-                lineNumber: 36
-            },
-            __self: this
-        }, this.state.content))));
-    }
-}
-exports.default = Download;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7Ma63":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-class ContactUs extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getPublicContentContactUs().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\contact-us.component.js",
-                lineNumber: 34
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\contact-us.component.js",
-                lineNumber: 35
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\contact-us.component.js",
-                lineNumber: 36
-            },
-            __self: this
-        }, this.state.content))));
-    }
-}
-exports.default = ContactUs;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7614U":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-class RP extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getPublicContentRP().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\rp.component.js",
-                lineNumber: 34
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\rp.component.js",
-                lineNumber: 35
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\rp.component.js",
-                lineNumber: 36
-            },
-            __self: this
-        }, this.state.content))));
-    }
-}
-exports.default = RP;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7fijF":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _userService = require("../service/user.service");
-var _userServiceDefault = parcelHelpers.interopDefault(_userService);
-class WP extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            content: ""
-        };
-    }
-    componentDidMount() {
-        _userServiceDefault.default.getPublicContentWP().then((response)=>{
-            this.setState({
-                content: response.data
-            });
-        }, (error)=>{
-            this.setState({
-                content: error.response && error.response.data || error.message || error.toString()
-            });
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\wp.component.js",
-                lineNumber: 34
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\wp.component.js",
-                lineNumber: 35
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\wp.component.js",
-                lineNumber: 36
-            },
-            __self: this
-        }, this.state.content))));
-    }
-}
-exports.default = WP;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3xFS3":[function(require,module,exports) {
+},{}],"3xFS3":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -38878,7 +37639,44 @@ function isVAT(str, countryCode) {
     throw new Error("Invalid country code: '".concat(countryCode, "'"));
 }
 
-},{"./util/assertString":"5c8ZW"}],"1hSVH":[function(require,module,exports) {
+},{"./util/assertString":"5c8ZW"}],"7RhIW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _authService = require("./auth.service");
+var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+// const API_URL = `http://localhost:8080/api/access/rp/`
+const API_URL = `http://localhost:8080/api/access/`;
+class UploadRPFilesService {
+    uploadFile(file, name, type, onUploadProgress) {
+        let formData = new FormData();
+        formData.append("file", file);
+        formData.append("user", name);
+        formData.append("approvalStatus", false);
+        if (type == "rp") return _axiosDefault.default.post(API_URL + "rp/upload", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            onUploadProgress
+        });
+        else if (type == "wp") return _axiosDefault.default.post(API_URL + "wp/upload", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            onUploadProgress
+        });
+    }
+    getRPFiles() {
+        return _axiosDefault.default.get(API_URL + "rp/files");
+    }
+    getWPFiles() {
+        return _axiosDefault.default.get(API_URL + "wp/files");
+    }
+}
+exports.default = new UploadRPFilesService();
+
+},{"axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./auth.service":"7tMCe"}],"1hSVH":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39048,6 +37846,1208 @@ class BoardAdmin extends _react.Component {
     }
 }
 exports.default = BoardAdmin;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3Djdl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _authHeader = require("./auth-header");
+var _authHeaderDefault = parcelHelpers.interopDefault(_authHeader);
+const API_URL = 'http://localhost:8080/api/access/';
+class UserService {
+    getPublicContentHome() {
+        return _axiosDefault.default.get(API_URL + 'all/home');
+    }
+    getPublicContentRP() {
+        return _axiosDefault.default.get(API_URL + 'all/rp');
+    }
+    getPublicContentWP() {
+        return _axiosDefault.default.get(API_URL + 'all/wp');
+    }
+    getPublicContentDownload() {
+        return _axiosDefault.default.get(API_URL + 'all/download');
+    }
+    getPublicContentContactUs() {
+        return _axiosDefault.default.get(API_URL + 'all/contactus');
+    }
+    getAdminBoard() {
+        return _axiosDefault.default.get(API_URL + 'admin', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getEditorBoard() {
+        return _axiosDefault.default.get(API_URL + 'editor', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    /*    getReviewerBoard() {
+        return axios.get(API_URL + 'reviewer', { headers: authHeader() });
+    }*/ getReviewerBoardRP() {
+        return _axiosDefault.default.get(API_URL + 'reviewer/rp', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getReviewerBoardWP() {
+        return _axiosDefault.default.get(API_URL + 'reviewer/wp', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getRPBoard() {
+        return _axiosDefault.default.get(API_URL + 'rp', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getWPBoard() {
+        return _axiosDefault.default.get(API_URL + 'wp', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getAttendeeBoard() {
+        return _axiosDefault.default.get(API_URL + 'attendee', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+    getUserBoard() {
+        return _axiosDefault.default.get(API_URL + 'user', {
+            headers: _authHeaderDefault.default()
+        });
+    }
+}
+exports.default = new UserService();
+
+},{"axios":"7rA65","./auth-header":"28iSr","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"28iSr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function authHeader() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user && user.accessToken) return {
+        Authorization: 'Bearer ' + user.accessToken
+    };
+    else return {
+    };
+}
+exports.default = authHeader;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"2DTtL":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+class Home extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getPublicContentHome().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\home.component.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\home.component.js",
+                lineNumber: 35
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\home.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, this.state.content))));
+    }
+}
+exports.default = Home;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"2sE3H":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+class RP extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getPublicContentRP().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\rp.component.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\rp.component.js",
+                lineNumber: 35
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\rp.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, this.state.content))));
+    }
+}
+exports.default = RP;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"40G91":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+class WP extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getPublicContentWP().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\wp.component.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\wp.component.js",
+                lineNumber: 35
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\wp.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, this.state.content))));
+    }
+}
+exports.default = WP;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4xiGE":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+class Download extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getPublicContentDownload().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\download.component.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\download.component.js",
+                lineNumber: 35
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\download.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, this.state.content))));
+    }
+}
+exports.default = Download;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4VD0X":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+class ContactUs extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getPublicContentContactUs().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\contact-us.component.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\contact-us.component.js",
+                lineNumber: 35
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\contact-us.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, this.state.content))));
+    }
+}
+exports.default = ContactUs;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"77TbD":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+class BoardEditor extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getEditorBoard().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\editor\\board-editor.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\editor\\board-editor.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\editor\\board-editor.component.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, this.state.content))));
+    }
+}
+exports.default = BoardEditor;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"38PJz":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+var _filesRpComponent = require("../files/files-rp.component");
+var _filesRpComponentDefault = parcelHelpers.interopDefault(_filesRpComponent);
+class BoardReviewerRP extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getReviewerBoardRP().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-rp.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-rp.component.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-rp.component.js",
+                lineNumber: 39
+            },
+            __self: this
+        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-rp.component.js",
+                lineNumber: 41
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = BoardReviewerRP;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","../files/files-rp.component":"1UHAV","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"1UHAV":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _filesRpService = require("../../service/files-rp.service");
+var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
+var _authService = require("../../service/auth.service");
+var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+class UploadRPFiles extends _react.Component {
+    constructor(props){
+        super(props);
+        this.selectFile = this.selectFile.bind(this);
+        this.state = {
+            selectedFiles: undefined,
+            currentFile: undefined,
+            progress: 0,
+            message: "",
+            fileInfos: [],
+            userFileInfo: [],
+            userType: ""
+        };
+        if (_authServiceDefault.default.getCurrentUser() != null) for(var i = 0; i < _authServiceDefault.default.getCurrentUser().roles.length; i++){
+            if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_REVIEWER") {
+                this.state.userType = "ROLE_REVIEWER";
+                break;
+            } else if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_RP") {
+                this.state.userType = "ROLE_RP";
+                break;
+            }
+        }
+    }
+    componentDidMount() {
+        _filesRpServiceDefault.default.getRPFiles().then((response)=>{
+            this.setState({
+                fileInfos: response.data
+            });
+        }).then(()=>{
+            for (const [key, value] of Object.entries(this.state.fileInfos))if (_authServiceDefault.default.getCurrentUser().username == value.user) this.state.userFileInfo = value;
+        });
+    }
+    selectFile(event) {
+        this.setState({
+            selectedFiles: event.target.files
+        });
+    }
+    render() {
+        const { userFileInfo , userType , fileInfos ,  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 63
+            },
+            __self: this
+        }, userType == "ROLE_REVIEWER" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 65
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-header",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 66
+            },
+            __self: this
+        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "list-group list-group-flush",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 67
+            },
+            __self: this
+        }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "list-group-item",
+                key: index,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 69
+                },
+                __self: this
+            }, file.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "float-lg-end",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 71
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: file.url + "/download",
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 72
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "btn btn-success btn-margin-right",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 73
+                },
+                __self: this
+            }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: file.url + "/view",
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 75
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "btn btn-success",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 76
+                },
+                __self: this
+            }, "View"))))
+        ))), userType == "ROLE_RP" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-header",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 87
+            },
+            __self: this
+        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "list-group list-group-flush",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, userFileInfo && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "list-group-item",
+            key: 0,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 90
+            },
+            __self: this
+        }, userFileInfo.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "float-lg-end",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 92
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            href: userFileInfo.url + "/download",
+            target: "_blank",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 93
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-success btn-margin-right",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 94
+            },
+            __self: this
+        }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            href: userFileInfo.url + "/view",
+            target: "_blank",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 96
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-success",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 97
+            },
+            __self: this
+        }, "View"))))))));
+    }
+}
+exports.default = UploadRPFiles;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/files-rp.service":"7RhIW","../../service/auth.service":"7tMCe","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"1EuhP":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+var _filesWpComponent = require("../files/files-wp.component");
+var _filesWpComponentDefault = parcelHelpers.interopDefault(_filesWpComponent);
+class BoardReviewerWP extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getReviewerBoardWP().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-wp.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-wp.component.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-wp.component.js",
+                lineNumber: 39
+            },
+            __self: this
+        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-wp.component.js",
+                lineNumber: 41
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = BoardReviewerWP;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","../files/files-wp.component":"5YHbJ","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5YHbJ":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _filesRpService = require("../../service/files-rp.service");
+var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
+var _authService = require("../../service/auth.service");
+var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+class UploadWPFiles extends _react.Component {
+    constructor(props){
+        super(props);
+        this.selectFile = this.selectFile.bind(this);
+        this.state = {
+            selectedFiles: undefined,
+            currentFile: undefined,
+            progress: 0,
+            message: "",
+            fileInfos: [],
+            userFileInfo: [],
+            userType: ""
+        };
+        if (_authServiceDefault.default.getCurrentUser() != null) for(var i = 0; i < _authServiceDefault.default.getCurrentUser().roles.length; i++){
+            if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_REVIEWER") {
+                this.state.userType = "ROLE_REVIEWER";
+                break;
+            } else if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_WP") {
+                this.state.userType = "ROLE_WP";
+                break;
+            }
+        }
+    }
+    componentDidMount() {
+        _filesRpServiceDefault.default.getWPFiles().then((response)=>{
+            this.setState({
+                fileInfos: response.data
+            });
+        }).then(()=>{
+            for (const [key, value] of Object.entries(this.state.fileInfos))if (_authServiceDefault.default.getCurrentUser().username == value.user) this.state.userFileInfo = value;
+        });
+    }
+    selectFile(event) {
+        this.setState({
+            selectedFiles: event.target.files
+        });
+    }
+    render() {
+        const { userFileInfo , userType , fileInfos ,  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 63
+            },
+            __self: this
+        }, userType == "ROLE_REVIEWER" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 65
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-header",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 66
+            },
+            __self: this
+        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "list-group list-group-flush",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 67
+            },
+            __self: this
+        }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "list-group-item",
+                key: index,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 69
+                },
+                __self: this
+            }, file.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "float-lg-end",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 71
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: file.url + "/download",
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 72
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "btn btn-success btn-margin-right",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 73
+                },
+                __self: this
+            }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: file.url + "/view",
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 75
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "btn btn-success",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 76
+                },
+                __self: this
+            }, "View"))))
+        ))), userType == "ROLE_WP" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-header",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 87
+            },
+            __self: this
+        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "list-group list-group-flush",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, userFileInfo && /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "list-group-item",
+            key: 0,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 90
+            },
+            __self: this
+        }, userFileInfo.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "float-lg-end",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 92
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            href: userFileInfo.url + "/download",
+            target: "_blank",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 93
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-success btn-margin-right",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 94
+            },
+            __self: this
+        }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            href: userFileInfo.url + "/view",
+            target: "_blank",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 96
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-success",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 97
+            },
+            __self: this
+        }, "View"))))))));
+    }
+}
+exports.default = UploadWPFiles;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/files-rp.service":"7RhIW","../../service/auth.service":"7tMCe","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4HNO5":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+var _filesRpComponent = require("../files/files-rp.component");
+var _filesRpComponentDefault = parcelHelpers.interopDefault(_filesRpComponent);
+class BoardRP extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getRPBoard().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\research-presenter\\board-rp.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\research-presenter\\board-rp.component.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\research-presenter\\board-rp.component.js",
+                lineNumber: 39
+            },
+            __self: this
+        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\research-presenter\\board-rp.component.js",
+                lineNumber: 41
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = BoardRP;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","../files/files-rp.component":"1UHAV","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3XISz":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+var _filesWpComponent = require("../files/files-wp.component");
+var _filesWpComponentDefault = parcelHelpers.interopDefault(_filesWpComponent);
+class BoardWP extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getWPBoard().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\workshop-presenter\\board-wp.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\workshop-presenter\\board-wp.component.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\workshop-presenter\\board-wp.component.js",
+                lineNumber: 39
+            },
+            __self: this
+        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\workshop-presenter\\board-wp.component.js",
+                lineNumber: 41
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = BoardWP;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/user.service":"3Djdl","../files/files-wp.component":"5YHbJ","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6bc4q":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userService = require("../../service/user.service");
+var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+class BoardAttendee extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: ""
+        };
+    }
+    componentDidMount() {
+        _userServiceDefault.default.getAttendeeBoard().then((response)=>{
+            this.setState({
+                content: response.data
+            });
+        }, (error)=>{
+            this.setState({
+                content: error.response && error.response.data && error.response.data.message || error.message || error.toString()
+            });
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\attendee\\board-attendee.component.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\attendee\\board-attendee.component.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\attendee\\board-attendee.component.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, this.state.content))));
+    }
+}
+exports.default = BoardAttendee;
 
   helpers.postlude(module);
 } finally {

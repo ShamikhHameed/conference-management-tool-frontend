@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UploadService from "../../service/files-rp.service";
+import UploadService from "../../service/file.service";
 import AuthService from "../../service/auth.service";
 
 export default class UploadWPFiles extends Component {

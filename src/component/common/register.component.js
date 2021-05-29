@@ -6,7 +6,7 @@ import { isEmail } from "validator";
 
 import AuthService from "../../service/auth.service";
 
-import UploadServiceRP from "../../service/files-rp.service";
+import UploadServiceRP from "../../service/file.service";
 
 const required = value => {
     if (!value) {
