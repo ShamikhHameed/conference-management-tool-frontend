@@ -2,33 +2,44 @@ import axios from 'axios'
 
 import AuthService from "./auth.service";
 
-// const API_URL = `http://localhost:8080/api/access/rp/`
 const API_URL = `http://localhost:8080/api/access/`
 
 class UploadRPFilesService {
-    uploadFile(file, name, type, onUploadProgress) {
+    uploadFile(file, name, userType, onUploadProgress) {
+        console.log("inside upload method");
+
         let formData = new FormData();
 
         formData.append("file", file);
         formData.append("user", name);
         formData.append("approvalStatus", false);
 
-        if(type == "rp"){
-            return axios.post(API_URL + "rp/upload", formData, {
-                headers: {
-                    "Content-Type": "multipart/form-data",
-                },
-                onUploadProgress,
-            });
-        } else if(type == "wp"){
-            return axios.post(API_URL + "wp/upload", formData, {
-                headers: {
-                    "Content-Type": "multipart/form-data",
-                },
-                onUploadProgress,
-            });
+        console.log("before if ");
+        if(userType === "rp"){
+            console.log("inside if ");
+            formData.append("paymentStatus", false);
         }
 
+        console.log("before return ");
+        return axios.post(API_URL + userType + "/upload", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+            onUploadProgress,
+        });
+    }
+
+
+    updateRPFileApproval(url){
+        return axios.put(url+"/approval");
+    }
+
+    updateRPFilePayment(url){
+        return axios.put(url+"/payment");
+    }
+
+    updateWPFileApproval(url){
+        return axios.put(url);
     }
 
     getRPFiles() {

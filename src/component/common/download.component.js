@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import UserService from "../../service/user.service";
+import TemplatesComponent from "../files/templates.component";
 
 export default class Download extends Component {
     constructor(props) {
@@ -32,9 +33,7 @@ export default class Download extends Component {
     render() {
         return (
             <div className="container">
-                <header className="jumbotron">
-                    <h3>{this.state.content}</h3>
-                </header>
+                <TemplatesComponent/>
             </div>
         );
     }

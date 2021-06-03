@@ -5,8 +5,8 @@ import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 
 import AuthService from "../../service/auth.service";
-
 import UploadServiceRP from "../../service/file.service";
+import PaymentPopup from "../payment/payment.component";
 
 const required = value => {
     if (!value) {
@@ -18,7 +18,7 @@ const required = value => {
     }
 };
 
-const email = value => {
+const vemail = value => {
     if (!isEmail(value)) {
         return (
             <div className="alert alert-danger" role="alert">
@@ -49,6 +49,8 @@ const vpassword = value => {
 };
 
 export default class Register extends Component {
+    awaitPromise;
+
     constructor(props) {
         super(props);
         this.handleRegister = this.handleRegister.bind(this);
@@ -72,6 +74,7 @@ export default class Register extends Component {
             currentFile: undefined,
             progress: 0,
             filemessage:"",
+            executionOption:"",
 
             fileInfos: [],
         };
@@ -99,6 +102,13 @@ export default class Register extends Component {
         this.setState({
             userType: e.target.value
         });
+        this.state.executionOption = async() => {
+            if(this.state.userType === "rp" || this.state.userType === "wp"){
+                this.state.executionOption = await this.upload();
+            }else if(this.state.userType === "attendee"){
+                this.state.executionOption = await this.makePayment();
+            }
+        }
     }
 
     handleRegister(e) {
@@ -137,7 +147,9 @@ export default class Register extends Component {
                         message: resMessage
                     });
                 }
-            ).then(this.upload);
+            ).then(
+                this.state.executionOption
+            );
         }
     }
 
@@ -148,6 +160,7 @@ export default class Register extends Component {
     }
 
     upload() {
+        console.log("inside upload");
         let currentFile = this.state.selectedFiles[0];
 
         this.setState({
@@ -159,16 +172,11 @@ export default class Register extends Component {
             this.setState({
                 progress: Math.round((100 * event.loaded) / event.total),
             });
-
-/*        UploadServiceRP.uploadRP(currentFile, this.state.username, (event) => {
-            this.setState({
-                progress: Math.round((100 * event.loaded) / event.total),
-            });*/
-        })
-            .then((response) => {
+        }).then((response) => {
                 this.setState({
                     filemessage: response.data.message,
                 });
+                console.log(this.state.filemessage);
                 return UploadServiceRP.getRPFiles();
             })
             .then((files) => {
@@ -182,6 +190,7 @@ export default class Register extends Component {
                     filemessage: "Could not upload the file!",
                     currentFile: undefined,
                 });
+                console.log(this.state.filemessage);
             });
 
         this.setState({
@@ -189,25 +198,35 @@ export default class Register extends Component {
         });
     }
 
+    makePayment(){
+        this.setState({
+           filemessage: "Payment successful"
+        });
+    }
+
     render() {
 
         const {
-            selectedFiles,
             currentFile,
             progress,
+            successful,
+            username,
+            email,
+            userType,
             message,
             filemessage,
-            fileInfos,
+            password
         } = this.state;
 
         return (
             <div className="col-md-12">
                 <div className="card card-container">
-                    <img
+                    <h2 style={{textAlign:'center'}} className="fw-bold">Sign Up</h2><br/>
+{/*                    <img
                         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
                         alt="profile-img"
                         className="profile-img-card"
-                    />
+                    />*/}
 
                     <Form
                         onSubmit={this.handleRegister}
@@ -215,57 +234,81 @@ export default class Register extends Component {
                             this.form = c;
                         }}
                     >
-                        {!this.state.successful && (
+                        {!successful && (
                             <div>
                                 <div className="form-group">
-                                    <label htmlFor="username">Username</label>
+                                    {/*<label htmlFor="username">Username</label>*/}
                                     <Input
                                         type="text"
                                         className="form-control"
                                         name="username"
-                                        value={this.state.username}
+                                        value={username}
+                                        placeholder="Username"
                                         onChange={this.onChangeUsername}
                                         validations={[required, vusername]}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="email">Email</label>
+                                    {/*<label htmlFor="email">Email</label>*/}
                                     <Input
                                         type="text"
                                         className="form-control"
                                         name="email"
-                                        value={this.state.email}
+                                        value={email}
+                                        placeholder="Email"
                                         onChange={this.onChangeEmail}
-                                        validations={[required, email]}
+                                        validations={[required, vemail]}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="password">Password</label>
+{/*                                    <label htmlFor="password">Password</label>*/}
                                     <Input
                                         type="password"
                                         className="form-control"
                                         name="password"
-                                        value={this.state.password}
+                                        value={password}
+                                        placeholder="Password"
                                         onChange={this.onChangePassword}
                                         validations={[required, vpassword]}
                                     />
                                 </div>
 
-                                <div className="form-group"
-                                     onClick={this.onChangeRadio}
+                                <div
+                                    className="form-group"
+                                    onClick={this.onChangeRadio}
                                 >
-                                    <label htmlFor="userType">User Type</label>
-                                    <Input id="rp" type="radio" value="rp" name="userType"/>
-                                    <label htmlFor="rp">Research Publisher</label>
-                                    <Input id="wp" type="radio" value="wp" name="userType"/>
-                                    <label htmlFor="wp">Workshop Presenter</label>
-                                    <Input id="attendee" type="radio" value="attendee" name="userType"/>
-                                    <label htmlFor="attendee">Attendee</label>
+                                    <label className="fw-bold">Choose User Type</label>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <Input id="rp" type="radio" value="rp" name="userType"/>
+                                            </td>
+                                            <td>
+                                                <label htmlFor="rp"> Research Publisher</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Input id="wp" type="radio" value="wp" name="userType"/>
+                                            </td>
+                                            <td>
+                                                <label htmlFor="wp"> Workshop Presenter</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Input id="attendee" type="radio" value="attendee" name="userType"/>
+                                            </td>
+                                            <td>
+                                                <label htmlFor="attendee"> Attendee</label>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
 
-                                { (this.state.userType == "rp" || this.state.userType == "wp") &&  (
+                                { (userType === "rp" || userType === "wp") &&  (
                                     <div>
                                         {currentFile && (
                                             <div className="progress">
@@ -281,28 +324,30 @@ export default class Register extends Component {
                                                 </div>
                                             </div>
                                         )}
+                                        <div className="input-group mb-3">
+                                            <div className="custom-file">
+                                                <label className="btn btn-default">
+                                                    <input
+                                                        type="file"
+                                                        onChange={this.selectFile}
+                                                    />
+                                                </label>
+                                            </div>
+                                        </div><br/>
+                                    </div>
+                                )}
 
-                                        <label className="btn btn-default">
-                                            <input type="file" onChange={this.selectFile} />
-                                        </label>
-
-{/*                                        <button
-                                            className="btn btn-success"
-                                            disabled={!selectedFiles}
-                                            type="button"
-                                            onClick={this.upload}
-                                        >
-                                            Upload
-                                        </button>*/}
-
-{/*                                        <div className="alert alert-light" role="alert">
-                                            {filemessage}
-                                        </div>*/}
+                                {userType === "attendee" && (
+                                    <div>
+                                    <div style={{textAlign:'center'}} className="alert alert-secondary" role="alert">
+                                        You will be charged Rs.350/= as registration fee
+                                    </div>
+                                    <PaymentPopup/>
                                     </div>
                                 )}
 
                                 <div className="form-group">
-                                    <button className="btn btn-primary btn-block"
+                                    <button className="btn btn-dark btn-block"
                                     >
                                         Sign Up
                                     </button>
@@ -310,27 +355,27 @@ export default class Register extends Component {
                             </div>
                         )}
 
-                        {this.state.message && this.state.filemessage && (
+                        {message && filemessage && (
                             <div className="form-group">
                                 <div
                                     className={
-                                        this.state.successful
+                                        successful
                                             ? "alert alert-success"
                                             : "alert alert-danger"
                                     }
                                     role="alert"
                                 >
-                                    {this.state.message}
+                                    {message}
                                 </div>
                                 <div
                                     className={
-                                        this.state.successful
+                                        successful
                                             ? "alert alert-success"
                                             : "alert alert-danger"
                                     }
                                     role="alert"
                                 >
-                                    {this.state.filemessage}
+                                    {filemessage}
                                 </div>
                             </div>
                         )}
@@ -341,12 +386,6 @@ export default class Register extends Component {
                             }}
                         />
                     </Form>
-
-                    { this.state.userType == "attendee" && (
-                        <div>
-                            <h4>Payment Here</h4>
-                        </div>
-                    )}
                 </div>
             </div>
         );

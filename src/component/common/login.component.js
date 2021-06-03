@@ -83,11 +83,12 @@ export default class Login extends Component {
         return (
             <div className="col-md-12">
                 <div className="card card-container">
-                    <img
+                    <h2 style={{textAlign:'center'}} className="fw-bold">Login</h2><br/>
+{/*                    <img
                         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
                         alt="profile-img"
                         className="profile-img-card"
-                    />
+                    />*/}
 
                     <Form
                         onSubmit={this.handleLogin}
@@ -96,11 +97,12 @@ export default class Login extends Component {
                         }}
                     >
                         <div className="form-group">
-                            <label htmlFor="username">Username</label>
+{/*                            <label htmlFor="username">Username</label>*/}
                             <Input
                                 type="text"
                                 className="form-control"
                                 name="username"
+                                placeholder="Username"
                                 value={this.state.username}
                                 onChange={this.onChangeUsername}
                                 validations={[required]}
@@ -108,11 +110,12 @@ export default class Login extends Component {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="password">Password</label>
+{/*                            <label htmlFor="password">Password</label>*/}
                             <Input
                                 type="password"
                                 className="form-control"
                                 name="password"
+                                placeholder="Password"
                                 value={this.state.password}
                                 onChange={this.onChangePassword}
                                 validations={[required]}
@@ -121,7 +124,7 @@ export default class Login extends Component {
 
                         <div className="form-group">
                             <button
-                                className="btn btn-primary btn-block"
+                                className="btn btn-dark btn-block"
                                 disabled={this.state.loading}
                             >
                                 {this.state.loading && (

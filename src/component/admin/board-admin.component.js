@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import UserService from "../../service/user.service";
+import RPFileStats from "../files/admin-rp-files-count.component";
+import WPFileStats from "../files/admin-wp-files-count.component";
 
 export default class BoardAdmin extends Component {
     constructor(props) {
@@ -35,7 +37,10 @@ export default class BoardAdmin extends Component {
         return (
             <div className="container">
                 <header className="jumbotron">
-                    <h3>{this.state.content}</h3>
+                    <RPFileStats/>
+                </header>
+                <header className="jumbotron">
+                    <WPFileStats/>
                 </header>
             </div>
         );

@@ -46,6 +46,20 @@ export default class UploadWPFiles extends Component {
         });
     }
 
+    approve(id, url) {
+        UploadService.updateWPFileApproval(url)
+            .then((response) => {
+                this.setState({
+                    updateMessage: response.data.message,
+                });
+                window.location.reload();
+            }).catch(() => {
+            this.setState({
+                updateMessage: "Could not update file!",
+            })
+        });
+    }
+
     selectFile(event) {
         this.setState({
             selectedFiles: event.target.files,
@@ -62,19 +76,41 @@ export default class UploadWPFiles extends Component {
         return (
             <div>
                 {userType == "ROLE_REVIEWER" &&  (
-                    <div className="card">
-                        <div className="card-header">List of Files</div>
+                    <div className="jumbotron">
+                        <div className="alert bg-transparent">
+                            <h4>Workshop presentations submitted by all the workshop presenters are listed below</h4>
+                        </div>
                         <ul className="list-group list-group-flush">
                             {fileInfos && fileInfos.map((file, index) => (
-                                <li className="list-group-item" key={index}>
+                                <li className="list-group-item bg-transparent" key={index}>
                                     {file.name}
                                     <div className="float-lg-end">
                                         <a href={file.url+"/download"} target="_blank">
-                                            <button className="btn btn-success btn-margin-right">Download</button>
+                                            <button className="btn btn-dark btn-margin-right">Download</button>
                                         </a>
                                         <a href={file.url+"/view"} target="_blank">
-                                            <button className="btn btn-success">View</button>
+                                            <button className="btn btn-dark">View</button>
                                         </a>
+                                    </div>
+                                    <div className="float-lg-end">
+                                        {file.approvalStatus === true && (
+                                            <button
+                                                type="button"
+                                                disabled={true}
+                                                className="btn btn-dark btn-margin-right"
+                                            >
+                                                Approved
+                                            </button>
+                                        )}
+                                        {file.approvalStatus === false && (
+                                            <button
+                                                type="button"
+                                                onClick={() => this.approve(this.id, file.url)}
+                                                className="btn btn-dark btn-margin-right"
+                                            >
+                                                Approve
+                                            </button>
+                                        )}
                                     </div>
                                 </li>
                             ))}
@@ -83,21 +119,52 @@ export default class UploadWPFiles extends Component {
                 )}
 
                 {userType == "ROLE_WP" &&  (
-                    <div className="card">
-                        <div className="card-header">List of Files</div>
+                    <div className="jumbotron">
+                        {userFileInfo.approvalStatus === false && (
+                            <div className="alert alert-dark" role="alert">
+                                Your workshop presentation is pending approval.
+                            </div>
+                        )}
+                        {userFileInfo.approvalStatus === true && (
+                            <div className="alert alert-dark" role="alert">
+                                Your workshop presentation has been approved.
+                            </div>
+                        )}
+
                         <ul className="list-group list-group-flush">
                             {userFileInfo &&
-                            <li className="list-group-item" key={0}>
+                            <li className="list-group-item bg-transparent" key={0}>
                                 {userFileInfo.name}
                                 <div className="float-lg-end">
                                     <a href={userFileInfo.url+"/download"} target="_blank">
-                                        <button className="btn btn-success btn-margin-right">Download</button>
+                                        <button className="btn btn-dark btn-margin-right">Download</button>
                                     </a>
                                     <a href={userFileInfo.url+"/view"} target="_blank">
-                                        <button className="btn btn-success">View</button>
+                                        <button className="btn btn-dark">View</button>
                                     </a>
                                 </div>
-                            </li>}
+                                <div className="float-lg-end">
+                                    {userFileInfo.approvalStatus === true && (
+                                        <button
+                                            type="button"
+                                            disabled={true}
+                                            className="btn btn-dark btn-margin-right"
+                                        >
+                                            Approved
+                                        </button>
+                                    )}
+                                    {userFileInfo.approvalStatus === false && (
+                                        <button
+                                            type="button"
+                                            disabled={true}
+                                            className="btn btn-dark btn-margin-right"
+                                        >
+                                            Not Approved
+                                        </button>
+                                    )}
+                                </div>
+                            </li>
+                            }
                         </ul>
                     </div>
                 )}

@@ -27099,10 +27099,17 @@ class Login extends _react.Component {
                 lineNumber: 85
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
-            src: "//ssl.gstatic.com/accounts/ui/avatar_2x.png",
-            alt: "profile-img",
-            className: "profile-img-card",
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            style: {
+                textAlign: 'center'
+            },
+            className: "fw-bold",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, "Login"), /*#__PURE__*/ _reactDefault.default.createElement("br", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
                 lineNumber: 86
@@ -27115,27 +27122,21 @@ class Login extends _react.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 92
+                lineNumber: 93
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-group",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 98
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            htmlFor: "username",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
                 lineNumber: 99
             },
             __self: this
-        }, "Username"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             type: "text",
             className: "form-control",
             name: "username",
+            placeholder: "Username",
             value: this.state.username,
             onChange: this.onChangeUsername,
             validations: [
@@ -27143,27 +27144,21 @@ class Login extends _react.Component {
             ],
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 100
+                lineNumber: 101
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-group",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 110
+                lineNumber: 112
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            htmlFor: "password",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 111
-            },
-            __self: this
-        }, "Password"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             type: "password",
             className: "form-control",
             name: "password",
+            placeholder: "Password",
             value: this.state.password,
             onChange: this.onChangePassword,
             validations: [
@@ -27171,42 +27166,42 @@ class Login extends _react.Component {
             ],
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 112
+                lineNumber: 114
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-group",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 122
+                lineNumber: 125
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-primary btn-block",
+            className: "btn btn-dark btn-block",
             disabled: this.state.loading,
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 123
+                lineNumber: 126
             },
             __self: this
         }, this.state.loading && /*#__PURE__*/ _reactDefault.default.createElement("span", {
             className: "spinner-border spinner-border-sm",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 128
+                lineNumber: 131
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("span", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 130
+                lineNumber: 133
             },
             __self: this
         }, "Login"))), this.state.message && /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-group",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 135
+                lineNumber: 138
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
@@ -27214,7 +27209,7 @@ class Login extends _react.Component {
             role: "alert",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 136
+                lineNumber: 139
             },
             __self: this
         }, this.state.message)), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
@@ -27226,7 +27221,7 @@ class Login extends _react.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\login.component.js",
-                lineNumber: 141
+                lineNumber: 144
             },
             __self: this
         })))));
@@ -30630,8 +30625,10 @@ var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _validator = require("validator");
 var _authService = require("../../service/auth.service");
 var _authServiceDefault = parcelHelpers.interopDefault(_authService);
-var _filesRpService = require("../../service/files-rp.service");
-var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
+var _fileService = require("../../service/file.service");
+var _fileServiceDefault = parcelHelpers.interopDefault(_fileService);
+var _paymentComponent = require("../payment/payment.component");
+var _paymentComponentDefault = parcelHelpers.interopDefault(_paymentComponent);
 const required = (value)=>{
     if (!value) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
         className: "alert alert-danger",
@@ -30643,7 +30640,7 @@ const required = (value)=>{
         __self: undefined
     }, "This field is required!"));
 };
-const email = (value)=>{
+const vemail = (value)=>{
     if (!_validator.isEmail(value)) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
         className: "alert alert-danger",
         role: "alert",
@@ -30677,6 +30674,7 @@ const vpassword = (value)=>{
     }, "The password must be between 6 and 40 characters."));
 };
 class Register extends _react.Component {
+    awaitPromise;
     constructor(props){
         super(props);
         this.handleRegister = this.handleRegister.bind(this);
@@ -30697,6 +30695,7 @@ class Register extends _react.Component {
             currentFile: undefined,
             progress: 0,
             filemessage: "",
+            executionOption: "",
             fileInfos: []
         };
     }
@@ -30719,6 +30718,10 @@ class Register extends _react.Component {
         this.setState({
             userType: e.target.value
         });
+        this.state.executionOption = async ()=>{
+            if (this.state.userType === "rp" || this.state.userType === "wp") this.state.executionOption = await this.upload();
+            else if (this.state.userType === "attendee") this.state.executionOption = await this.makePayment();
+        };
     }
     handleRegister(e) {
         e.preventDefault();
@@ -30738,7 +30741,7 @@ class Register extends _react.Component {
                 successful: false,
                 message: resMessage
             });
-        }).then(this.upload);
+        }).then(this.state.executionOption);
     }
     selectFile(event) {
         this.setState({
@@ -30746,23 +30749,22 @@ class Register extends _react.Component {
         });
     }
     upload() {
+        console.log("inside upload");
         let currentFile = this.state.selectedFiles[0];
         this.setState({
             progress: 0,
             currentFile: currentFile
         });
-        _filesRpServiceDefault.default.uploadFile(currentFile, this.state.username, this.state.userType, (event)=>{
+        _fileServiceDefault.default.uploadFile(currentFile, this.state.username, this.state.userType, (event)=>{
             this.setState({
                 progress: Math.round(100 * event.loaded / event.total)
             });
-        /*        UploadServiceRP.uploadRP(currentFile, this.state.username, (event) => {
-            this.setState({
-                progress: Math.round((100 * event.loaded) / event.total),
-            });*/ }).then((response)=>{
+        }).then((response)=>{
             this.setState({
                 filemessage: response.data.message
             });
-            return _filesRpServiceDefault.default.getRPFiles();
+            console.log(this.state.filemessage);
+            return _fileServiceDefault.default.getRPFiles();
         }).then((files)=>{
             this.setState({
                 fileInfos: files.data
@@ -30773,34 +30775,47 @@ class Register extends _react.Component {
                 filemessage: "Could not upload the file!",
                 currentFile: undefined
             });
+            console.log(this.state.filemessage);
         });
         this.setState({
             selectedFiles: undefined
         });
     }
+    makePayment() {
+        this.setState({
+            filemessage: "Payment successful"
+        });
+    }
     render() {
-        const { selectedFiles , currentFile , progress , message , filemessage , fileInfos ,  } = this.state;
+        const { currentFile , progress , successful , username , email , userType , message , filemessage , password  } = this.state;
         return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "col-md-12",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 204
+                lineNumber: 222
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "card card-container",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 205
+                lineNumber: 223
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
-            src: "//ssl.gstatic.com/accounts/ui/avatar_2x.png",
-            alt: "profile-img",
-            className: "profile-img-card",
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            style: {
+                textAlign: 'center'
+            },
+            className: "fw-bold",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 206
+                lineNumber: 224
+            },
+            __self: this
+        }, "Sign Up"), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 224
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
@@ -30810,34 +30825,28 @@ class Register extends _react.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 212
+                lineNumber: 231
             },
             __self: this
-        }, !this.state.successful && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        }, !successful && /*#__PURE__*/ _reactDefault.default.createElement("div", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 219
+                lineNumber: 238
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-group",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 220
+                lineNumber: 239
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            htmlFor: "username",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 221
-            },
-            __self: this
-        }, "Username"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             type: "text",
             className: "form-control",
             name: "username",
-            value: this.state.username,
+            value: username,
+            placeholder: "Username",
             onChange: this.onChangeUsername,
             validations: [
                 required,
@@ -30845,57 +30854,45 @@ class Register extends _react.Component {
             ],
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 222
+                lineNumber: 241
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-group",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 232
+                lineNumber: 252
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            htmlFor: "email",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 233
-            },
-            __self: this
-        }, "Email"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             type: "text",
             className: "form-control",
             name: "email",
-            value: this.state.email,
+            value: email,
+            placeholder: "Email",
             onChange: this.onChangeEmail,
             validations: [
                 required,
-                email
+                vemail
             ],
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 234
+                lineNumber: 254
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-group",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 244
+                lineNumber: 265
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            htmlFor: "password",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 245
-            },
-            __self: this
-        }, "Password"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             type: "password",
             className: "form-control",
             name: "password",
-            value: this.state.password,
+            value: password,
+            placeholder: "Password",
             onChange: this.onChangePassword,
             validations: [
                 required,
@@ -30903,7 +30900,7 @@ class Register extends _react.Component {
             ],
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 246
+                lineNumber: 267
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
@@ -30911,78 +30908,138 @@ class Register extends _react.Component {
             onClick: this.onChangeRadio,
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 256
+                lineNumber: 278
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            htmlFor: "userType",
+            className: "fw-bold",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 259
+                lineNumber: 282
             },
             __self: this
-        }, "User Type"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, "Choose User Type"), /*#__PURE__*/ _reactDefault.default.createElement("table", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 283
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 284
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 285
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             id: "rp",
             type: "radio",
             value: "rp",
             name: "userType",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 260
+                lineNumber: 286
             },
             __self: this
-        }), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 288
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
             htmlFor: "rp",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 261
+                lineNumber: 289
             },
             __self: this
-        }, "Research Publisher"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, " Research Publisher"))), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 292
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 293
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             id: "wp",
             type: "radio",
             value: "wp",
             name: "userType",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 262
+                lineNumber: 294
             },
             __self: this
-        }), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 296
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
             htmlFor: "wp",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 263
+                lineNumber: 297
             },
             __self: this
-        }, "Workshop Presenter"), /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+        }, " Workshop Presenter"))), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 300
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 301
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
             id: "attendee",
             type: "radio",
             value: "attendee",
             name: "userType",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 264
+                lineNumber: 302
             },
             __self: this
-        }), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 304
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
             htmlFor: "attendee",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 265
+                lineNumber: 305
             },
             __self: this
-        }, "Attendee")), (this.state.userType == "rp" || this.state.userType == "wp") && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        }, " Attendee"))))), (userType === "rp" || userType === "wp") && /*#__PURE__*/ _reactDefault.default.createElement("div", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 269
+                lineNumber: 312
             },
             __self: this
         }, currentFile && /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "progress",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 271
+                lineNumber: 314
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
@@ -30996,14 +31053,28 @@ class Register extends _react.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 272
+                lineNumber: 315
             },
             __self: this
-        }, progress, "%")), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        }, progress, "%")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 327
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "custom-file",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 328
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
             className: "btn btn-default",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 285
+                lineNumber: 329
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -31011,47 +31082,76 @@ class Register extends _react.Component {
             onChange: this.selectFile,
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 286
+                lineNumber: 330
             },
             __self: this
-        }))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "form-group",
+        })))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 304
+                lineNumber: 336
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-primary btn-block",
+        })), userType === "attendee" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 305
-            },
-            __self: this
-        }, "Sign Up"))), this.state.message && this.state.filemessage && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "form-group",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 314
+                lineNumber: 341
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: this.state.successful ? "alert alert-success" : "alert alert-danger",
+            style: {
+                textAlign: 'center'
+            },
+            className: "alert alert-secondary",
             role: "alert",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 315
+                lineNumber: 342
             },
             __self: this
-        }, this.state.message), /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: this.state.successful ? "alert alert-success" : "alert alert-danger",
+        }, "You will be charged Rs.350/= as registration fee"), /*#__PURE__*/ _reactDefault.default.createElement(_paymentComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 345
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 349
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-dark btn-block",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 350
+            },
+            __self: this
+        }, "Sign Up"))), message && filemessage && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 359
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: successful ? "alert alert-success" : "alert alert-danger",
             role: "alert",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 325
+                lineNumber: 360
             },
             __self: this
-        }, this.state.filemessage)), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+        }, message), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: successful ? "alert alert-success" : "alert alert-danger",
+            role: "alert",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
+                lineNumber: 370
+            },
+            __self: this
+        }, filemessage)), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
             style: {
                 display: "none"
             },
@@ -31060,22 +31160,10 @@ class Register extends _react.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 337
+                lineNumber: 382
             },
             __self: this
-        })), this.state.userType == "attendee" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 346
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\register.component.js",
-                lineNumber: 347
-            },
-            __self: this
-        }, "Payment Here")))));
+        })))));
     }
 }
 exports.default = Register;
@@ -31085,7 +31173,7 @@ exports.default = Register;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","react-validation/build/form":"5trzO","react-validation/build/input":"6vlrk","react-validation/build/button":"6VNM7","validator":"WF9rx","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../service/auth.service":"7tMCe","../../service/files-rp.service":"7RhIW"}],"WF9rx":[function(require,module,exports) {
+},{"react":"3b2NM","react-validation/build/form":"5trzO","react-validation/build/input":"6vlrk","react-validation/build/button":"6VNM7","validator":"WF9rx","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../service/auth.service":"7tMCe","../../service/file.service":"6lIb4","../payment/payment.component":"2wVA1"}],"WF9rx":[function(require,module,exports) {
 "use strict";
 function _typeof(obj) {
     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function _typeof1(obj1) {
@@ -37639,33 +37727,42 @@ function isVAT(str, countryCode) {
     throw new Error("Invalid country code: '".concat(countryCode, "'"));
 }
 
-},{"./util/assertString":"5c8ZW"}],"7RhIW":[function(require,module,exports) {
+},{"./util/assertString":"5c8ZW"}],"6lIb4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _authService = require("./auth.service");
 var _authServiceDefault = parcelHelpers.interopDefault(_authService);
-// const API_URL = `http://localhost:8080/api/access/rp/`
 const API_URL = `http://localhost:8080/api/access/`;
 class UploadRPFilesService {
-    uploadFile(file, name, type, onUploadProgress) {
+    uploadFile(file, name, userType, onUploadProgress) {
+        console.log("inside upload method");
         let formData = new FormData();
         formData.append("file", file);
         formData.append("user", name);
         formData.append("approvalStatus", false);
-        if (type == "rp") return _axiosDefault.default.post(API_URL + "rp/upload", formData, {
+        console.log("before if ");
+        if (userType === "rp") {
+            console.log("inside if ");
+            formData.append("paymentStatus", false);
+        }
+        console.log("before return ");
+        return _axiosDefault.default.post(API_URL + userType + "/upload", formData, {
             headers: {
                 "Content-Type": "multipart/form-data"
             },
             onUploadProgress
         });
-        else if (type == "wp") return _axiosDefault.default.post(API_URL + "wp/upload", formData, {
-            headers: {
-                "Content-Type": "multipart/form-data"
-            },
-            onUploadProgress
-        });
+    }
+    updateRPFileApproval(url) {
+        return _axiosDefault.default.put(url + "/approval");
+    }
+    updateRPFilePayment(url) {
+        return _axiosDefault.default.put(url + "/payment");
+    }
+    updateWPFileApproval(url) {
+        return _axiosDefault.default.put(url);
     }
     getRPFiles() {
         return _axiosDefault.default.get(API_URL + "rp/files");
@@ -37676,7 +37773,311 @@ class UploadRPFilesService {
 }
 exports.default = new UploadRPFilesService();
 
-},{"axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./auth.service":"7tMCe"}],"1hSVH":[function(require,module,exports) {
+},{"axios":"7rA65","./auth.service":"7tMCe","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"2wVA1":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _form = require("react-validation/build/form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _input = require("react-validation/build/input");
+var _inputDefault = parcelHelpers.interopDefault(_input);
+var _authService = require("../../service/auth.service");
+var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+const required = (value)=>{
+    if (!value) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+            lineNumber: 9
+        },
+        __self: undefined
+    }, "This field is required!"));
+};
+const cname = (value)=>{
+    if (value.length < 3 || value.length > 20) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+            lineNumber: 19
+        },
+        __self: undefined
+    }, "The name must be between 3 and 20 characters."));
+};
+const cnumber = (value)=>{
+    if (value.length != 16) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+            lineNumber: 29
+        },
+        __self: undefined
+    }, "The card number must be 16 digits."));
+};
+const cmonth = (value)=>{
+    if (value < 1 || value > 12) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+            lineNumber: 39
+        },
+        __self: undefined
+    }, "The value for month should be between 1 to 12."));
+};
+const cyear = (value)=>{
+    if (value < 21 || value >= 99) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+            lineNumber: 49
+        },
+        __self: undefined
+    }, "The value entered for year is invalid."));
+};
+const ccvc = (value)=>{
+    if (value.length != 3) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "alert alert-danger",
+        role: "alert",
+        __source: {
+            fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+            lineNumber: 59
+        },
+        __self: undefined
+    }, "The cvc number should be 3 digits."));
+};
+class PaymentPopup extends _react.Component {
+    constructor(props){
+        super(props);
+        this.onChangeName = this.onChangeName.bind(this);
+        this.onChangeNumber = this.onChangeNumber.bind(this);
+        this.onChangeMonth = this.onChangeMonth.bind(this);
+        this.onChangeYear = this.onChangeYear.bind(this);
+        this.onChangeCVC = this.onChangeCVC.bind(this);
+        this.state = {
+            name: "",
+            number: "",
+            month: "",
+            year: "",
+            cvc: "",
+            userType: ""
+        };
+        if (_authServiceDefault.default.getCurrentUser() != null) {
+            for(var i = 0; i < _authServiceDefault.default.getCurrentUser().roles.length; i++)if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_RP") {
+                this.state.userType = "ROLE_RP";
+                break;
+            }
+        } else this.state.userType = "NONE";
+    }
+    onChangeName(e) {
+        this.setState({
+            name: e.target.name
+        });
+    }
+    onChangeNumber(e) {
+        this.setState({
+            number: e.target.number
+        });
+    }
+    onChangeMonth(e) {
+        this.setState({
+            month: e.target.month
+        });
+    }
+    onChangeYear(e) {
+        this.setState({
+            year: e.target.year
+        });
+    }
+    onChangeCVC(e) {
+        this.setState({
+            cvc: e.target.cvc
+        });
+    }
+    handlePayment(e) {
+        e.preventDefault();
+    }
+    render() {
+        const { userType  } = this.state;
+        return(/*            <div className="card card-container">
+                {userType === "NONE" && (
+                    <div className="card-header">
+                        You will be charged Rs.350/= as registration fee
+                    </div>
+                )}
+                {userType === "ROLE_RP" && (
+                    <div className="card-header">
+                        You will be charged Rs.650/= for the research presentation
+                    </div>
+                )}*/ /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 147
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 148
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            onSubmit: this.handlePayment,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 149
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 150
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "text",
+            placeholder: "Name on Card",
+            className: "form-control",
+            name: "name",
+            value: this.state.name,
+            onChange: this.onChangeName,
+            validations: [
+                required,
+                cname
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 151
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 161
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "text",
+            placeholder: "Card Number",
+            className: "form-control",
+            name: "number",
+            pattern: "d*",
+            maxLength: "16",
+            value: this.state.number,
+            onChange: this.onChangeNumber,
+            validations: [
+                required,
+                cnumber
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 162
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 174
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 175
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "text",
+            placeholder: "Month of Expiry - MM",
+            className: "form-control",
+            name: "month",
+            pattern: "d*",
+            maxLength: "2",
+            value: this.state.month,
+            onChange: this.onChangeMonth,
+            validations: [
+                required,
+                cmonth
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 176
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 188
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "text",
+            placeholder: "Year of Expiry - YY",
+            className: "form-control",
+            name: "year",
+            pattern: "d*",
+            maxLength: "2",
+            value: this.state.year,
+            onChange: this.onChangeYear,
+            validations: [
+                required,
+                cyear
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 189
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 202
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_inputDefault.default, {
+            type: "text",
+            placeholder: "CVC",
+            className: "form-control",
+            name: "cvc",
+            pattern: "d*",
+            maxLength: "3",
+            value: this.state.cvc,
+            onChange: this.onChangeCVC,
+            validations: [
+                required,
+                ccvc
+            ],
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\payment\\payment.component.js",
+                lineNumber: 203
+            },
+            __self: this
+        }))))));
+    }
+}
+exports.default = PaymentPopup;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","react-validation/build/form":"5trzO","react-validation/build/input":"6vlrk","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../service/auth.service":"7tMCe"}],"1hSVH":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37724,19 +38125,26 @@ class Profile extends _react.Component {
                 lineNumber: 20
             },
             __self: this
-        }, currentUser.username), " Profile")), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+        }, currentUser.username), " Profile")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "jumbotron",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
                 lineNumber: 23
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+        }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
                 lineNumber: 24
             },
             __self: this
-        }, "Token:"), " ", currentUser.accessToken.substring(0, 20), " ...", " ", currentUser.accessToken.substr(currentUser.accessToken.length - 20)), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, "Id:"), " ", currentUser.id), /*#__PURE__*/ _reactDefault.default.createElement("p", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
                 lineNumber: 28
@@ -37748,39 +38156,39 @@ class Profile extends _react.Component {
                 lineNumber: 29
             },
             __self: this
-        }, "Id:"), " ", currentUser.id), /*#__PURE__*/ _reactDefault.default.createElement("p", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
-                lineNumber: 32
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+        }, "Token:"), " ", currentUser.accessToken.substring(0, 20), " ...", " ", currentUser.accessToken.substr(currentUser.accessToken.length - 20)), /*#__PURE__*/ _reactDefault.default.createElement("p", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
                 lineNumber: 33
             },
             __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
+                lineNumber: 34
+            },
+            __self: this
         }, "Email:"), " ", currentUser.email), /*#__PURE__*/ _reactDefault.default.createElement("strong", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
-                lineNumber: 36
+                lineNumber: 37
             },
             __self: this
         }, "Authorities:"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
-                lineNumber: 37
+                lineNumber: 38
             },
             __self: this
         }, currentUser.roles && currentUser.roles.map((role, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
                 key: index,
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\profile.component.js",
-                    lineNumber: 39
+                    lineNumber: 40
                 },
                 __self: this
             }, role)
-        ))));
+        )))));
     }
 }
 exports.default = Profile;
@@ -37803,6 +38211,10 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _userService = require("../../service/user.service");
 var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+var _adminRpFilesCountComponent = require("../files/admin-rp-files-count.component");
+var _adminRpFilesCountComponentDefault = parcelHelpers.interopDefault(_adminRpFilesCountComponent);
+var _adminWpFilesCountComponent = require("../files/admin-wp-files-count.component");
+var _adminWpFilesCountComponentDefault = parcelHelpers.interopDefault(_adminWpFilesCountComponent);
 class BoardAdmin extends _react.Component {
     constructor(props){
         super(props);
@@ -37826,23 +38238,36 @@ class BoardAdmin extends _react.Component {
             className: "container",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\admin\\board-admin.component.js",
-                lineNumber: 36
+                lineNumber: 38
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
             className: "jumbotron",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\admin\\board-admin.component.js",
-                lineNumber: 37
+                lineNumber: 39
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_adminRpFilesCountComponentDefault.default, {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\admin\\board-admin.component.js",
-                lineNumber: 38
+                lineNumber: 40
             },
             __self: this
-        }, this.state.content))));
+        })), /*#__PURE__*/ _reactDefault.default.createElement("header", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\admin\\board-admin.component.js",
+                lineNumber: 42
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_adminWpFilesCountComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\admin\\board-admin.component.js",
+                lineNumber: 43
+            },
+            __self: this
+        }))));
     }
 }
 exports.default = BoardAdmin;
@@ -37852,7 +38277,7 @@ exports.default = BoardAdmin;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3Djdl":[function(require,module,exports) {
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../files/admin-rp-files-count.component":"1CcUS","../files/admin-wp-files-count.component":"5F6iA"}],"3Djdl":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _axios = require("axios");
@@ -37934,7 +38359,388 @@ function authHeader() {
 }
 exports.default = authHeader;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"2DTtL":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"1CcUS":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _fileService = require("../../service/file.service");
+var _fileServiceDefault = parcelHelpers.interopDefault(_fileService);
+class RPFileStats extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            rpFileInfos: [],
+            rpFileCount: 0,
+            rpFilesPendingApprovalCount: 0,
+            rpFilesPendingPaymentCount: 0,
+            rpFilesApprovedCount: 0
+        };
+    }
+    componentDidMount() {
+        _fileServiceDefault.default.getRPFiles().then((response)=>{
+            this.setState({
+                rpFileInfos: response.data
+            });
+        }).then(()=>{
+            for (const [key, value] of Object.entries(this.state.rpFileInfos)){
+                this.state.rpFileCount++;
+                if (value.approvalStatus === false && value.paymentStatus === false) /*                    this.state.rpFilesPendingApproval = value;*/ this.state.rpFilesPendingApprovalCount++;
+                else if (value.approvalStatus === true && value.paymentStatus === false) /*                    this.state.rpFilesPendingPayment = value;*/ this.state.rpFilesPendingPaymentCount++;
+                else if (value.approvalStatus === true && value.paymentStatus === true) /*                    this.state.rpFilesApproved = value;*/ this.state.rpFilesApprovedCount++;
+            }
+        });
+    }
+    render() {
+        const { rpFileCount , rpFilesPendingApprovalCount , rpFilesPendingPaymentCount , rpFilesApprovedCount ,  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 48
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "row",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 49
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 50
+            },
+            __self: this
+        }, "Details about the research publications submitted"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-sm-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 51
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card text-white bg-dark mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 52
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 53
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 54
+            },
+            __self: this
+        }, "Total Submitted"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-text",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 55
+            },
+            __self: this
+        }, rpFileCount)))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-sm-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 59
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card text-white bg-dark mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 60
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 61
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 62
+            },
+            __self: this
+        }, "Pending Approval"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-text",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 63
+            },
+            __self: this
+        }, rpFilesPendingApprovalCount)))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-sm-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 67
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card text-white bg-dark mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 68
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 69
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 70
+            },
+            __self: this
+        }, "Pending Payment"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-text",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 71
+            },
+            __self: this
+        }, rpFilesPendingPaymentCount)))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-sm-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 75
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card text-white bg-dark mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 76
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 77
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 78
+            },
+            __self: this
+        }, "Approved"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-text",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-rp-files-count.component.js",
+                lineNumber: 79
+            },
+            __self: this
+        }, rpFilesApprovedCount)))))));
+    }
+}
+exports.default = RPFileStats;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/file.service":"6lIb4","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5F6iA":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _fileService = require("../../service/file.service");
+var _fileServiceDefault = parcelHelpers.interopDefault(_fileService);
+class WPFileStats extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            wpFileInfos: [],
+            wpFileCount: 0,
+            wpFilesPendingApprovalCount: 0,
+            wpFilesApprovedCount: 0
+        };
+    }
+    componentDidMount() {
+        _fileServiceDefault.default.getWPFiles().then((response)=>{
+            this.setState({
+                wpFileInfos: response.data
+            });
+        }).then(()=>{
+            for (const [key, value] of Object.entries(this.state.wpFileInfos)){
+                this.state.wpFileCount++;
+                if (value.approvalStatus === false) this.state.wpFilesPendingApprovalCount++;
+                else if (value.approvalStatus === true) this.state.wpFilesApprovedCount++;
+            }
+        });
+    }
+    render() {
+        const { wpFileCount , wpFilesPendingApprovalCount , wpFilesApprovedCount ,  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 41
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "row",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 42
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 43
+            },
+            __self: this
+        }, "Details about the workshop presentations submitted"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-sm-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card text-white bg-dark mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 45
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 46
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 47
+            },
+            __self: this
+        }, "Total Submitted"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-text",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 48
+            },
+            __self: this
+        }, wpFileCount)))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-sm-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 52
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card text-white bg-dark mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 53
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 54
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 55
+            },
+            __self: this
+        }, "Pending Approval"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-text",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 56
+            },
+            __self: this
+        }, wpFilesPendingApprovalCount)))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-sm-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 60
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card text-white bg-dark mb-3",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 61
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 62
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 63
+            },
+            __self: this
+        }, "Pending Payment"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-text",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\admin-wp-files-count.component.js",
+                lineNumber: 64
+            },
+            __self: this
+        }, wpFilesApprovedCount)))))));
+    }
+}
+exports.default = WPFileStats;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/file.service":"6lIb4","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"2DTtL":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -38133,6 +38939,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _userService = require("../../service/user.service");
 var _userServiceDefault = parcelHelpers.interopDefault(_userService);
+var _templatesComponent = require("../files/templates.component");
+var _templatesComponentDefault = parcelHelpers.interopDefault(_templatesComponent);
 class Download extends _react.Component {
     constructor(props){
         super(props);
@@ -38156,23 +38964,16 @@ class Download extends _react.Component {
             className: "container",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\download.component.js",
-                lineNumber: 34
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\download.component.js",
                 lineNumber: 35
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_templatesComponentDefault.default, {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\common\\download.component.js",
                 lineNumber: 36
             },
             __self: this
-        }, this.state.content))));
+        })));
     }
 }
 exports.default = Download;
@@ -38182,7 +38983,145 @@ exports.default = Download;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4VD0X":[function(require,module,exports) {
+},{"react":"3b2NM","../../service/user.service":"3Djdl","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../files/templates.component":"1RNYZ"}],"1RNYZ":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _templateService = require("../../service/template.service");
+var _templateServiceDefault = parcelHelpers.interopDefault(_templateService);
+class TemplatesComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.selectFile = this.selectFile.bind(this);
+        this.state = {
+            selectedFiles: undefined,
+            currentFile: undefined,
+            progress: 0,
+            message: "",
+            fileInfos: [],
+            userFileInfo: [],
+            userType: ""
+        };
+    }
+    componentDidMount() {
+        _templateServiceDefault.default.getTemplateFiles().then((response)=>{
+            this.setState({
+                fileInfos: response.data
+            });
+        });
+    }
+    selectFile(event) {
+        this.setState({
+            selectedFiles: event.target.files
+        });
+    }
+    render() {
+        const { userType , fileInfos ,  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                lineNumber: 43
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "jumbotron",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert bg-transparent",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                lineNumber: 45
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                lineNumber: 46
+            },
+            __self: this
+        }, "All the necessary templates are available for download below")), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "list-group list-group-flush",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                lineNumber: 48
+            },
+            __self: this
+        }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "list-group-item bg-transparent",
+                key: index,
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                    lineNumber: 50
+                },
+                __self: this
+            }, file.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "float-lg-end",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                    lineNumber: 52
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: file.url + "/download",
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                    lineNumber: 53
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "btn btn-dark btn-margin-right",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\templates.component.js",
+                    lineNumber: 54
+                },
+                __self: this
+            }, "Download"))))
+        )))));
+    }
+}
+exports.default = TemplatesComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","../../service/template.service":"zF9eX","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"zF9eX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+const API_URL = `http://localhost:8080/api/access/`;
+class TemplateService {
+    uploadTemplateFile(file, onUploadProgress) {
+        let formData = new FormData();
+        formData.append("file", file);
+        return _axiosDefault.default.post(API_URL + "template/upload", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            onUploadProgress
+        });
+    }
+    getTemplateFiles() {
+        return _axiosDefault.default.get(API_URL + "template/files");
+    }
+}
+exports.default = new TemplateService();
+
+},{"axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"4VD0X":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -38347,23 +39286,10 @@ class BoardReviewerRP extends _react.Component {
                 lineNumber: 37
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-rp.component.js",
                 lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-rp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-rp.component.js",
-                lineNumber: 41
             },
             __self: this
         })));
@@ -38387,22 +39313,35 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _filesRpService = require("../../service/files-rp.service");
-var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
+var _fileService = require("../../service/file.service");
+var _fileServiceDefault = parcelHelpers.interopDefault(_fileService);
 var _authService = require("../../service/auth.service");
 var _authServiceDefault = parcelHelpers.interopDefault(_authService);
+var _paymentComponent = require("../payment/payment.component");
+var _paymentComponentDefault = parcelHelpers.interopDefault(_paymentComponent);
+var _form = require("react-validation/build/form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _button = require("react-validation/build/button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
 class UploadRPFiles extends _react.Component {
     constructor(props){
         super(props);
         this.selectFile = this.selectFile.bind(this);
+        this.approve = this.approve.bind(this);
+        this.toggleOnPayment = this.toggleOnPayment.bind(this);
+        this.toggleOffPayment = this.toggleOffPayment.bind(this);
+        this.handlePayment = this.handlePayment.bind(this);
         this.state = {
             selectedFiles: undefined,
             currentFile: undefined,
             progress: 0,
             message: "",
+            successful: false,
             fileInfos: [],
             userFileInfo: [],
-            userType: ""
+            userType: "",
+            updateMessage: "",
+            showPayment: "hide"
         };
         if (_authServiceDefault.default.getCurrentUser() != null) for(var i = 0; i < _authServiceDefault.default.getCurrentUser().roles.length; i++){
             if (_authServiceDefault.default.getCurrentUser().roles[i] == "ROLE_REVIEWER") {
@@ -38415,7 +39354,7 @@ class UploadRPFiles extends _react.Component {
         }
     }
     componentDidMount() {
-        _filesRpServiceDefault.default.getRPFiles().then((response)=>{
+        _fileServiceDefault.default.getRPFiles().then((response)=>{
             this.setState({
                 fileInfos: response.data
             });
@@ -38423,53 +39362,103 @@ class UploadRPFiles extends _react.Component {
             for (const [key, value] of Object.entries(this.state.fileInfos))if (_authServiceDefault.default.getCurrentUser().username == value.user) this.state.userFileInfo = value;
         });
     }
+    approve(id, url) {
+        _fileServiceDefault.default.updateRPFileApproval(url).then((response)=>{
+            this.setState({
+                updateMessage: response.data.message
+            });
+            window.location.reload();
+        }).catch(()=>{
+            this.setState({
+                updateMessage: "Could not update file!"
+            });
+        });
+    }
     selectFile(event) {
         this.setState({
             selectedFiles: event.target.files
         });
     }
+    toggleOnPayment() {
+        this.setState({
+            showPayment: "show"
+        });
+    }
+    toggleOffPayment() {
+        this.setState({
+            showPayment: "hide"
+        });
+    }
+    handlePayment(url) {
+        //e.preventDefault();
+        this.setState({
+            message: "",
+            successful: false
+        });
+        this.form.validateAll();
+        if (this.checkBtn.context._errors.length === 0) _fileServiceDefault.default.updateRPFilePayment(url).then((response)=>{
+            this.setState({
+                message: response.data.message,
+                successful: true
+            });
+            console.log("payment successful");
+            window.location.reload();
+        }).catch(()=>{
+            this.setState({
+                message: "Payment was unsuccessful. Please try again.",
+                successful: false
+            });
+            console.log("payment unsuccessful");
+        });
+    }
     render() {
-        const { userFileInfo , userType , fileInfos ,  } = this.state;
+        const { userFileInfo , userType , fileInfos , showPayment ,  } = this.state;
         return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 63
+                lineNumber: 130
             },
             __self: this
-        }, userType == "ROLE_REVIEWER" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
+        }, userType === "ROLE_REVIEWER" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "jumbotron",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 65
+                lineNumber: 132
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
+            className: "alert bg-transparent",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 66
+                lineNumber: 133
             },
             __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 134
+            },
+            __self: this
+        }, "Research papers submitted by all the registered research publishers are listed below")), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
             className: "list-group list-group-flush",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 67
+                lineNumber: 136
             },
             __self: this
         }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
-                className: "list-group-item",
+                className: "list-group-item bg-transparent",
                 key: index,
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                    lineNumber: 69
+                    lineNumber: 138
                 },
                 __self: this
             }, file.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
                 className: "float-lg-end",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                    lineNumber: 71
+                    lineNumber: 140
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38477,14 +39466,14 @@ class UploadRPFiles extends _react.Component {
                 target: "_blank",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                    lineNumber: 72
+                    lineNumber: 141
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success btn-margin-right",
+                className: "btn btn-dark btn-margin-right",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                    lineNumber: 73
+                    lineNumber: 142
                 },
                 __self: this
             }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38492,51 +39481,94 @@ class UploadRPFiles extends _react.Component {
                 target: "_blank",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                    lineNumber: 75
+                    lineNumber: 144
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success",
+                className: "btn btn-dark",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                    lineNumber: 76
+                    lineNumber: 145
                 },
                 __self: this
-            }, "View"))))
-        ))), userType == "ROLE_RP" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
+            }, "View"))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "float-lg-end",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 148
+                },
+                __self: this
+            }, file.approvalStatus === true && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                type: "button",
+                disabled: true,
+                className: "btn btn-dark btn-margin-right",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 150
+                },
+                __self: this
+            }, "Approved"), file.approvalStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                type: "button",
+                onClick: ()=>this.approve(this.id, file.url)
+                ,
+                className: "btn btn-dark btn-margin-right",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                    lineNumber: 159
+                },
+                __self: this
+            }, "Approve")))
+        ))), userType === "ROLE_RP" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "jumbotron",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 86
+                lineNumber: 175
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
+        }, userFileInfo.approvalStatus === false && userFileInfo.paymentStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert alert-dark",
+            role: "alert",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 87
+                lineNumber: 177
             },
             __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+        }, "Your research publication is pending approval."), userFileInfo.approvalStatus === true && userFileInfo.paymentStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert alert-dark",
+            role: "alert",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 182
+            },
+            __self: this
+        }, "Your research publication has been approved. Make the payment to finalise the publication."), userFileInfo.approvalStatus === true && userFileInfo.paymentStatus === true && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert alert-dark",
+            role: "alert",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 187
+            },
+            __self: this
+        }, "Your research publication has been published."), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
             className: "list-group list-group-flush",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 88
+                lineNumber: 191
             },
             __self: this
         }, userFileInfo && /*#__PURE__*/ _reactDefault.default.createElement("li", {
-            className: "list-group-item",
+            className: "list-group-item bg-transparent",
             key: 0,
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 90
+                lineNumber: 193
             },
             __self: this
         }, userFileInfo.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "float-lg-end",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 92
+                lineNumber: 195
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38544,14 +39576,14 @@ class UploadRPFiles extends _react.Component {
             target: "_blank",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 93
+                lineNumber: 196
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success btn-margin-right",
+            className: "btn btn-dark btn-margin-right",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 94
+                lineNumber: 197
             },
             __self: this
         }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38559,17 +39591,132 @@ class UploadRPFiles extends _react.Component {
             target: "_blank",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 96
+                lineNumber: 199
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success",
+            className: "btn btn-dark",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
-                lineNumber: 97
+                lineNumber: 200
             },
             __self: this
-        }, "View"))))))));
+        }, "View"))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "float-lg-end",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 203
+            },
+            __self: this
+        }, userFileInfo.approvalStatus === true && userFileInfo.paymentStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            onClick: this.toggleOnPayment,
+            /*onClick={() => this.approve(this.id, file.url)}*/ className: "btn btn-dark btn-margin-right",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 205
+            },
+            __self: this
+        }, "Pay"), userFileInfo.approvalStatus === true && userFileInfo.paymentStatus === true && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            disabled: true,
+            className: "btn btn-dark btn-margin-right",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 215
+            },
+            __self: this
+        }, "Published"), userFileInfo.approvalStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            disabled: true,
+            className: "btn btn-dark btn-margin-right",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 224
+            },
+            __self: this
+        }, "Not Approved")))), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
+            onClick: ()=>this.handlePayment(userFileInfo.url)
+            ,
+            ref: (c)=>{
+                this.form = c;
+            },
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 236
+            },
+            __self: this
+        }, showPayment === "show" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 243
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 244
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert alert-dark",
+            role: "alert",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 245
+            },
+            __self: this
+        }, "You will be charged Rs.650/= for the research presentation", /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            style: {
+                float: 'right'
+            },
+            className: "btn-close",
+            onClick: this.toggleOffPayment,
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 247
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-md-12",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 249
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card card-container",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 250
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_paymentComponentDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 251
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "btn btn-dark",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 252
+            },
+            __self: this
+        }, "Confirm Payment")))), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            style: {
+                display: "none"
+            },
+            ref: (c)=>{
+                this.checkBtn = c;
+            },
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-rp.component.js",
+                lineNumber: 261
+            },
+            __self: this
+        })))));
     }
 }
 exports.default = UploadRPFiles;
@@ -38579,7 +39726,7 @@ exports.default = UploadRPFiles;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","../../service/files-rp.service":"7RhIW","../../service/auth.service":"7tMCe","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"1EuhP":[function(require,module,exports) {
+},{"react":"3b2NM","../../service/auth.service":"7tMCe","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../service/file.service":"6lIb4","../payment/payment.component":"2wVA1","react-validation/build/form":"5trzO","react-validation/build/button":"6VNM7"}],"1EuhP":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -38620,23 +39767,10 @@ class BoardReviewerWP extends _react.Component {
                 lineNumber: 37
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-wp.component.js",
                 lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-wp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\reviewer\\board-reviewer-wp.component.js",
-                lineNumber: 41
             },
             __self: this
         })));
@@ -38660,8 +39794,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _filesRpService = require("../../service/files-rp.service");
-var _filesRpServiceDefault = parcelHelpers.interopDefault(_filesRpService);
+var _fileService = require("../../service/file.service");
+var _fileServiceDefault = parcelHelpers.interopDefault(_fileService);
 var _authService = require("../../service/auth.service");
 var _authServiceDefault = parcelHelpers.interopDefault(_authService);
 class UploadWPFiles extends _react.Component {
@@ -38688,12 +39822,24 @@ class UploadWPFiles extends _react.Component {
         }
     }
     componentDidMount() {
-        _filesRpServiceDefault.default.getWPFiles().then((response)=>{
+        _fileServiceDefault.default.getWPFiles().then((response)=>{
             this.setState({
                 fileInfos: response.data
             });
         }).then(()=>{
             for (const [key, value] of Object.entries(this.state.fileInfos))if (_authServiceDefault.default.getCurrentUser().username == value.user) this.state.userFileInfo = value;
+        });
+    }
+    approve(id, url) {
+        _fileServiceDefault.default.updateWPFileApproval(url).then((response)=>{
+            this.setState({
+                updateMessage: response.data.message
+            });
+            window.location.reload();
+        }).catch(()=>{
+            this.setState({
+                updateMessage: "Could not update file!"
+            });
         });
     }
     selectFile(event) {
@@ -38706,43 +39852,49 @@ class UploadWPFiles extends _react.Component {
         return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 63
+                lineNumber: 77
             },
             __self: this
         }, userType == "ROLE_REVIEWER" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
+            className: "jumbotron",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 65
+                lineNumber: 79
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
+            className: "alert bg-transparent",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 66
+                lineNumber: 80
             },
             __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 81
+            },
+            __self: this
+        }, "Workshop presentations submitted by all the workshop presenters are listed below")), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
             className: "list-group list-group-flush",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 67
+                lineNumber: 83
             },
             __self: this
         }, fileInfos && fileInfos.map((file, index)=>/*#__PURE__*/ _reactDefault.default.createElement("li", {
-                className: "list-group-item",
+                className: "list-group-item bg-transparent",
                 key: index,
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                    lineNumber: 69
+                    lineNumber: 85
                 },
                 __self: this
             }, file.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
                 className: "float-lg-end",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                    lineNumber: 71
+                    lineNumber: 87
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38750,14 +39902,14 @@ class UploadWPFiles extends _react.Component {
                 target: "_blank",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                    lineNumber: 72
+                    lineNumber: 88
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success btn-margin-right",
+                className: "btn btn-dark btn-margin-right",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                    lineNumber: 73
+                    lineNumber: 89
                 },
                 __self: this
             }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38765,51 +39917,86 @@ class UploadWPFiles extends _react.Component {
                 target: "_blank",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                    lineNumber: 75
+                    lineNumber: 91
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-                className: "btn btn-success",
+                className: "btn btn-dark",
                 __source: {
                     fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                    lineNumber: 76
+                    lineNumber: 92
                 },
                 __self: this
-            }, "View"))))
+            }, "View"))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "float-lg-end",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 95
+                },
+                __self: this
+            }, file.approvalStatus === true && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                type: "button",
+                disabled: true,
+                className: "btn btn-dark btn-margin-right",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 97
+                },
+                __self: this
+            }, "Approved"), file.approvalStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                type: "button",
+                onClick: ()=>this.approve(this.id, file.url)
+                ,
+                className: "btn btn-dark btn-margin-right",
+                __source: {
+                    fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                    lineNumber: 106
+                },
+                __self: this
+            }, "Approve")))
         ))), userType == "ROLE_WP" && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card",
+            className: "jumbotron",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 86
+                lineNumber: 122
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "card-header",
+        }, userFileInfo.approvalStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert alert-dark",
+            role: "alert",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 87
+                lineNumber: 124
             },
             __self: this
-        }, "List of Files"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+        }, "Your workshop presentation is pending approval."), userFileInfo.approvalStatus === true && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "alert alert-dark",
+            role: "alert",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 129
+            },
+            __self: this
+        }, "Your workshop presentation has been approved."), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
             className: "list-group list-group-flush",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 88
+                lineNumber: 134
             },
             __self: this
         }, userFileInfo && /*#__PURE__*/ _reactDefault.default.createElement("li", {
-            className: "list-group-item",
+            className: "list-group-item bg-transparent",
             key: 0,
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 90
+                lineNumber: 136
             },
             __self: this
         }, userFileInfo.name, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "float-lg-end",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 92
+                lineNumber: 138
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38817,14 +40004,14 @@ class UploadWPFiles extends _react.Component {
             target: "_blank",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 93
+                lineNumber: 139
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success btn-margin-right",
+            className: "btn btn-dark btn-margin-right",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 94
+                lineNumber: 140
             },
             __self: this
         }, "Download")), /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -38832,17 +40019,42 @@ class UploadWPFiles extends _react.Component {
             target: "_blank",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 96
+                lineNumber: 142
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-            className: "btn btn-success",
+            className: "btn btn-dark",
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
-                lineNumber: 97
+                lineNumber: 143
             },
             __self: this
-        }, "View"))))))));
+        }, "View"))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "float-lg-end",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 146
+            },
+            __self: this
+        }, userFileInfo.approvalStatus === true && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            disabled: true,
+            className: "btn btn-dark btn-margin-right",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 148
+            },
+            __self: this
+        }, "Approved"), userFileInfo.approvalStatus === false && /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            disabled: true,
+            className: "btn btn-dark btn-margin-right",
+            __source: {
+                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\files\\files-wp.component.js",
+                lineNumber: 157
+            },
+            __self: this
+        }, "Not Approved")))))));
     }
 }
 exports.default = UploadWPFiles;
@@ -38852,7 +40064,7 @@ exports.default = UploadWPFiles;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","../../service/files-rp.service":"7RhIW","../../service/auth.service":"7tMCe","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4HNO5":[function(require,module,exports) {
+},{"react":"3b2NM","../../service/auth.service":"7tMCe","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../service/file.service":"6lIb4"}],"4HNO5":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -38893,23 +40105,10 @@ class BoardRP extends _react.Component {
                 lineNumber: 37
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\research-presenter\\board-rp.component.js",
                 lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\research-presenter\\board-rp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesRpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\research-presenter\\board-rp.component.js",
-                lineNumber: 41
             },
             __self: this
         })));
@@ -38963,23 +40162,10 @@ class BoardWP extends _react.Component {
                 lineNumber: 37
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
-            className: "jumbotron",
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
             __source: {
                 fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\workshop-presenter\\board-wp.component.js",
                 lineNumber: 38
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\workshop-presenter\\board-wp.component.js",
-                lineNumber: 39
-            },
-            __self: this
-        }, this.state.content)), /*#__PURE__*/ _reactDefault.default.createElement(_filesWpComponentDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\Shamikh\\Desktop\\SLIIT\\Y3S1\\AF\\conference-management-tool-frontend\\src\\component\\workshop-presenter\\board-wp.component.js",
-                lineNumber: 41
             },
             __self: this
         })));
