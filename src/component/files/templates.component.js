@@ -35,7 +35,6 @@ export default class TemplatesComponent extends Component {
 
     render() {
         const {
-            userType,
             fileInfos,
         } = this.state;
 

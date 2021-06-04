@@ -1,5 +1,3 @@
-@import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
-
 label {
     display: block;
     margin-top: 10px;
@@ -35,4 +33,8 @@ label {
 
 .btn-margin-right{
     margin-right: 5px;
+}
+
+.float-lg-end {
+    float: right;
 }

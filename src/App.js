@@ -1,14 +1,11 @@
-/*
-import React, { Component } from 'react';
-import './App.css';
-import ItemApp from './component/ItemApp';
+/*import React, {Component} from 'react';
 
 class App extends Component {
     render() {
         return (
-            <div className="container">
-                <ItemApp />
-            </div>
+            <h1>
+                Hello
+            </h1>
         );
     }
 }
@@ -81,7 +78,7 @@ class App extends Component {
     }
 
     render() {
-        const { currentUser, showAdminBoard, showEditorBoard, /*showReviewerBoard ,*/ showReviewerBoardRP,
+        const { currentUser, showAdminBoard, showEditorBoard, showReviewerBoardRP,
             showReviewerBoardWP, showRPBoard, showWPBoard, showAttendeeBoard } = this.state;
 
         return (
@@ -137,14 +134,6 @@ class App extends Component {
                             </li>
                         )}
 
-{/*                        {showReviewerBoard && (
-                            <li className="nav-item">
-                                <Link to={"/reviewer"} className="nav-link">
-                                    Reviewer Board
-                                </Link>
-                            </li>
-                        )}*/}
-
                         {showReviewerBoardRP && (
                             <li className="nav-item">
                                 <Link to={"/reviewer/rp"} className="nav-link">
@@ -184,14 +173,6 @@ class App extends Component {
                                 </Link>
                             </li>
                         )}
-
-{/*                        {currentUser && (
-                            <li className="nav-item">
-                                <Link to={"/user"} className="nav-link">
-                                    User
-                                </Link>
-                            </li>
-                        )}*/}
                     </div>
 
                     {currentUser ? (
@@ -236,13 +217,11 @@ class App extends Component {
                         <Route exact path="/profile" component={Profile} />
                         <Route path="/admin" component={BoardAdmin} />
                         <Route path="/editor" component={BoardEditor} />
-{/*                        <Route path="/reviewer" component={BoardReviewer} />*/}
                         <Route path="/reviewer/rp" component={BoardReviewerRP} />
                         <Route path="/reviewer/wp" component={BoardReviewerWP} />
                         <Route path="/rp" component={BoardRP} />
                         <Route path="/wp" component={BoardWP} />
                         <Route path="/Attendee" component={BoardAttendee} />
-{/*                        <Route path="/user" component={BoardUser} />*/}
                     </Switch>
                 </div>
             </div>

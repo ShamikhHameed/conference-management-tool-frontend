@@ -133,87 +133,74 @@ export default class PaymentPopup extends Component{
         } = this.state;
 
         return (
-            /*            <div className="card card-container">
-                {userType === "NONE" && (
-                    <div className="card-header">
-                        You will be charged Rs.350/= as registration fee
+            <div>
+                <form onSubmit={this.handlePayment}>
+                    <div className="form-group">
+                        <Input
+                            type="text"
+                            placeholder="Name on Card"
+                            className="form-control"
+                            name="name"
+                            value={this.state.name}
+                            onChange={this.onChangeName}
+                            validations={[required, cname]}
+                        />
                     </div>
-                )}
-                {userType === "ROLE_RP" && (
-                    <div className="card-header">
-                        You will be charged Rs.650/= for the research presentation
+                    <div className="form-group">
+                        <Input
+                            type="text"
+                            placeholder="Card Number"
+                            className="form-control"
+                            name="number"
+                            pattern="\d*"
+                            maxLength="16"
+                            value={this.state.number}
+                            onChange={this.onChangeNumber}
+                            validations={[required, cnumber]}
+                        />
                     </div>
-                )}*/
-                <div>
-                <div>
-                    <form onSubmit={this.handlePayment}>
+                    <div>
                         <div className="form-group">
                             <Input
                                 type="text"
-                                placeholder="Name on Card"
+                                placeholder="Month of Expiry - MM"
                                 className="form-control"
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.onChangeName}
-                                validations={[required, cname]}
-                            />
-                        </div>
-                        <div className="form-group">
-                            <Input
-                                type="text"
-                                placeholder="Card Number"
-                                className="form-control"
-                                name="number"
+                                name="month"
                                 pattern="\d*"
-                                maxLength="16"
-                                value={this.state.number}
-                                onChange={this.onChangeNumber}
-                                validations={[required, cnumber]}
+                                maxLength="2"
+                                value={this.state.month}
+                                onChange={this.onChangeMonth}
+                                validations={[required, cmonth]}
                             />
-                        </div>
-                        <div>
-                            <div className="form-group">
-                                <Input
-                                    type="text"
-                                    placeholder="Month of Expiry - MM"
-                                    className="form-control"
-                                    name="month"
-                                    pattern="\d*"
-                                    maxLength="2"
-                                    value={this.state.month}
-                                    onChange={this.onChangeMonth}
-                                    validations={[required, cmonth]}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <Input
-                                    type="text"
-                                    placeholder="Year of Expiry - YY"
-                                    className="form-control"
-                                    name="year"
-                                    pattern="\d*"
-                                    maxLength="2"
-                                    value={this.state.year}
-                                    onChange={this.onChangeYear}
-                                    validations={[required, cyear]}
-                                />
-                            </div>
                         </div>
                         <div className="form-group">
                             <Input
                                 type="text"
-                                placeholder="CVC"
+                                placeholder="Year of Expiry - YY"
                                 className="form-control"
-                                name="cvc"
+                                name="year"
                                 pattern="\d*"
-                                maxLength="3"
-                                value={this.state.cvc}
-                                onChange={this.onChangeCVC}
-                                validations={[required, ccvc]}
+                                maxLength="2"
+                                value={this.state.year}
+                                onChange={this.onChangeYear}
+                                validations={[required, cyear]}
                             />
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div className="form-group">
+                        <Input
+                            type="text"
+                            placeholder="CVC"
+                            className="form-control"
+                            name="cvc"
+                            pattern="\d*"
+                            maxLength="3"
+                            value={this.state.cvc}
+                            onChange={this.onChangeCVC}
+                            validations={[required, ccvc]}
+                        />
+                    </div>
+                </form>
             </div>
         );
     }
