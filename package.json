@@ -6,6 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
+    "heroku-postbuild": "npm run build",
     "test": "jest --watch"
   },
   "jest": {
@@ -38,6 +39,7 @@
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "save-dev": "0.0.1-security",
+    "serve": "^12.0.0",
     "validator": "^13.6.0"
   },
   "devDependencies": {
