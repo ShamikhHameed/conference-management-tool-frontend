@@ -26838,7 +26838,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.properties = void 0;
 var properties = {
-    apiUrl: "https://cmt-backend.herokuapp.com"
+    //apiUrl : "https://cmt-backend.herokuapp.com"
+    apiUrl: "http://localhost:8080"
 };
 exports.properties = properties;
 
@@ -41233,9 +41234,12 @@ var UploadRPFiles1 = /*#__PURE__*/ function(_Component) {
                 }, "Your research publication has been approved. Make the payment to finalise the publication."), userFileInfo.approvalStatus === true && userFileInfo.paymentStatus === true && /*#__PURE__*/ _react["default"].createElement("div", {
                     className: "alert alert-dark",
                     role: "alert"
-                }, "Your research publication has been published."), /*#__PURE__*/ _react["default"].createElement("ul", {
+                }, "Your research publication has been published."), userFileInfo.name == null && /*#__PURE__*/ _react["default"].createElement("div", {
+                    className: "alert alert-dark",
+                    role: "alert"
+                }, "You have not submitted a research paper."), /*#__PURE__*/ _react["default"].createElement("ul", {
                     className: "list-group list-group-flush"
-                }, userFileInfo && /*#__PURE__*/ _react["default"].createElement("li", {
+                }, userFileInfo && userFileInfo.name != null && /*#__PURE__*/ _react["default"].createElement("li", {
                     className: "list-group-item bg-transparent",
                     key: 0
                 }, userFileInfo.name, /*#__PURE__*/ _react["default"].createElement("div", {
@@ -41771,9 +41775,12 @@ var UploadWPFiles1 = /*#__PURE__*/ function(_Component) {
                 }, "Your workshop presentation is pending approval."), userFileInfo.approvalStatus === true && /*#__PURE__*/ _react["default"].createElement("div", {
                     className: "alert alert-dark",
                     role: "alert"
-                }, "Your workshop presentation has been approved."), /*#__PURE__*/ _react["default"].createElement("ul", {
+                }, "Your workshop presentation has been approved."), userFileInfo.name == null && /*#__PURE__*/ _react["default"].createElement("div", {
+                    className: "alert alert-dark",
+                    role: "alert"
+                }, "You have not submitted a workshop presentation."), /*#__PURE__*/ _react["default"].createElement("ul", {
                     className: "list-group list-group-flush"
-                }, userFileInfo && /*#__PURE__*/ _react["default"].createElement("li", {
+                }, userFileInfo && userFileInfo.name != null && /*#__PURE__*/ _react["default"].createElement("li", {
                     className: "list-group-item bg-transparent",
                     key: 0
                 }, userFileInfo.name, /*#__PURE__*/ _react["default"].createElement("div", {
