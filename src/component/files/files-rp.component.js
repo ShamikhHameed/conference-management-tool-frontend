@@ -90,7 +90,7 @@ export default class UploadRPFiles extends Component {
 
     handlePayment(url){
         //e.preventDefault();
-
+        console.log("inside handle payment");
         this.setState({
             message: "",
             successful: false

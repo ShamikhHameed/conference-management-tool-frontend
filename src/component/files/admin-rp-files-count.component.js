@@ -46,8 +46,10 @@ export default class RPFileStats extends Component {
 
         return (
             <div>
-                <div className="row">
+                <div className="alert alert-dark" role="alert">
                     <h4>Details about the research publications submitted</h4>
+                </div>
+                <div className="row">
                     <div className="col-sm-3">
                         <div className="card text-white bg-dark mb-3">
                             <div className="card-body">

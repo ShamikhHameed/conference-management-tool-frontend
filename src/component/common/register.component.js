@@ -99,16 +99,23 @@ export default class Register extends Component {
     }
 
     onChangeRadio(e) {
+        //console.log("Inside radio change");
         this.setState({
             userType: e.target.value
-        });
+        });/*
+        console.log("outside async");
         this.state.executionOption = async() => {
+            console.log("Inside async");
             if(this.state.userType === "rp" || this.state.userType === "wp"){
+                console.log("at upload option loading before");
                 this.state.executionOption = await this.upload();
+                console.log("at upload option loading after");
             }else if(this.state.userType === "attendee"){
+                console.log("at upload option loading before");
                 this.state.executionOption = await this.makePayment();
+                console.log("at make payment option loading after");
             }
-        }
+        }*/
     }
 
     handleRegister(e) {
@@ -147,8 +154,24 @@ export default class Register extends Component {
                         message: resMessage
                     });
                 }
-            ).then(
+            )/*.then(
+                console.log("at execution option"),
                 this.state.executionOption
+            )*/
+                .then( () => {
+                    if(this.state.userType === "rp" || this.state.userType === "wp"){
+                        console.log("inside upload before");
+                        this.upload();
+                        console.log("inside upload after");
+                    }
+                }
+                ).then( () => {
+                    if(this.state.userType === "attendee"){
+                        console.log("inside payment before");
+                        this.makePayment();
+                        console.log("inside payment after");
+                    }
+                }
             );
         }
     }
@@ -355,7 +378,7 @@ export default class Register extends Component {
                             </div>
                         )}
 
-                        {message && filemessage && (
+                        {message && (
                             <div className="form-group">
                                 <div
                                     className={
@@ -367,6 +390,10 @@ export default class Register extends Component {
                                 >
                                     {message}
                                 </div>
+                            </div>
+                        )}
+                        {filemessage && (
+                            <div className="form-group">
                                 <div
                                     className={
                                         successful
