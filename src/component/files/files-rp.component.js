@@ -90,7 +90,7 @@ export default class UploadRPFiles extends Component {
 
     handlePayment(url){
         //e.preventDefault();
-
+        console.log("inside handle payment");
         this.setState({
             message: "",
             successful: false
@@ -188,8 +188,13 @@ export default class UploadRPFiles extends Component {
                                 Your research publication has been published.
                             </div>
                         )}
+                        {userFileInfo.name == null && (
+                            <div className="alert alert-dark" role="alert">
+                                You have not submitted a research paper.
+                            </div>
+                        )}
                         <ul className="list-group list-group-flush">
-                            {userFileInfo &&
+                            {userFileInfo && userFileInfo.name != null &&
                             <li className="list-group-item bg-transparent" key={0}>
                                 {userFileInfo.name}
                                 <div className="float-lg-end">

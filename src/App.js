@@ -1,17 +1,3 @@
-/*import React, {Component} from 'react';
-
-class App extends Component {
-    render() {
-        return (
-            <h1>
-                Hello
-            </h1>
-        );
-    }
-}
-
-export default App;*/
-
 import React, { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -85,7 +71,7 @@ class App extends Component {
             <div>
                 <nav className="navbar navbar-expand navbar-dark bg-dark">
                     <Link to={"/"} className="navbar-brand">
-                        CMS
+                        ICAF
                     </Link>
                     <div className="navbar-nav mr-auto">
                         <li className="nav-item">

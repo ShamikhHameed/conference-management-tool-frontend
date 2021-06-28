@@ -34,6 +34,10 @@ label {
 .btn-margin-right{
     margin-right: 5px;
 }
+
+.float-lg-end {
+    float: right;
+}
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
