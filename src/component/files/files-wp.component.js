@@ -130,9 +130,13 @@ export default class UploadWPFiles extends Component {
                                 Your workshop presentation has been approved.
                             </div>
                         )}
-
+                        {userFileInfo.name == null && (
+                            <div className="alert alert-dark" role="alert">
+                                You have not submitted a workshop presentation.
+                            </div>
+                        )}
                         <ul className="list-group list-group-flush">
-                            {userFileInfo &&
+                            {userFileInfo && userFileInfo.name != null &&
                             <li className="list-group-item bg-transparent" key={0}>
                                 {userFileInfo.name}
                                 <div className="float-lg-end">
