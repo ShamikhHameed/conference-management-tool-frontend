@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import UserService from "../../service/user.service";
 import RPFileStats from "../files/admin-rp-files-count.component";
 import WPFileStats from "../files/admin-wp-files-count.component";
-import ConferenceDetailsApproval from "../files/admin-conference-details-approval.component"
+import ConferenceDetailsApproval from "../files/admin-conference-details-approval.component";
+import ResearchDetailsApproval from "../files/admin-research-details-approval.component";
 
 export default class BoardAdmin extends Component {
     constructor(props) {
@@ -45,6 +46,9 @@ export default class BoardAdmin extends Component {
                 </header>
                 <header className="jumbotron">
                     <ConferenceDetailsApproval/>
+                </header>
+                <header className="jumbotron">
+                    <ResearchDetailsApproval/>
                 </header>
             </div>
         );
