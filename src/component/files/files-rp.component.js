@@ -146,7 +146,7 @@ export default class UploadRPFiles extends Component {
                                         </a>
                                     </div>
                                     <div className="float-lg-end">
-                                        {file.approvalStatus === true && (
+                                        {file.approvalStatus === true && file.paymentStatus === true && (
                                             <button
                                                 type="button"
                                                 disabled={true}
@@ -155,13 +155,22 @@ export default class UploadRPFiles extends Component {
                                                 Approved
                                             </button>
                                         )}
-                                        {file.approvalStatus === false && (
+                                        {file.approvalStatus === false && file.paymentStatus === false &&  (
                                             <button
                                                 type="button"
                                                 onClick={() => this.approve(this.id, file.url)}
                                                 className="btn btn-dark btn-margin-right"
                                             >
                                                 Approve
+                                            </button>
+                                        )}
+                                        {file.approvalStatus === true && file.paymentStatus === false && (
+                                            <button
+                                                type="button"
+                                                disabled={true}
+                                                className="btn btn-dark btn-margin-right"
+                                            >
+                                                Payment Pending
                                             </button>
                                         )}
                                     </div>

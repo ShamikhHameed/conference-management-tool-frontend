@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FormConferenceDetailsService from '../../service/form-conference-details.service';
+//import FormConferenceDetailsService from '../../service/form-conference-details.service';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -13,30 +13,21 @@ class Form1 extends Component {
 		this.state = {
 			name: '',
 			institute: '',
-			startDate: new Date(),
-			noOfDays: 0,
+			startDate: '',
+			noOffDays: '',
 			speakers: [],
 			speakerInstitutes: [],
 		}
-		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleInstituteChange = this.handleInstituteChange.bind(this);
-		this.handleNameChange = this.handleNameChange.bind(this);
-		this.handleNoOfDaysChange = this.handleNoOfDaysChange.bind(this);
-		this.handleSpeakerInstitutesChange = this.handleSpeakerInstitutesChange.bind(this);
-		this.handleStartDateChange = this.handleStartDateChange.bind(this);
 		
 	}
-
-
 	createSI(){
 		return this.state.speakerInstitutes.map((el, i) => 	
-        <div className="form-row align-items-center" key={i}>
-		 <div className="col-auto">
-		  <div className="input-group mb-2">
-           <div className="input-group-prepend">
+        <div class="form-row align-items-center" key={i}>
+		 <div class="col-auto">
+		  <div class="input-group mb-2">
+           <div class="input-group-prepend">
 		       <input type="text" className="form-control" placeholder="Speaker institute "  value={el||''} onChange={this.handleSpeakerInstitutesChange.bind(this, i)} />
-			   <input type='button' className="btn btn-outline-danger " value='remove' onClick={this.removeSpeakerInstitutesClick.bind(this, i)}/>
+			   <input type='button' class="btn btn-outline-danger " value='remove' onClick={this.removeSpeakerInstitutesClick.bind(this, i)}/>
 			</div> 
 		   </div> 
 		  </div>
@@ -62,12 +53,12 @@ class Form1 extends Component {
 
 	createUI(){
 		return this.state.speakers.map((el, i) => 	
-        <div className="form-row align-items-center" key={i}>
-		 <div className="col-auto">
-		  <div className="input-group mb-2">
-           <div className="input-group-prepend">
+        <div class="form-row align-items-center" key={i}>
+		 <div class="col-auto">
+		  <div class="input-group mb-2">
+           <div class="input-group-prepend">
 		       <input type="text" className="form-control" placeholder="SpeakerName"  value={el||''} onChange={this.handleChange.bind(this, i)} />
-			   <input type='button' className="btn btn-outline-danger " value='remove' onClick={this.removeClick.bind(this, i)}/>
+			   <input type='button' class="btn btn-outline-danger " value='remove' onClick={this.removeClick.bind(this, i)}/>
 			</div> 
 		   </div> 
 		  </div>
@@ -90,45 +81,9 @@ class Form1 extends Component {
 		speakers.splice(i,1);
 		this.setState({ speakers });
 	 }
-
 	 handleSubmit(event) {
-		FormConferenceDetailsService.submit(
-			this.state.name,
-			this.state.institute,
-			this.state.startDate,
-			this.state.noOfDays,
-			this.state.speakers,
-			this.state.speakerInstitutes
-
-		).then(
-			response => {
-				this.setState({
-					message: response.data.message,
-					successful: true
-				});
-			},
-			error => {
-				const resMessage =
-					(error.response &&
-						error.response.data &&
-						error.response.data.message) ||
-					error.message ||
-					error.toString();
-
-				this.setState({
-					successful: false,
-					message: resMessage
-				});
-			}
-		).then(
-			this.state.executionOption
-		);		 
-
-		alert(this.state.name + " conference details submitted successfully");
+		// alert('A name was submitted: ' + this.state.speakers.join(', '));
 		event.preventDefault();
-		this.props.history.push('../component/admin/board-admin.component')
-		console.log(this.state.startDate);
-		console.log(this.state.noOfDays)
 	  }
 
 
@@ -142,15 +97,14 @@ class Form1 extends Component {
 			institute: event.target.value
 		})
 	}
-	handleStartDateChange =date => {
+	handleStartDateChange = event => {
 		this.setState({
-		  startDate: date
+			startDate: event.target.value
 		})
-	  }
-
+	}
 	handleNoOfDaysChange = event => {
 		this.setState({
-			noOfDays: event.target.value
+			noOffDays: event.target.value
 		})
 	}
 	
@@ -158,8 +112,7 @@ class Form1 extends Component {
 	
 
 	render() {
-		const { name, institute,startDate, noOfDays } = this.state
-
+		const { name, institute, startDate, noOffDays,   } = this.state
 		return (
 	       <div className="col-md-12">
                 <div className="card card-container">
@@ -188,12 +141,13 @@ class Form1 extends Component {
 				</div>
 				<div className="form-group">
 				<label>Start Date</label>
-				<DatePicker
-					selected={ this.state.startDate }
-					onChange={ this.handleStartDateChange }
-					name="startDate"
-					dateFormat="yyyy-MM-dd"
-          		/>
+					<input
+						type="Date"
+						className="form-control"
+						name="startDate"
+						value={startDate}
+						onChange={this.handleStartDateChange}
+					/>
 				</div>
 				<div className="form-group">
 					<input
@@ -201,7 +155,7 @@ class Form1 extends Component {
 						className="form-control"
 						name="noOfDays"
 						placeholder="No Of Days"
-						value={noOfDays}
+						value={noOffDays}
 						onChange={this.handleNoOfDaysChange}
 					/>
 				</div>
@@ -222,6 +176,9 @@ class Form1 extends Component {
 						onClick={this.addSpeakerInstitutesClick.bind(this)}
 						/>
 				</div>
+				
+				
+				
 				<hr/>
 				<div className="form-group">
                             <button
@@ -235,6 +192,7 @@ class Form1 extends Component {
                                 <span>Submit</span>
                             </button>
                         </div>
+				{/* <button type="submit">Submit</button> */}
 			</form>
 			</div>
 			</div>

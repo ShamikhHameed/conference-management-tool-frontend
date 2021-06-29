@@ -62,13 +62,12 @@ export default class WPFileStats extends Component {
                     <div className="col-sm-3">
                         <div className="card text-white bg-dark mb-3">
                             <div className="card-body">
-                                <h5 className="card-title">Pending Payment</h5>
+                                <h5 className="card-title">Approved</h5>
                                 <p className="card-text">{wpFilesApprovedCount}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         );
     }
