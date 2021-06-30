@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import UserService from "../../service/user.service";
 import WorkshopDetailsService from "../../service/form-workshop-details.service";
-import workshop6 from "url:../../assets/workshop7.jpg";
-import speaker from "url:../../assets/speaker3.PNG";
+import workshop6 from "../../assets/workshop7.jpg";
+import speaker from "../../assets/speaker3.PNG";
 
 export default class WP extends Component {
     constructor(props) {
