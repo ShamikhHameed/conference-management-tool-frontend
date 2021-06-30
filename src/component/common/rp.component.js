@@ -63,7 +63,7 @@ export default class RP extends Component {
                             
                             <center e={file.publishedDate}>
                               <h2 className="card-title">{file.name}</h2>
-                              <h4 className="card-text">  Published on {this.dateFix(e)} and is based on "{file.researchArea}"</h4>
+                              <h4 className="card-text">  Published on {new Date(file.publishedDate).toDateString()} and is based on "{file.researchArea}"</h4>
                               <h3 className="card-text"><small class="text-muted">{file.title}</small></h3>
                            
                       

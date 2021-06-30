@@ -87,7 +87,7 @@ export default class ResearchDetailsApproval extends Component {
                                     <h5 className="card-text">Research Name : {file.name}</h5>
                                     <h5 className="card-text">Reasearch Title : {file.title}</h5>
                                     <h5 className="card-text">Reasearch Area : {file.researchArea}</h5>
-                                    <h5 className="card-text">Published date : {file.publishedDate}</h5> 
+                                    <h5 className="card-text">Published date : {new Date(file.publishedDate).toDateString()}</h5> 
                                     <h5 className="card-text">Country : {file.country}</h5> 
                                     <h5 className="card-text">Author : {file.author}</h5>
                                     <h5 className="card-text">Contributors related to the Research : {file.contributors}</h5>
