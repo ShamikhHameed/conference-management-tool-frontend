@@ -63,6 +63,7 @@ class ContactUs extends Component {
               <label for="exampleFormControlTextarea1">Message</label>
               <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
+            <button type="submit" class="btn btn-secondary">Submit</button>
           </form>
         </div>
         <br></br>
