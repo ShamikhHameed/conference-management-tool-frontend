@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import moment from 'moment';
 import UserService from "../../service/user.service";
 import ResearchDetailsService from "../../service/form-research-details.service";
+import researchpagepic from "url:../../assets/research7.jpg";
+import research1pagepic from "url:../../assets/research3.jpg";
 
 export default class RP extends Component {
     constructor(props) {
@@ -43,44 +45,53 @@ export default class RP extends Component {
         var dateComponent = date.utc().format("MMM Do YY");
         return dateComponent;
     }
-    
+
     render() {
         const {
+            e,
             researchDetailsFormInfos
         } = this.state;
+        
         return (
-            <div className="container">
-                <header className="jumbotron">
-                            <h3>{this.state.content}</h3>
-                </header>
-                <div className="jumbotron">
-                    <div className="alert bg-transparent">
-                        <h4>Research Details needed to be approved!</h4>
-                    </div>
-                    <ul className="list-group list-group-flush">
+            <div className="container mt-3">
+                <img src={researchpagepic} className="card-img" alt="..."/>
+                <div className="container-fluid">
+                    <div className="card-body" text-white bg-dark>
+                    {researchDetailsFormInfos && researchDetailsFormInfos.map((file, index) => (
+                      <div key={index} >
+                        {file.approvalStatus === true && (
+                            
+                            <center e={file.publishedDate}>
+                              <h2 className="card-title">{file.name}</h2>
+                              <h4 className="card-text">  Published on {this.dateFix(e)} and is based on "{file.researchArea}"</h4>
+                              <h3 className="card-text"><small class="text-muted">{file.title}</small></h3>
+                           
+                      
+                      <div className="card">
+                                        <center>
+                                        <h4 >RESEARCH PUBLICATIONS</h4> <br></br>
+                                        <div >
+                                        <img className="card-m3" src={research1pagepic} alt="Card image cap"/>
+                                        <div className="card-body">
+                                            <h5 className="card-title"><a href="https://papersowl.com/examples/apple-environmental-analysis-and-branding-strategies/" class="stretched-link">{file.name}</a></h5>
+                                                
+                                            <h6 className="card-text">{file.title}</h6>
+                                            <h6 className="card-text">-{file.author}-</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">Last updated few secs ago</small>
+                                        </div>
+                                        </div>
+                                        </center>
+                                </div> 
+                                <br></br><br></br>
+                                </center>
+                                 )}
+                                </div>
+                                ))}
+                                </div>
 
-                        {researchDetailsFormInfos && researchDetailsFormInfos.map((file, index) => (
-
-                            <li className="list-group-item bg-transparent" key={index}>
-                                {file.approvalStatus === true &&(
-                                    <div>
-                                        <h5 className="card-text">Research Name : {file.name}</h5>
-                                        <h5 className="card-text">Reasearch Title : {file.title}</h5>
-                                        <h5 className="card-text">Reasearch Area : {file.researchArea}</h5>
-                                        <h5 className="card-text">Published date : {file.publishedDate}</h5> 
-                                        <h5 className="card-text">Country : {file.country}</h5> 
-                                        <h5 className="card-text">Author : {file.author}</h5>
-                                        <h5 className="card-text">Contributors related to the Research : {file.contributors}</h5>
-                                        <h5 className="card-text">Title of the related Contributors : {file.contributorTitle}</h5>
-                                    </div>
-                                )}
-
-                            </li>
-                        ))}
-
-
-                    </ul>
-                </div>
+                                </div>
             </div>
         );
     }

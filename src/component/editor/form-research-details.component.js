@@ -67,7 +67,7 @@ class Form3 extends Component {
 				<div className="col-auto">
 					<div className="input-group mb-2">
 						<div className="input-group-prepend">
-							<input type="text" className="form-control" placeholder="ContributorName"  value={el||''} onChange={this.handleChange.bind(this, i)} />
+							<input type="text" className="form-control" placeholder="Contributor Name"  value={el||''} onChange={this.handleChange.bind(this, i)} />
 							<input type='button' className="btn btn-outline-danger " value='remove' onClick={this.removeClick.bind(this, i)}/>
 						</div>
 					</div>
