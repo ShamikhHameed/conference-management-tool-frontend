@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import moment from 'moment';
 import UserService from "../../service/user.service";
 import ResearchDetailsService from "../../service/form-research-details.service";
-import researchpagepic from "url:../../assets/research0.jpg";
+import researchpagepic from "url:../../assets/research4.jpg";
 import research1pagepic from "url:../../assets/research3.jpg";
 
 export default class RP extends Component {
