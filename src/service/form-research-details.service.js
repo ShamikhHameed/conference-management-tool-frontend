@@ -1,6 +1,7 @@
 import axios from "axios";
+import {properties} from "../properties";
 
-const API_URL = "http://localhost:8080/api/access/researchPaperDetails";
+const API_URL = properties.apiUrl + "/api/access/researchPaperDetails";
 
 class FormResearchDetailsService {
     submit(name, title, researchArea, publishedDate, country, author, contributors, contributorTitle, ) {

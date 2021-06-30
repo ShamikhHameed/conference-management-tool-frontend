@@ -1,6 +1,7 @@
 import axios from "axios";
+import {properties} from "../properties";
 
-const API_URL = "http://localhost:8080/api/access/workshopDetails";
+const API_URL = properties.apiUrl + "/api/access/workshopDetails";
 
 class FormWorkshopDetailsService {
     submit(title, time, place, startDate, noOfDays, speakers, speakerInstitutes, ) {
