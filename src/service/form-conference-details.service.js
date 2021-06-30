@@ -15,6 +15,21 @@ class FormConferenceDetailsService {
         });
     }
 
+    submitF(id,name, institute, startDate, noOfDays, speakers, speakerInstitutes ) {
+        return axios.put(API_URL + "/" + id , {
+            // return axios.post(API_URL + "conferenceDetails", {
+            id,    
+            name,
+			institute,
+			startDate,
+			noOfDays,
+			speakers,
+			speakerInstitutes,
+            
+        });
+
+    }
+
     updateConferenceFormDetailsApproval(id){
         return axios.put(API_URL + "/" + id +"/approval");
     }

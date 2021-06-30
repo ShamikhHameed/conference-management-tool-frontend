@@ -1,19 +1,11 @@
 import React, {Component} from "react";
 import ConferenceDetailsService from "../../service/form-conference-details.service";
-import moment from 'moment';
 
 export default class ConferenceDetailsApproval extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            // name: '',
-			// institute: '',
-			// startDate: new Date(),
-			// noOfDays: 0,
-			// speakers: [],
-			// speakerInstitutes: [],
-            // approvalStatus: false,
             conferenceDetailsFormInfos: [],
         };
     }
@@ -78,23 +70,9 @@ export default class ConferenceDetailsApproval extends Component {
         });
     
     }
-    dateFix(e){
-        // window.moment = moment
-        var date = moment(e);
-        var dateComponent = date.utc().format("MMM Do YY");
-        return dateComponent;
-    }
 
     render() {
         const {
-            // name,
-            // institute,
-            // startDate,
-            // noOfDays,
-            // speakers,
-            // speakerInstitutes,
-            // approvalStatus
-            e,
             conferenceDetailsFormInfos
         } = this.state;
 
@@ -108,7 +86,7 @@ export default class ConferenceDetailsApproval extends Component {
                                 <li className="list-group-item bg-transparent" key={index} >
                                     <h5 className="card-text">Conference Name : {file.name}</h5>
                                     <h5 className="card-text">Conducting Institute : {file.institute}</h5>
-                                    <h5 className="card-text" e={file.startDate}>Conference Starting date : {this.dateFix(e)}</h5> 
+                                    <h5 className="card-text">Conference Starting date : {new Date(file.startDate).toDateString()}</h5> 
                                     <h5 className="card-text">No of days conference, going to be held : {file.noOfDays}</h5> 
                                     <h5 className="card-text">Speakers of conference : {file.speakers}</h5>
                                     <h5 className="card-text">Institutes of speakers : {file.speakerInstitutes}</h5>

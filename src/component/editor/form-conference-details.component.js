@@ -132,6 +132,29 @@ class Form1 extends Component {
 	}
 
 
+	submitF(id) {
+        ConferenceDetailsService.submitF(
+			this.state.name,
+			this.state.institute,
+			this.state.startDate,
+			this.state.noOfDays,
+			this.state.speakers,
+			this.state.speakerInstitutes
+		
+            ).then((response) => {
+                this.setState({
+                updateMessage: response.data.message,
+            });
+                window.location.reload();
+        }).catch(() => {
+            this.setState({
+                updateMessage: "Could not update status!",
+            })
+        });
+    
+    }
+
+
 	handleNameChange = event => {
 		this.setState({
 			name: event.target.value

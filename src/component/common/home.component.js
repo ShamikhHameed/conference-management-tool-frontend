@@ -50,7 +50,6 @@ export default class Home extends Component {
     }
     render() {
         const {
-            e,
             conferenceDetailsFormInfos
         } = this.state;
         
@@ -64,10 +63,10 @@ export default class Home extends Component {
                       <div key={index} >
                         {file.approvalStatus === true && (
                             <div>
-                            <center e={file.startDate}>
+                            <center>
                               <h2 className="card-title">{file.name}</h2>
-                              <h3 className="card-text">  Starting from {this.dateFix(e)}, Will be held for  {file.noOfDays} days.</h3>
-                              <h3 className="card-text"><small class="text-muted">{file.institute}</small></h3>
+                              <h3 className="card-text">  Starting from {new Date(file.startDate).toDateString()}, Will be held for  {file.noOfDays} days.</h3>
+                              <h3 className="card-text"><small className="text-muted">{file.institute}</small></h3>
                             </center>
                         
                        <div className="card-body">
