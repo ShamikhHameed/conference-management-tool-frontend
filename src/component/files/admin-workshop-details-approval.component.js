@@ -87,7 +87,7 @@ export default class WorkshopDetailsApproval extends Component {
                                     <h5 className="card-text">Workshop Title : {file.title}</h5>
                                     <h5 className="card-text">Workshop Time : {file.time}</h5>            
                                     <h5 className="card-text">Place : {file.place}</h5>
-                                    <h5 className="card-text">Workshop Starting date : {file.startDate}</h5> 
+                                    <h5 className="card-text">Workshop Starting date : { new Date( file.startDate ).toDateString() }</h5> 
                                     <h5 className="card-text">No of days workshop, going to be held : {file.noOfDays}</h5> 
                                     <h5 className="card-text">Speakers of workshop : {file.speakers}</h5>
                                     <h5 className="card-text">Institutes of speakers : {file.speakerInstitutes}</h5>
