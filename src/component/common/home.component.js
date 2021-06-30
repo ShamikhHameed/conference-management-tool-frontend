@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-
+import moment from 'moment';
 import UserService from "../../service/user.service";
 import ConferenceDetailsService from "../../service/form-conference-details.service";
-import homepagepic from "url:../../assets/af-homepage.jpg"
+import homepagepic from "url:../../assets/af-homepage.jpg";
+import speakerpic from "url:../../assets/af-speakerimg.jpg";
+
 
 
 export default class Home extends Component {
@@ -39,49 +41,68 @@ export default class Home extends Component {
             // console.log(response.data);
         })
     }
-
+   
+    dateFix(e){
+        window.moment = moment
+        var date = moment(e);
+        var dateComponent = date.utc().format("MMM Do YY");
+        return dateComponent;
+    }
     render() {
         const {
+            e,
             conferenceDetailsFormInfos
         } = this.state;
+        
+        
         return (
-            <div className="container">
-                <header className="jumbotron">
-                    <div className="card bg-dark text-white">
-                        <img src={homepagepic} className="card-img-top" alt="1" />
-                        <div className="card-img-overlay">
-                            <h3>{this.state.content}</h3>
+            <div className="container mt-3">
+                <img className="container mt-3" src={homepagepic} alt="Card image cap"/>
+                <div className="container-fluid">
+                    <div className="card-body" text-white bg-dark>
+                     {conferenceDetailsFormInfos && conferenceDetailsFormInfos.map((file, index) => (
+                      <div key={index} >
+                        {file.approvalStatus === true && (
+                            <div>
+                            <center e={file.startDate}>
+                              <h2 className="card-title">{file.name}</h2>
+                              <h3 className="card-text">  Starting from {this.dateFix(e)}, Will be held for  {file.noOfDays} days.</h3>
+                              <h3 className="card-text"><small class="text-muted">{file.institute}</small></h3>
+                            </center>
+                        
+                       <div className="card-body">
+                            <center>
+                              <h6 className="card-title">About our conference</h6>
+                              <h4 className="card-title">{file.name}</h4>
+                              <p className="card-text" class="text-muted">{file.name} is organized by the {file.institute}as an open forum for academics along with industry professionals to present the latest findings and research output and practical deployments in the Computer Science and Information Technology domains. Primary objective of the ICAF is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work. ICAF 2019 and ICAF 2020 were successfully conducted with a technical co-sponsorship by IEEE Sri Lanka Section and all publications are available in IEEE Xplore digital library</p>
+                            </center>
+                        </div> 
+                        <div className="card">
+                            <center>
+                                <h1 >Keynote Speakers</h1>
+                                <br></br>
+                                <div className="card-body" >
+                                  <img className="mr-3" src={speakerpic} alt="Card image cap"/>
+                                   <br></br>
+                                   <h4 className="mt-0">
+                                   <br></br>
+                                   <br></br>
+                                    {file.speakers}
+                                    <br></br>
+                                    {file.speakerInstitutes}
+                                    </h4>
+                                </div>
+                            </center>
                         </div>
+                        </div>
+                        )}
                     </div>
-                    {/* <img src={homepagepic} alt="homepage image" /> */}
-                </header>
-                <div className="jumbotron">
-                    <div className="alert bg-transparent">
-                        <h4>Conference Details needed to be approve</h4>
-                    </div>
-                    <ul className="list-group list-group-flush">
-
-                        {conferenceDetailsFormInfos && conferenceDetailsFormInfos.map((file, index) => (
-
-                            <li className="list-group-item bg-transparent" key={index}>
-                                {file.approvalStatus === true &&(
-                                    <div>
-                                        <h5 className="card-text">Conference Name : {file.name}</h5>
-                                        <h5 className="card-text">Conducting Institute : {file.institute}</h5>
-                                        <h5 className="card-text">Conference Starting date : {file.startDate}</h5>
-                                        <h5 className="card-text">No of days conference, going to be held : {file.noOfDays}</h5>
-                                        <h5 className="card-text">Speakers of conference : {file.speakers}</h5>
-                                        <h5 className="card-text">Institutes of speakers : {file.speakerInstitutes}</h5>
-                                    </div>
-                                )}
-
-                            </li>
-                        ))}
-
-
-                    </ul>
+                    ))}
                 </div>
             </div>
+        <br></br>
+                    
+    </div>
         );
     }
 }
