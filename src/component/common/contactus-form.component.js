@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import image from '../../assets/contact.jpg';
-import image2 from '../../assets/feature-icon-03.svg';
-import image3 from '../../assets/feature-icon-01.svg';
+import image from 'url:../../assets/contact.jpg';
+import image2 from 'url:../../assets/feature-icon-03.svg';
+import image3 from 'url:../../assets/feature-icon-01.svg';
 
 class ContactUs extends Component {
   constructor(props) {
