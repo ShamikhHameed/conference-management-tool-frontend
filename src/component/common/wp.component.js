@@ -66,26 +66,27 @@ export default class WP extends Component {
                                         <h2 className="card-title">{file.title}</h2>
                                         <h3 className="card-text">  Starting from {this.dateFix(e)}, Will be held for  {file.noOfDays} days.</h3>
                                         <h3 className="card-text"><small class="text-muted">{file.place}</small></h3>
-                                        </center>  
-                                    )}
-                                   
-                                    <div className="card">
-                                        <center>
-                                        <h4 >Keynote Speakers</h4> <br></br>
-                                        <div >
-                                        <img className="card-m3" src={speaker} alt="Card image cap"/>
-                                        <div className="card-body">
-                                        <h5 className="card-title">{file.speakers}</h5>
-                                        <h4 className="card-text">{file.speakerInstitutes}</h4>
-                                        </div>
-                                        </div>
+                                                   
+                                        <div className="card">
+                                            <center>
+                                            <h4 >Keynote Speakers</h4> <br></br>
+                                            <div >
+                                            <img className="card-m3" src={speaker} alt="Card image cap"/>
+                                            <div className="card-body">
+                                            <h5 className="card-title">{file.speakers}</h5>
+                                            <h4 className="card-text">{file.speakerInstitutes}</h4>
+                                            </div>
+                                            </div>
+                                            </center>
+                                        </div> 
+                                        <br></br><br></br>
                                         </center>
-                                </div> 
+                                    )}
                                 </div>
                                 ))}
                                 </div>
+                            </div>
 
-                                </div>
             </div>
         );
     }
