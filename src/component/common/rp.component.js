@@ -79,7 +79,7 @@ export default class RP extends Component {
                                             <h6 className="card-text">-{file.author}-</h6>
                                         </div>
                                         <div class="card-footer">
-                                            <small class="text-muted">Last updated few secs ago</small>
+                                            <small class="text-muted">Last updated few secs ago...</small>
                                         </div>
                                         </div>
                                         </center>
