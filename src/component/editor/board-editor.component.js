@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import UserService from "../../service/user.service";
 import Form1 from "./form-conference-details.component";
 import Form2 from "./form-workshop-details.component";
+import Form3 from "./form-research-details.component";
 
 export default class BoardEditor extends Component {
     constructor(props) {
@@ -44,6 +45,9 @@ export default class BoardEditor extends Component {
                 </header>
                 <header className="jumbotron">
                     <Form2/>
+                </header>
+                <header className="jumbotron">
+                    <Form3/>
                 </header>
             </div>
         );
