@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import moment from 'moment';
 import UserService from "../../service/user.service";
 import WorkshopDetailsService from "../../service/form-workshop-details.service";
 import workshop6 from "url:../../assets/workshop7.jpg";
@@ -14,9 +13,7 @@ export default class WP extends Component {
             workshopDetailsFormInfos: [],
         };
     }
-
     
-
     componentDidMount() {
         UserService.getPublicContentWP().then(
             response => {
@@ -41,16 +38,8 @@ export default class WP extends Component {
         })
     }
 
-    dateFix(e){
-        window.moment = moment
-        var date = moment(e);
-        var dateComponent = date.utc().format("MMM Do YY");
-        return dateComponent;
-    }
-
     render() {
         const {
-            e,
             workshopDetailsFormInfos
         } = this.state;
         return (
@@ -62,9 +51,9 @@ export default class WP extends Component {
                                 <div key={index} >
                                     {file.approvalStatus === true && (
                                         
-                                        <center e={file.startDate}>
+                                        <center e = {file.startDate}>
                                         <h2 className="card-title">{file.title}</h2>
-                                        <h3 className="card-text">  Starting from {this.dateFix(e)}, Will be held for  {file.noOfDays} days.</h3>
+                                        <h3 className="card-text">  Starting from { new Date( file.startDate ).toDateString() }, Will be held for  {file.noOfDays} days.</h3>
                                         <h3 className="card-text"><small class="text-muted">{file.place}</small></h3>
                                                    
                                         <div className="card">
