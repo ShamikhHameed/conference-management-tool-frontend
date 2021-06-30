@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import moment from 'moment';
 import UserService from "../../service/user.service";
 import ResearchDetailsService from "../../service/form-research-details.service";
-import researchpagepic from "url:../../assets/research4.jpg";
+import researchpagepic from "url:../../assets/research8.jpg";
 import research1pagepic from "url:../../assets/research3.jpg";
 
 export default class RP extends Component {
@@ -79,7 +79,7 @@ export default class RP extends Component {
                                             <h6 className="card-text">-{file.author}-</h6>
                                         </div>
                                         <div class="card-footer">
-                                            <small class="text-muted">Last updated few secs ago</small>
+                                            <small class="text-muted">Last updated few secs ago...</small>
                                         </div>
                                         </div>
                                         </center>
